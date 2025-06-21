@@ -1,0 +1,63 @@
+.footer__text {
+  position: absolute;
+  left: 4rem;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 1rem;
+  color: #fab005;
+}
+.footer__text a {
+  text-align: center;
+  line-height: 1.5;
+  font-size: 1rem;
+  color: #fab005;
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+}
+.footer__text a:hover,
+.footer__text a:active {
+  color: #588157;
+}
+.footer hr {
+  margin: 1.6rem 0 0.3rem 4.8rem;
+  border: 0;
+  width: 50%;
+  border-top: 0.2rem solid #fab0058e;
+}
+.social-links {
+  display: flex;
+  justify-content: center;
+}
+.social-links a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fab005;
+  width: 4.8rem;
+  height: 0.5rem;
+  /* margin: 1rem 1rem; */
+  transition: all ease 0.2s;
+}
+.social-links a i {
+  transition: all ease-in-out 0.2s;
+}
+.social-links a:hover {
+  transform: scale(1.1) translateY(-0.2rem);
+}
+.social-links a:hover .fa-twitter {
+  color: #00acee;
+}
+.social-links a:hover .fa-facebook-f {
+  color: #2957e0;
+}
+.social-links a:hover .fa-instagram {
+  color: #c13584;
+}
+.social-links a:hover .fa-linkedin {
+  color: #4875b4;
+}
+.social-links a:hover .fa-github {
+  color: #807676;
+}

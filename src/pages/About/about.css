@@ -1,0 +1,552 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap");
+.aboutMePage {
+  position: relative;
+  font-family: "Poppins";
+  background-color: #0d0d0d;
+  height: 90vh;
+  margin-bottom: 0;
+
+  .aboutMeContainer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    .aboutMyselfBox {
+      background-color: #383838;
+      height: 80%;
+      width: 80%;
+      margin: 2rem;
+      position: relative;
+      border-radius: 10rem;
+
+      .myImage {
+        position: absolute;
+        left: -12rem;
+        top: 1rem;
+        img {
+          height: 65rem;
+        }
+      }
+      .myselfbox1 {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: 15%;
+        top: 10%;
+        font-family: "Poppins";
+        line-height: 8.5rem;
+        color: #f2ecff;
+        .div1 {
+          font-size: 4rem;
+          font-weight: 700;
+        }
+        .div2 {
+          font-size: 10rem;
+          font-weight: 800;
+          letter-spacing: 1rem;
+        }
+      }
+      .myselfbox2 {
+        position: absolute;
+        margin-top: 5rem;
+        top: 40%;
+        right: 15%;
+
+        .quote-card {
+          position: relative;
+          color: #f2ecff;
+          padding: 4rem 3rem 3rem 6rem;
+          border-radius: 0.8rem;
+          max-width: 85rem;
+          font-size: 1.6rem;
+          font-weight: 600;
+          line-height: 1.8;
+          font-family: "Poppins", "Inter", sans-serif;
+          text-align: right;
+        }
+
+        .quote-mark {
+          position: absolute;
+          top: 0.8rem;
+          right: 2rem;
+          font-size: 8rem;
+          color: #d3fbd8;
+          line-height: 0.35;
+          font-family: serif;
+        }
+      }
+      .gotoLinks {
+        width: 140rem;
+        position: absolute;
+        bottom: 18%;
+        left: 25%;
+        .boxContainer {
+          position: relative;
+          .div0 {
+            position: absolute;
+            left: 5%;
+            width: 40%;
+          }
+          .div1 {
+            position: absolute;
+            top: 10rem;
+            left: 30%;
+            width: 100%;
+            color: #f2ecff;
+            .quickLinks {
+              display: flex;
+              flex-direction: column;
+              align-items: start;
+              justify-content: start;
+              padding: 1.6rem;
+              font-weight: 700;
+              font-size: 1rem;
+              gap: 1rem;
+              margin-top: 1rem;
+              a:hover {
+                text-decoration: underline;
+              }
+
+              h2 {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: start;
+                gap: 1.2rem;
+                font-size: 2rem;
+              }
+              .pageSections {
+                font-size: 1.3rem;
+                display: flex;
+                flex-direction: row;
+                gap: 2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* .aboutMeBox {
+    position: absolute;
+    background-color: #689461;
+    border-radius: 2rem;
+    height: 30.5rem;
+    width: 110rem;
+    top: 5%;
+    left: 20%;
+    z-index: 1;
+    .boxContainer {
+      position: relative;
+      padding: 1.2rem;
+      .div1 {
+        padding: 2rem;
+        font-family: "Poppins";
+        font-weight: 800;
+        font-size: 3rem;
+        color: white;
+      }
+      .div2 {
+        color: white;
+        position: relative;
+        bottom: 3rem;
+        padding: 2rem;
+        font-family: "Poppins";
+        font-weight: 800;
+      }
+      .div3 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 45%;
+        padding: 2rem;
+        font-family: "Poppins";
+        color: white;
+        font-size: 2rem;
+        font-weight: 800;
+      }
+      .div4 {
+        position: absolute;
+        bottom: 2.5rem;
+        right: 3.5rem;
+        width: 35%;
+        padding: 2rem;
+        font-family: "Poppins";
+        color: white;
+        font-size: 2rem;
+        font-weight: 800;
+      }
+    }
+  }
+  .aboutMeBox2 {
+    position: absolute;
+    color: #b0c7ac;
+    background-color: #689461;
+    border-radius: 2rem;
+    height: 31rem;
+    width: 110rem;
+    top: 48%;
+    left: 10%;
+    z-index: 1;
+  } */
+  /* Floating Cards */
+  .floating-card {
+    position: absolute;
+    background: #fefefe;
+    backdrop-filter: blur(1rem);
+    border-radius: 1.6rem;
+    padding: 1.8rem;
+    box-shadow: 0 0.8rem 3.2rem rgba(0, 0, 0, 0.1);
+    border: 0.1rem solid rgba(255, 255, 255, 0.2);
+    animation: cardFloat 6s ease-in-out infinite;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 28rem;
+  }
+
+  .floating-card:hover {
+    transform: translateY(-0.5rem) scale(1.02);
+    box-shadow: 0 1.2rem 4rem rgba(0, 0, 0, 0.15);
+  }
+
+  .floating-card h3 {
+    margin: 0 0 1rem 0;
+    color: #333;
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+  .timeline-card {
+    z-index: 1;
+    top: 55%;
+    right: 2%;
+    animation-delay: 4s;
+
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+    }
+
+    .timeline-item {
+      display: flex;
+      align-items: center;
+      gap: 1.6rem;
+      animation: fadeIn 0.6s ease-out both;
+    }
+
+    .timeline-dot {
+      width: 1rem;
+      height: 1rem;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .timeline-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .timeline-date {
+      font-weight: bold;
+      color: #667eea;
+      font-size: 1.2rem;
+    }
+
+    .timeline-event {
+      color: #555;
+      font-size: 1.2rem;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  }
+  .hobbies-card {
+    top: 7%;
+    right: 1.7%;
+    animation-delay: 2s;
+    z-index: 1;
+
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    .hobbies-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.01rem;
+    }
+
+    .hobby-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0.6rem;
+      border-radius: 0.8rem;
+      transition: background-color 0.3s ease;
+      animation: zoomIn 0.6s ease-out both;
+    }
+
+    .hobby-item:hover {
+      background-color: rgba(102, 126, 234, 0.1);
+    }
+
+    .hobby-icon {
+      font-size: 2rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .hobby-name {
+      font-size: 1.2rem;
+      color: #666;
+      font-weight: 500;
+    }
+
+    @keyframes zoomIn {
+      from {
+        opacity: 0;
+        transform: scale(0);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  }
+}
+@keyframes cardFloat {
+  0%,
+  100% {
+    transform: translateY(0rem);
+  }
+  50% {
+    transform: translateY(-1rem);
+  }
+}
+.education {
+  min-height: 100vh;
+  background-color: #9ab0a6;
+  .educationContainer {
+    padding: 2.8rem;
+    color: #212926;
+    h1 {
+      text-align: center;
+      font-size: 4.8rem;
+    }
+    .college {
+      display: flex;
+      flex-direction: row;
+      padding: 1.6rem 6.4rem;
+      margin-left: 6.4rem;
+      margin-right: 6.4rem;
+      margin-top: 2.4rem;
+      margin-bottom: 1.6rem;
+      gap: 2rem;
+      padding-bottom: 0;
+      border: solid 0.5rem;
+      border-radius: 2.4rem;
+
+      h3 {
+        font-size: 1.8rem;
+      }
+      .collegeLogo {
+        display: flex;
+        align-items: center;
+        img {
+          height: 25rem;
+          width: 25rem;
+          padding: 1.6rem;
+        }
+      }
+      .collegeDesc {
+        display: flex;
+        flex-direction: column;
+        padding: 2.4rem;
+        h2 {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          font-size: 2.4rem;
+          gap: 0.5rem;
+        }
+        .collegeHeader:hover {
+          text-decoration: underline;
+        }
+
+        ul {
+          padding: 1.5rem;
+          /* font-style: italic; */
+          font-size: 1.6rem;
+          font-family: "Poppins";
+
+          a:hover {
+            text-decoration: underline;
+          }
+          li:not(:last-child) {
+            margin-bottom: 1rem;
+          }
+        }
+      }
+    }
+    .css-society {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0rem 16rem;
+      padding-bottom: 2rem;
+      text-align: center;
+
+      .cssHeader {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        .cssLogo {
+          img {
+            width: 6rem;
+            height: 6rem;
+          }
+        }
+        h3 {
+          text-decoration: underline;
+          font-size: 1.8rem;
+        }
+      }
+      p {
+        font-family: "Poppins";
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
+.codingProfiles {
+  background-color: #212926;
+  height: fit-content;
+  .codingContainer {
+    padding: 3rem;
+    h1 {
+      color: #d3fbd8;
+      text-align: center;
+      letter-spacing: 0.5rem;
+      font-size: 4.8rem;
+      padding-bottom: 1rem;
+    }
+    .leetcodeCalendar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+    .codingHandles {
+      display: flex;
+      flex-direction: row;
+      padding: 2rem 6.4rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}
+.skillsSection {
+  padding: 1.6rem 6.4rem;
+  overflow: hidden;
+  background-color: #111;
+  height: fit-content;
+  .skillsContainer {
+    padding: 2rem;
+    h1 {
+      text-align: center;
+      letter-spacing: 0.5rem;
+      font-size: 4.8rem;
+      padding-bottom: 1rem;
+      color: #c8fcea;
+    }
+  }
+}
+.certificationsSection {
+  background-color: #2e3135;
+  color: #1f898c;
+  min-height: fit-content;
+  padding: 3rem 6.4rem;
+  .certificationContainer {
+    h1 {
+      text-align: center;
+      font-size: 4.8rem;
+    }
+    .certificates {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: center;
+      padding-top: 1rem;
+
+      .certificate {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        width: 90%;
+        margin: 1rem;
+
+        .certificatePic {
+          .intel-cert {
+            height: 15rem;
+            width: 30rem;
+            padding: 2rem;
+          }
+          .IITB {
+            height: 20rem;
+            width: 30rem;
+            padding: 2.5rem;
+          }
+          img {
+            height: 20rem;
+            width: 30rem;
+            object-fit: contain;
+          }
+        }
+        .certificateDesc {
+          display: flex;
+          flex-direction: column;
+          align-items: start;
+          justify-content: center;
+
+          a:hover {
+            text-decoration: underline;
+          }
+
+          .certDesc {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            color: #adc8c9;
+            font-size: 1.7rem;
+          }
+          .certHeading {
+            font-size: 2rem;
+          }
+          .viewCert {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            font-size: 1.8rem;
+            color: #adc8c9;
+          }
+        }
+      }
+    }
+  }
+}

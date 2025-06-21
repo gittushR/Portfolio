@@ -1,0 +1,55 @@
+.experienceTimeline {
+  /* height: 100vh; */
+  /* padding: 1.6rem 6.4rem; */
+  padding-left: 6.4rem;
+  padding-right: 6.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 2rem;
+  position: relative;
+
+  .company {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5rem;
+    padding: 2rem 2rem;
+    position: relative;
+
+    .clipped-bg {
+      position: absolute;
+      inset: 0;
+      clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 100%,
+        20rem 100%,
+        0 calc(100% - 19rem)
+      );
+      z-index: -1;
+    }
+    img {
+      height: 5rem;
+      width: 12.5rem;
+      z-index: 1;
+    }
+  }
+  .intel {
+    margin-left: 10%;
+  }
+  .oracle {
+
+    img {
+      height: 6rem;
+    }
+  }
+  .nits {
+    margin-left: 20%;
+    img {
+      height: 6rem;
+      width: auto;
+    }
+  }
+}

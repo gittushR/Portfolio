@@ -1,0 +1,133 @@
+/* Contact Section Styles */
+.contact-section {
+  background-color: transparent;
+  color: #212529;
+  font-family: "Poppins";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  padding-right: 5rem;
+}
+
+.contact-container {
+  max-width: 40vw;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Header Styles */
+.contact-header {
+  text-align: center;
+  margin-bottom: 1.6rem;
+}
+
+.contact-title {
+  font-size: 3.2rem;
+  font-weight: bold;
+  margin-bottom: 1.6rem;
+  line-height: 1;
+}
+
+.contact-accent {
+  position: relative;
+}
+
+.contact-underline {
+  position: absolute;
+  bottom: -0.4rem;
+  left: 0;
+  width: 100%;
+  height: 0.8rem;
+  background-color: #ff4757;
+}
+
+.contact-subtitle {
+  color: #f08c00;
+  font-size: 1.28rem;
+  line-height: 1;
+}
+
+/* Form Styles */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.input-group {
+  width: 100%;
+}
+
+.contact-input,
+.contact-textarea {
+  width: 100%;
+  background-color: #ffd43b;
+  color: black;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 0;
+  font-size: 1.2rem;
+  outline: none;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.contact-input::placeholder,
+.contact-textarea::placeholder {
+  color: #495057;
+}
+
+.contact-input:focus,
+.contact-textarea:focus {
+  border-color: #fab005;
+  box-shadow: 0 0 0 0.2rem #fab005;
+}
+
+.contact-textarea {
+  resize: none;
+  font-family: inherit;
+}
+
+/* Submit Button Styles */
+.submit-container {
+  display: flex;
+  justify-content: flex-end;
+}
+.submitbutton {
+  font-size: 1rem;
+  color: #fab005;
+  border: 0.2rem solid #fab005;
+  background-color: transparent;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  padding: 1rem 3rem;
+  cursor: pointer;
+  letter-spacing: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.submitbutton:hover {
+  background-color: black;
+  color: white;
+}
+
+.submitbutton:before {
+  content: "";
+  position: absolute;
+  height: 15rem;
+  width: 5rem;
+  background: #fff;
+  left: -5.5rem;
+  top: -4rem;
+  transform: rotate(37deg);
+  transition: all 0.3s;
+  opacity: 0.3;
+}
+
+.submitbutton:hover:before {
+  left: 95%;
+}

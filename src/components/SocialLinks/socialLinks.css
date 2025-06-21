@@ -1,0 +1,33 @@
+.sociallinks a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 3rem;
+  height: 0.5rem;
+  color: inherit;
+  margin: 1rem 1rem;
+  transition: all ease 0.2s;
+}
+.sociallinks a i {
+  transition: all ease-in-out 0.2s;
+}
+.sociallinks a:hover {
+  transform: scale(1.1) translateY(-0.2rem);
+}
+.sociallinks a:hover .fa-twitter {
+  color: #00acee;
+}
+.sociallinks a:hover .fa-facebook-f {
+  color: #2957e0;
+}
+.sociallinks a:hover .fa-instagram {
+  color: #c13584;
+}
+.sociallinks a:hover .fa-linkedin {
+  color: #4875b4;
+}
+.sociallinks a:hover .fa-github {
+  color: #807676;
+}

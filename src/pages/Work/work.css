@@ -1,0 +1,118 @@
+.workExperience {
+  min-height: 100vh;
+  padding: 1.6rem 6.4rem;
+  font-family: "Poppins";
+  background-color: #bffcfb;
+
+  .workexContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+
+    .company {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      border: solid 0.5rem #f4f3ee;
+      padding: 1.6rem;
+      padding-right: 3rem;
+      /* border-radius: 2rem; */
+      background-color: #f4f3ee;
+      padding-bottom: 2.4rem;
+
+      .compHeader {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .compLogo {
+          transition: filter 0.3s ease-in-out;
+          height: 18rem;
+          object-fit: cover;
+        }
+        .intelLogo {
+          transition: filter 0.3s ease-in-out;
+          height: 7.5rem;
+          object-fit: cover;
+          margin-left: 3rem;
+          margin-top: 5.5rem;
+          margin-bottom: 5.5rem;
+        }
+        .compLogo:hover {
+          filter: drop-shadow(0 0 10px red);
+        }
+        .intelLogo:hover {
+          filter: drop-shadow(0 0 10px #00c8fd);
+        }
+        .timeLine {
+          color: #28afb0;
+          font-size: 4rem;
+          font-weight: 700;
+          opacity: 0.6;
+          display: flex;
+          flex-direction: column;
+          text-align: end;
+
+          .dates {
+            font-size: 2rem;
+          }
+        }
+      }
+      .aboutWork {
+        display: flex;
+        flex-direction: column;
+        color: #19647e;
+        position: relative;
+
+        .team {
+          position: absolute;
+          align-self: flex-end;
+          font-size: 2rem;
+          text-align: right;
+          width: 60%;
+          font-family: "Dancing Script";
+          font-weight: 900;
+          top: -4rem;
+          right: 0;
+        }
+        
+        .mywork {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .myWorkContainer {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            padding-top: 2rem;
+
+            .myworkheader {
+              font-size: 2rem;
+              font-weight: 700;
+              display: flex;
+              align-items: center;
+              gap: 0.5rem;
+              margin-bottom: 1rem;
+            }
+            .workDone {
+              margin-left: 4rem;
+              font-size: 1.4rem;
+              font-weight: 600;
+
+              ul {
+                line-height: 2.4rem;
+
+                li:not(:last-child) {
+                  margin-bottom: 1.6rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
