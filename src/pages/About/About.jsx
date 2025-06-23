@@ -5,11 +5,6 @@ import SkillsSlider from "../../components/SkillsSlider/SkillsSlider";
 import { FaExternalLinkAlt, FaLink } from "react-icons/fa";
 import PhotoCarousel from "../../components/CollegeGallery/PhotoCarousel";
 import CurvedArrowCTA from "../../components/CurvedArrow/CurvedArrowCTA";
-
-import {
-  getGFGDetails,
-  getLeetcodeDetails,
-} from "../../helpers/ApiCommunicator/ApiCommunicator";
 import { useEffect } from "react";
 
 let myCertificates = [
@@ -43,12 +38,9 @@ let myCertificates = [
   },
 ];
 const About = () => {
-  let leetcodeStats = async () => await getLeetcodeDetails("tusharrathi");
-  let gfgStats = async () => await getGFGDetails();
-
   let codingStats = {
     leetcode: {
-      problemSolved: leetcodeStats.totalSolved,
+      problemSolved: 0,
       contestRating: 1567,
       activeSince: "June 2022",
     },
@@ -58,12 +50,12 @@ const About = () => {
       activeSince: "May 2021",
     },
     GFG: {
-      problemSolved: gfgStats.totalProblemsSolved,
+      problemSolved: 0,
       score: 2100,
       activeSince: "August 2022",
     },
     github: {
-      repos: 28,
+      repos: 30,
       activeSince: "August 2021",
     },
   };

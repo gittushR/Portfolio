@@ -1,7 +1,27 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import "./codingProfile.css";
+import {
+  getGFGDetails,
+  getLeetcodeDetails,
+} from "../../helpers/ApiCommunicator/ApiCommunicator";
 
 const CodingProfile = ({ image, handleName, link, det }) => {
+  let [leetcodeProbs, setLeetcodeProbs] = useState(null);
+  let [gfgprobs, setgfgProbs] = useState(null);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        let leetcodeStats = getLeetcodeDetails("tusharrathi");
+        let gfgStats = getGFGDetails();
+        setLeetcodeProbs(leetcodeStats);
+        setgfgProbs(gfgStats);
+      } catch (error) {
+        console.log("Failed to fetch coding problems: " + error);
+      }
+    })();
+  }, []);
+
   let listEle = (
     <ul>
       <li>Problems Solved: {det.problemSolved}</li>
@@ -12,7 +32,7 @@ const CodingProfile = ({ image, handleName, link, det }) => {
   if (handleName === "rathitushar021") {
     listEle = (
       <ul>
-        <li>Problems Solved: {det.problemSolved}</li>
+        <li>Problems Solved: {gfgprobs ? gfgprobs : "Loading..."}</li>
         <li>Coding Score: {det.score}</li>
         <li>Active Since: {det.activeSince}</li>
       </ul>
@@ -22,6 +42,15 @@ const CodingProfile = ({ image, handleName, link, det }) => {
     listEle = (
       <ul>
         <li>Public Repos: {det.repos}</li>
+        <li>Active Since: {det.activeSince}</li>
+      </ul>
+    );
+  }
+  if (handleName === "tusharrathi") {
+    listEle = (
+      <ul>
+        <li>Problems Solved: {leetcodeProbs ? leetcodeProbs : "Loading..."}</li>
+        <li>Coding Score: {det.score}</li>
         <li>Active Since: {det.activeSince}</li>
       </ul>
     );

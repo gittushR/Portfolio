@@ -4,11 +4,10 @@ export const getLeetcodeDetails = async (username) => {
   const res = await axios.get(
     `https://leetcode-stats-api.herokuapp.com/${username}`
   );
-  if (res.status !== 200) {
-    throw new Error("Unable to fetch leetcode profile");
-  }
+
   const data = await res.data;
-  return data;
+
+  return data.totalSolved;
 };
 export const getGFGDetails = async () => {
   const res = await axios.get(
@@ -19,5 +18,5 @@ export const getGFGDetails = async () => {
   }
   const data = await res.data;
 
-  return data;
+  return data.totalProblemsSolved;
 };
