@@ -56,15 +56,15 @@
 }
 .homebutton {
   padding: 1rem 2.4rem;
-  border: 2px solid black;
+  border: 0.2rem solid black;
   background-color: transparent;
   font-weight: 600;
   cursor: pointer;
   text-align: center;
   display: inline-block;
-  padding: 15px 40px;
+  padding: 1.5rem 4rem;
   cursor: pointer;
-  letter-spacing: 2px;
+  letter-spacing: 0.2rem;
   position: relative;
   overflow: hidden;
   margin: 0 2rem;
@@ -78,11 +78,11 @@
 .homebutton:before {
   content: "";
   position: absolute;
-  height: 150px;
-  width: 50px;
+  height: 15rem;
+  width: 5rem;
   background: #fff;
-  left: -55px;
-  top: -40px;
+  left: -5.5rem;
+  top: -4rem;
   transform: rotate(37deg);
   transition: all 0.3s;
   opacity: 0.3;
@@ -93,18 +93,18 @@
 }
 
 .profile-image {
-  width: 490px;
+  width: 49rem;
   max-width: 100%;
 }
 .stroke-text {
   color: transparent;
-  -webkit-text-stroke: 2px black;
-  text-stroke: 2px black;
+  -webkit-text-stroke: 0.2rem black;
+  text-stroke: 0.2rem black;
 }
 .scroll-down {
   text-align: center;
-  font-size: 14px;
-  margin-top: 30px;
+  font-size: 1.4rem;
+  margin-top: 3rem;
   margin-bottom: 2rem;
 }
 @-moz-keyframes bounce {
@@ -117,12 +117,12 @@
     transform: translateY(0);
   }
   40% {
-    -moz-transform: translateY(-30px);
-    transform: translateY(-30px);
+    -moz-transform: translateY(-3rem);
+    transform: translateY(-3rem);
   }
   60% {
-    -moz-transform: translateY(-15px);
-    transform: translateY(-15px);
+    -moz-transform: translateY(-1.5rem);
+    transform: translateY(-1.5rem);
   }
 }
 @-webkit-keyframes bounce {
@@ -135,12 +135,12 @@
     transform: translateY(0);
   }
   40% {
-    -webkit-transform: translateY(-30px);
-    transform: translateY(-30px);
+    -webkit-transform: translateY(-3rem);
+    transform: translateY(-3rem);
   }
   60% {
-    -webkit-transform: translateY(-15px);
-    transform: translateY(-15px);
+    -webkit-transform: translateY(-1.5rem);
+    transform: translateY(-1.5rem);
   }
 }
 @keyframes bounce {
@@ -155,22 +155,22 @@
     transform: translateY(0);
   }
   40% {
-    -moz-transform: translateY(-30px);
-    -ms-transform: translateY(-30px);
-    -webkit-transform: translateY(-30px);
-    transform: translateY(-30px);
+    -moz-transform: translateY(-3rem);
+    -ms-transform: translateY(-3rem);
+    -webkit-transform: translateY(-3rem);
+    transform: translateY(-3rem);
   }
   60% {
-    -moz-transform: translateY(-15px);
-    -ms-transform: translateY(-15px);
-    -webkit-transform: translateY(-15px);
-    transform: translateY(-15px);
+    -moz-transform: translateY(-1.5rem);
+    -ms-transform: translateY(-1.5rem);
+    -webkit-transform: translateY(-1.5rem);
+    transform: translateY(-1.5rem);
   }
 }
 
 .arrow {
   position: fixed;
-  bottom: 50px;
+  bottom: 5rem;
   left: 50%;
   margin-left: -2rem;
   width: 2rem;
@@ -193,17 +193,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 30px;
-  font-size: 16px;
+  margin-bottom: 3rem;
+  font-size: 1.6rem;
   font-family: "Poppins";
   font-weight: 800;
-  letter-spacing: 2px;
+  letter-spacing: 0.2rem;
 }
 .stats {
   display: flex;
   justify-content: space-around;
   background: white;
-  padding: 40px 0;
+  padding: 4rem 0;
   font-weight: 600;
   text-align: center;
 }
@@ -211,14 +211,14 @@
 .aboutMe {
   display: grid;
   grid-template-columns: auto auto;
-  padding: 16px 64px;
+  padding: 1.6rem 6.4rem;
   align-items: center;
 
   .aboutHeading {
     font-family: "Poppins";
-    font-size: 50px;
+    font-size: 5rem;
     font-weight: 900;
-    letter-spacing: 5px;
+    letter-spacing: 0.5rem;
     margin-bottom: 2rem;
   }
   .line {
@@ -231,8 +231,8 @@
       border: 0;
       width: 120%;
       right: 0;
-      top: -25px;
-      border-top: 2px solid rgba(0, 0, 0, 0.5);
+      top: -2.5rem;
+      border-top: 0.2rem solid rgba(0, 0, 0, 0.5);
     }
   }
   .frame {
@@ -250,27 +250,27 @@
 
       .fancy {
         font-family: "Dancing Script";
-        font-size: 35px;
+        font-size: 3.5rem;
       }
     }
   }
 }
 
 .work {
-  margin-bottom: 50px;
+  margin-bottom: 5rem;
   display: flex;
   flex-direction: column;
   .workHeading {
     display: flex;
-    padding: 16px 64px;
+    padding: 1.6rem 6.4rem;
     align-items: center;
-    gap: 50px;
+    gap: 5rem;
 
     .workEx {
       font-family: "Poppins";
-      font-size: 50px;
+      font-size: 5rem;
       font-weight: 900;
-      letter-spacing: 5px;
+      letter-spacing: 0.5rem;
       margin-bottom: 2rem;
     }
 
@@ -279,7 +279,7 @@
       margin: 1rem auto;
       border: 0;
       width: 100%;
-      border-top: 2px solid rgba(0, 0, 0, 0.5);
+      border-top: 0.2rem solid rgba(0, 0, 0, 0.5);
     }
   }
 }
@@ -288,15 +288,15 @@
   flex-direction: column;
   .projectHeader {
     display: flex;
-    padding: 16px 64px;
+    padding: 1.6rem 6.4rem;
     align-items: center;
-    gap: 50px;
+    gap: 5rem;
 
     .proj {
       font-family: "Poppins";
-      font-size: 50px;
+      font-size: 5rem;
       font-weight: 900;
-      letter-spacing: 5px;
+      letter-spacing: 0.5rem;
       margin-bottom: 2rem;
     }
 
@@ -305,13 +305,13 @@
       margin: 1rem auto;
       border: 0;
       width: 100%;
-      border-top: 2px solid rgba(0, 0, 0, 0.5);
+      border-top: 0.2rem solid rgba(0, 0, 0, 0.5);
     }
   }
 }
 .morebutton {
   font-size: 1.2rem;
-  letter-spacing: 4px;
+  letter-spacing: 0.4rem;
   display: flex;
   gap: 1rem;
   align-items: center;
@@ -319,7 +319,7 @@
 }
 
 .footerSection {
-  padding: 16px 64px;
+  padding: 1.6rem 6.4rem;
   background-color: #fff9db;
   position: absolute;
   width: 100%;
@@ -358,7 +358,7 @@
     }
   }
   .links {
-    padding-top: 50px;
+    padding-top: 5rem;
     border-left: #fab005 solid;
   }
   .pageLinks-container {
@@ -366,7 +366,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 80px;
+    gap: 8rem;
   }
   .pageLinks {
     font-family: "Poppins";
@@ -374,23 +374,23 @@
     grid-template-columns: auto auto;
     align-items: center;
     justify-content: space-evenly;
-    row-gap: 15px;
-    column-gap: 40px;
-    font-size: 14px;
+    row-gap: 1.5rem;
+    column-gap: 4rem;
+    font-size: 1.4rem;
     color: #fab005;
     font-weight: 800;
   }
   .other {
     display: flex;
     flex-direction: column;
-    padding-top: 50px;
+    padding-top: 5rem;
     font-size: medium;
     align-items: center;
     justify-content: center;
-    gap: 5px;
+    gap: 0.5rem;
 
     .submitbutton {
-      margin-bottom: 30px;
+      margin-bottom: 3rem;
       border: #fab005 solid;
       color: #fab005;
     }
@@ -402,19 +402,19 @@
 .neon-text {
   font-size: 2rem;
   color: black;
-  text-shadow: 0 0 5px #ff005e, 0 0 1rem #ff005e, 0 0 2rem #ff005e,
-    0 0 40px #ff005e, 0 0 80px #ff005e;
+  text-shadow: 0 0 0.5rem #ff005e, 0 0 1rem #ff005e, 0 0 2rem #ff005e,
+    0 0 4rem #ff005e, 0 0 8rem #ff005e;
   animation: glow 1.5s infinite alternate;
   font-family: "Poppins";
 }
 
 @keyframes glow {
   0% {
-    text-shadow: 0 0 5px #ff005e, 0 0 1rem #ff005e, 0 0 2rem #ff005e,
-      0 0 40px #ff005e, 0 0 80px #ff005e;
+    text-shadow: 0 0 0.5rem #ff005e, 0 0 1rem #ff005e, 0 0 2rem #ff005e,
+      0 0 4rem #ff005e, 0 0 8rem #ff005e;
   }
   100% {
-    text-shadow: 0 0 1rem #00d4ff, 0 0 2rem #00d4ff, 0 0 40px #00d4ff,
-      0 0 80px #00d4ff, 0 0 160px #00d4ff;
+    text-shadow: 0 0 1rem #00d4ff, 0 0 2rem #00d4ff, 0 0 4rem #00d4ff,
+      0 0 8rem #00d4ff, 0 0 16rem #00d4ff;
   }
 }

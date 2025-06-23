@@ -140,7 +140,7 @@ const Homepage = () => {
             letterSpacing: "0.8rem",
             width: "50%",
             alignSelf: "center",
-            marginTop: "40px",
+            marginTop: "4rem",
           }}
           onClick={() => {
             navigate("/work");
@@ -161,10 +161,10 @@ const Homepage = () => {
         <button
           className="homebutton morebutton"
           style={{
-            letterSpacing: "8px",
+            letterSpacing: "0.8rem",
             width: "50%",
             alignSelf: "center",
-            margin: "20px 20px",
+            margin: "2rem 2rem",
           }}
           onClick={() => {
             navigate("/projects");
@@ -200,7 +200,7 @@ const Homepage = () => {
             <a href="#top" className="logo">
               <span
                 className="navbarLogo"
-                style={{ color: "black", lineHeight: "1", fontSize: "20px" }}
+                style={{ color: "black", lineHeight: "1", fontSize: "2rem" }}
               >
                 tushar.
                 <br />

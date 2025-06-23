@@ -5,7 +5,7 @@
   color: #1a1a1a;
 
   header {
-    padding: 16px 64px;
+    padding: 1.6rem 6.4rem;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -16,19 +16,19 @@
       display: flex;
       align-items: center;
       font-weight: bold;
-      gap: 8px;
+      gap: 0.8rem;
     }
 
     .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 100px;
-      width: 200px;
+      gap: 10rem;
+      width: 20rem;
 
       .nav-item {
         font-family: "Poppins";
-        font-size: 16px;
+        font-size: 1.6rem;
         font-weight: 700;
         position: relative;
         transition: color 0.3s ease;
@@ -71,7 +71,7 @@
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 900;
     line-height: 1.2;
   }
