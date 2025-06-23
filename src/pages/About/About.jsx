@@ -1,5 +1,5 @@
 import "./about.css";
-import LeetCodeCalendar from "leetcode-calendar";
+// import LeetCodeCalendar from "leetcode-calendar";
 import CodingProfile from "../../components/CodingProfile/CodingProfile";
 import SkillsSlider from "../../components/SkillsSlider/SkillsSlider";
 import { FaExternalLinkAlt, FaLink } from "react-icons/fa";
@@ -84,16 +84,16 @@ const About = () => {
 
     { icon: "🛫", name: `Travelling` },
   ];
-  const exampleTheme = {
-    light: [
-      "rgb(29, 10, 10)",
-      "rgba(192, 132, 245, 0.44)",
-      "rgba(192, 132, 245, 0.6)",
-      "rgba(192, 132, 245, 0.76)",
-      "rgba(192, 132, 245, 0.92)",
-    ],
-    dark: ["#d3f9d8", "#8ce99a", "#51cf66", "#37b24d", "#2b8a3e"],
-  };
+  // const exampleTheme = {
+  //   light: [
+  //     "rgb(29, 10, 10)",
+  //     "rgba(192, 132, 245, 0.44)",
+  //     "rgba(192, 132, 245, 0.6)",
+  //     "rgba(192, 132, 245, 0.76)",
+  //     "rgba(192, 132, 245, 0.92)",
+  //   ],
+  //   dark: ["#d3f9d8", "#8ce99a", "#51cf66", "#37b24d", "#2b8a3e"],
+  // };
   return (
     <>
       <div className="aboutMePage">
@@ -258,7 +258,7 @@ const About = () => {
       <div className="codingProfiles" id="codingProfiles">
         <div className="codingContainer">
           <h1>CODING PROFILES</h1>
-          <div className="leetcodeCalendar">
+          {/* <div className="leetcodeCalendar">
             <a
               href="https://leetcode.com/u/tusharrathi/"
               rel="noopener noreferrer"
@@ -273,7 +273,7 @@ const About = () => {
                 style={{ maxWidth: "160rem" }}
               />
             </a>
-          </div>
+          </div> */}
           <div className="codingHandles">
             <CodingProfile
               image="/leetcode-48.png"
