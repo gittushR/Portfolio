@@ -10,33 +10,8 @@ import {
   getGFGDetails,
   getLeetcodeDetails,
 } from "../../helpers/ApiCommunicator/ApiCommunicator";
-import FootballAnimation from "../../components/FootballAnimation/FootballAnimation";
 import { useEffect } from "react";
 
-let leetcodeStats = await getLeetcodeDetails("tusharrathi");
-let gfgStats = await getGFGDetails();
-
-let codingStats = {
-  leetcode: {
-    problemSolved: leetcodeStats.totalSolved,
-    contestRating: 1567,
-    activeSince: "June 2022",
-  },
-  codeforces: {
-    problemSolved: 911,
-    contestRating: 1600,
-    activeSince: "May 2021",
-  },
-  GFG: {
-    problemSolved: gfgStats.totalProblemsSolved,
-    score: 2100,
-    activeSince: "August 2022",
-  },
-  github: {
-    repos: 28,
-    activeSince: "August 2021",
-  },
-};
 let myCertificates = [
   {
     name: "Oracle Cloud Infrastructure 2024 Certified Application Integration Professional",
@@ -68,6 +43,30 @@ let myCertificates = [
   },
 ];
 const About = () => {
+  let leetcodeStats = async () => await getLeetcodeDetails("tusharrathi");
+  let gfgStats = async () => await getGFGDetails();
+
+  let codingStats = {
+    leetcode: {
+      problemSolved: leetcodeStats.totalSolved,
+      contestRating: 1567,
+      activeSince: "June 2022",
+    },
+    codeforces: {
+      problemSolved: 911,
+      contestRating: 1600,
+      activeSince: "May 2021",
+    },
+    GFG: {
+      problemSolved: gfgStats.totalProblemsSolved,
+      score: 2100,
+      activeSince: "August 2022",
+    },
+    github: {
+      repos: 28,
+      activeSince: "August 2021",
+    },
+  };
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
