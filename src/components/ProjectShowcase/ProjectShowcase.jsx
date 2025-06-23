@@ -1,5 +1,4 @@
-import React from "react";
-import "./ProjectShowcase.css";
+import "./projectShowcase.css";
 import { FaGithub } from "react-icons/fa";
 import SlideInOnScroll from "../../helpers/slideIn/SlideInOnScroll";
 
