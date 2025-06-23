@@ -1,7 +1,97 @@
-.projectsPage{
-    min-height: 100vh;
-    padding: 1.6rem 6.4rem;
-    .projectsContainer{
-        
+:root {
+  --background: #0d1321;
+  --textcolor: #f1f1e6;
+  --alternatecolor: #4191f9;
+}
+.projectsPage {
+  min-height: 100vh;
+  background-color: var(--background);
+  padding: 1.6rem 6.4rem;
+  display: flex;
+  justify-content: center;
+  font-family: "Poppins";
+  .projectsContainer {
+    width: 80%;
+    h1 {
+      font-size: 3.2rem;
+      color: var(--textcolor);
     }
+    .projectsGrid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3.2rem;
+      padding-top: 2rem;
+
+      .gridItem {
+        background-color: transparent;
+        border: 0.05rem var(--alternatecolor) solid;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1.2rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        .projectVid {
+          height: 30rem;
+          .project-video {
+            height: 100%;
+            width: 100%;
+            max-width: fit-content;
+            border-radius: 1rem;
+            box-shadow: 0 0.8rem 3rem rgba(0, 0, 0, 0.2);
+            object-fit: cover;
+          }
+        }
+        .projectHeader {
+          color: var(--alternatecolor);
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+
+          h2 {
+            font-size: 2.4rem;
+          }
+          .projectLinks {
+            display: flex;
+            align-items: center;
+            font-size: 2rem;
+            gap: 1.2rem;
+
+            .git-link{
+              padding-top: 0.5rem;
+            }
+
+          }
+        }
+        .projectabout {
+          font-size: 1.4rem;
+          color: var(--textcolor);
+        }
+        .projectTech {
+          .techUsed {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: start;
+            gap: 0.8rem;
+            padding-bottom: 1rem;
+            .tech {
+              font-size: 1.2rem;
+              color: var(--textcolor);
+              background-color: var(--alternatecolor);
+              padding: 0.8rem;
+              border: none;
+              border-radius: 0.8rem;
+            }
+          }
+        }
+      }
+      .gridItem:hover {
+        transform: translateZ(-0.8rem) scale(1.02);
+        box-shadow: 0 1rem 2.5rem rgba(236, 236, 236, 0.2);
+      }
+    }
+  }
 }

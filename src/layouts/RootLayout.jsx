@@ -9,7 +9,7 @@ const RootLayout = () => {
   const location = useLocation();
   const backgroundMap = {
     "/": ["white", "black"],
-    "/projects": ["#2b2d42", "#edf2f4"],
+    "/projects": ["#0d1321", "#f1f1e6"],
     "/about": ["#0D0D0D", "#d3fbd8", "#CADCC8"],
     "/work": ["#bffcfb", "#19647e"],
   };

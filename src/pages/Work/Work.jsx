@@ -1,8 +1,12 @@
 import { FaDotCircle } from "react-icons/fa";
 import "./work.css";
 import CompanyWorks from "../../components/CompanyWorks/CompanyWorks";
+import { useEffect } from "react";
 
 const Work = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="workExperience">
       <div className="workexContainer">

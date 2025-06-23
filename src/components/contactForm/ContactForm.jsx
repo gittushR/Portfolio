@@ -44,7 +44,13 @@ const ContactForm = () => {
         </div>
 
         {/* Form */}
-        <div className="contact-form" onSubmit={handleSubmit}>
+        <form name="contact-form" netlify netlify-honeypot="bot-field" hidden>
+          <input type="text" name="name" />
+          <input type="email" name="email" />
+          <textarea name="message"></textarea>
+        </form>
+        <form className="contact-form" onSubmit={handleSubmit} method="post">
+          <input type="hidden" name="form-name" value="contact-form" />
           <div className="input-group">
             <input
               type="text"
@@ -93,7 +99,7 @@ const ContactForm = () => {
               <div className="submit-underline"></div>
             </button>
           </div>
-        </div>
+        </form>
       </div>
     </div>
   );

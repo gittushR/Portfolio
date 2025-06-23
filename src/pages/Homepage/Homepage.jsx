@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./homepage.css";
 import Footer from "../../components/Footer/Footer";
 import Stat from "../../components/homePageStat/Stat";
@@ -11,11 +11,10 @@ import {
   FaLink,
 } from "react-icons/fa";
 import ContactForm from "../../components/contactForm/ContactForm";
-import { Link } from "react-router";
-import SocialLinks from "../../components/SocialLinks/SocialLinks";
-//import ExperienceTimeline from "../../components/Experience/Experience";
+import { Link, useNavigate } from "react-router";
 
 const Homepage = () => {
+  const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -28,10 +27,12 @@ const Homepage = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
-      <div className="hero">
+      <div className="hero" id="top">
         <div className="hero-bg"></div>
         <div className="intro">
           <h1>Hi! I’m</h1>
@@ -51,8 +52,26 @@ const Homepage = () => {
             as an Associate Software Engineer.
           </p>
           <div className="buttons">
-            <button className="homebutton view-resume">View Resume</button>
-            <button className="homebutton hire-btn">Hire ME</button>
+            <button
+              className="homebutton view-resume"
+              onClick={() =>
+                window.open(
+                  "https://drive.google.com/file/d/1_V9mEL-UQ3KR8jd2exqDj8o55TpY2YUO/view?usp=drive_link",
+                  "_blank",
+                  "noopener noreferrer"
+                )
+              }
+            >
+              View Resume
+            </button>
+            <button
+              className="homebutton hire-btn"
+              onClick={() => {
+                window.location.href = `mailto:tushar@example.com?subject=Job%20Opportunity&body=Hi%20Tushar,%0A%0AI%20have%20an%20offer%20for%20you...`;
+              }}
+            >
+              Hire ME
+            </button>
           </div>
         </div>
         <img src={"/image3.png"} alt="Tushar Rathi" className="profile-image" />
@@ -71,7 +90,6 @@ const Homepage = () => {
         <div className="line">
           <hr />
         </div>
-        {/* <img src="/public/bot.png" alt="About Me" className="myImg" /> */}
         <Skills></Skills>
         <div className="frame">
           <p className="myPara">
@@ -124,6 +142,9 @@ const Homepage = () => {
             alignSelf: "center",
             marginTop: "40px",
           }}
+          onClick={() => {
+            navigate("/work");
+          }}
         >
           Know More <FaExternalLinkAlt></FaExternalLinkAlt>
         </button>
@@ -144,6 +165,9 @@ const Homepage = () => {
             width: "50%",
             alignSelf: "center",
             margin: "20px 20px",
+          }}
+          onClick={() => {
+            navigate("/projects");
           }}
         >
           See More <FaExternalLinkAlt></FaExternalLinkAlt>
@@ -173,7 +197,7 @@ const Homepage = () => {
         </div>
         <div className="links">
           <div className="pageLinks-container">
-            <Link to={"/"} className="logo">
+            <a href="#top" className="logo">
               <span
                 className="navbarLogo"
                 style={{ color: "black", lineHeight: "1", fontSize: "20px" }}
@@ -182,15 +206,15 @@ const Homepage = () => {
                 <br />
                 rathi
               </span>
-            </Link>
+            </a>
             <div className="pageLinks">
-              <Link>
+              <Link to={"/about"}>
                 About <FaExternalLinkSquareAlt></FaExternalLinkSquareAlt>{" "}
               </Link>
-              <Link>
+              <Link to={"/work"}>
                 Work <FaExternalLinkSquareAlt></FaExternalLinkSquareAlt>
               </Link>
-              <Link>
+              <Link to={"/projects"}>
                 Projects <FaExternalLinkSquareAlt></FaExternalLinkSquareAlt>
               </Link>
               <Link>
@@ -199,7 +223,14 @@ const Homepage = () => {
             </div>
           </div>
           <div className="other">
-            <button className="homebutton submitbutton">Email Me</button>
+            <button
+              className="homebutton submitbutton"
+              onClick={() => {
+                window.location.href = `mailto:tushar@example.com?subject=Job%20Opportunity&body=Hi%20Tushar,%0A%0AI%20have%20an%20offer%20for%20you...`;
+              }}
+            >
+              Email Me
+            </button>
             <div className="footer">
               <Footer></Footer>
             </div>

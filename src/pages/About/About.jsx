@@ -11,6 +11,7 @@ import {
   getLeetcodeDetails,
 } from "../../helpers/ApiCommunicator/ApiCommunicator";
 import FootballAnimation from "../../components/FootballAnimation/FootballAnimation";
+import { useEffect } from "react";
 
 let leetcodeStats = await getLeetcodeDetails("tusharrathi");
 let gfgStats = await getGFGDetails();
@@ -67,18 +68,9 @@ let myCertificates = [
   },
 ];
 const About = () => {
-  // const [isScrolled, setIsScrolled] = useState(false);
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const scrollY = window.scrollY;
-  //     setIsScrolled(scrollY >= 1);
-  //   };
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const importantDates = [
     { date: "Aug 2024", event: "First full-time job at Oracle" },
     { date: "May 2024", event: "Graduated with a CS Degree" },

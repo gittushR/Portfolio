@@ -22,11 +22,15 @@ const ProjectShowcase = () => {
               Your own not so polite AI companion !!
             </h2>
             <p className="project-description">
-              Full stack social media application built with React, Node.js,
-              Express.js, MongoDB, Socket.io and AWS S3.
+              A full stack SaaS AI platform with a sarcastic edge, built using
+              React, Node.js, and Gemini 2.0 API, supporting image and text
+              input with secure, session-persistent interactions.
             </p>
             <div className="buttons">
-              <a href="#" className="homebutton projectbutton">
+              <a
+                href="https://github.com/gittushR/RowdyAI"
+                className="homebutton projectbutton"
+              >
                 GITHUB <FaGithub></FaGithub>
               </a>
             </div>
@@ -37,23 +41,28 @@ const ProjectShowcase = () => {
         <div className="project-container-end">
           <div className="project-image-wrapper">
             <img
-              src={"./rowdyChat.png"}
+              src={"./docthor.png"}
               alt="Project"
               className="project-image-end"
             />
           </div>
           <div className="project-details-end">
             <h2 className="project-title">
-              <span className="highlight">Rowdy AI</span>
+              <span className="highlight">DOCTHOR</span>
               <br />
-              Your own not so polite AI companion !!
+              An AI doc that listens, looks, and <br></br>chats back with health
+              tips.
             </h2>
             <p className="project-description">
-              Full stack social media application built with React, Node.js,
-              Express.js, MongoDB, Socket.io and AWS S3.
+              Built using Python, FastAPI, and Gradio, this AI doctor app
+              processes voice and image inputs to deliver health suggestions via
+              text-to-speech in a multi-modal setup.
             </p>
             <div className="buttons">
-              <a href="#" className="homebutton projectbutton">
+              <a
+                href="https://github.com/gittushR/DocThor"
+                className="homebutton projectbutton"
+              >
                 GITHUB <FaGithub></FaGithub>
               </a>
             </div>
@@ -63,24 +72,25 @@ const ProjectShowcase = () => {
       <SlideInOnScroll fromLeft={true}>
         <div className="project-container">
           <div className="project-image-wrapper">
-            <img
-              src={"./rowdyChat.png"}
-              alt="Project"
-              className="project-image"
-            />
+            <img src={"./jobapp.png"} alt="Project" className="project-image" />
           </div>
           <div className="project-details">
             <h2 className="project-title">
-              <span className="highlight">Rowdy AI</span>
+              <span className="highlight">Job Listings</span>
               <br />
-              Your own not so polite AI companion !!
+              An full stack, clean and simple job portal for posting and
+              browsing jobs, built from scratch.
             </h2>
             <p className="project-description">
-              Full stack social media application built with React, Node.js,
-              Express.js, MongoDB, Socket.io and AWS S3.
+              A full-stack job portal built with React and Spring Boot,
+              featuring RESTful APIs, Spring Security, and modular admin-user
+              workflows.
             </p>
             <div className="buttons">
-              <a href="#" className="homebutton projectbutton">
+              <a
+                href="https://github.com/gittushR/Job_App_Backend"
+                className="homebutton projectbutton"
+              >
                 GITHUB <FaGithub></FaGithub>
               </a>
             </div>
