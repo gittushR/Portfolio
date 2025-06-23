@@ -67,7 +67,7 @@ const Homepage = () => {
             <button
               className="homebutton hire-btn"
               onClick={() => {
-                window.location.href = `mailto:tushar@example.com?subject=Job%20Opportunity&body=Hi%20Tushar,%0A%0AI%20have%20an%20offer%20for%20you...`;
+                window.location.href = `mailto:tusharrathi2021@outlook.com?subject=Job%20Opportunity&body=Hi%20Tushar,%0A%0AI%20have%20an%20offer%20for%20you...`;
               }}
             >
               Hire ME
@@ -226,7 +226,7 @@ const Homepage = () => {
             <button
               className="homebutton submitbutton"
               onClick={() => {
-                window.location.href = `mailto:tushar@example.com?subject=Job%20Opportunity&body=Hi%20Tushar,%0A%0AI%20have%20an%20offer%20for%20you...`;
+                window.location.href = `mailto:tusharrathi2021@outlook.com?subject=Job%20Opportunity&body=Hi%20Tushar,%0A%0AI%20have%20an%20offer%20for%20you...`;
               }}
             >
               Email Me
