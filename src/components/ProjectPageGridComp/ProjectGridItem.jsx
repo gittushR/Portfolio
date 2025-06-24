@@ -23,7 +23,7 @@ const ProjectGridItem = ({
           fontWeight: "800",
         }}
       >
-        <a href={playlink}>
+        <a href={playlink} rel="noopener noreferrer" target="_blank">
           {projectName === "Foodcourt" ? (
             <FaExternalLinkAlt></FaExternalLinkAlt>
           ) : (
@@ -49,7 +49,12 @@ const ProjectGridItem = ({
         <h2>{projectName}</h2>
         <div className="projectLinks">
           {playlink && playButton}
-          <a href={gitLink} className="git-link">
+          <a
+            href={gitLink}
+            className="git-link"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
             <FaGithub></FaGithub>
           </a>
         </div>

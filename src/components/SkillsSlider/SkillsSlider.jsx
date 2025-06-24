@@ -2,30 +2,30 @@ import React from "react";
 import "./skillsSlider.css";
 
 const skills = [
-  ["C++", "/cpp.png"],
-  ["Java", "/java.png"],
-  ["Python", "/py.png"],
-  ["Javascript", "/js.png"],
-  ["Typescript", "/ts.png"],
-  ["HTML", "/html.png"],
-  ["SQL", "/sql.png"],
-  ["ReactJS", "/react.png"],
-  ["Express", "/express.png"],
-  ["FlutterSDK", "/flutter.png"],
-  ["MaterialUI", "/mat.png"],
-  ["TailwindCSS", "/tail.png"],
-  ["Git", "/git.png"],
-  ["Postman", "/post.png"],
-  ["Spring Boot", "/springBoot.png"],
-  ["Node", "/node.png"],
-  ["FastAPI", "/fast.png"],
-  ["PostgreSQL", "/postg.png"],
-  ["MongoDB", "/mongo.png"],
-  ["Firebase", "/fire.png"],
-  ["Latex", "/latex.png"],
-  ["Oracle Integration Cloud", "/oiccloud.png"],
+  ["C++", "/cpp.webp"],
+  ["Java", "/java.webp"],
+  ["Python", "/py.webp"],
+  ["Javascript", "/js.webp"],
+  ["Typescript", "/ts.webp"],
+  ["HTML", "/html.webp"],
+  ["SQL", "/sql.webp"],
+  ["ReactJS", "/react.webp"],
+  ["Express", "/express.webp"],
+  ["FlutterSDK", "/flutter.webp"],
+  ["MaterialUI", "/mat.webp"],
+  ["TailwindCSS", "/tail.webp"],
+  ["Git", "/git.webp"],
+  ["Postman", "/post.webp"],
+  ["Spring Boot", "/springBoot.webp"],
+  ["Node", "/node.webp"],
+  ["FastAPI", "/fast.webp"],
+  ["PostgreSQL", "/postg.webp"],
+  ["MongoDB", "/mongo.webp"],
+  ["Firebase", "/fire.webp"],
+  ["Latex", "/latex.webp"],
+  ["Oracle Integration Cloud", "/oiccloud.webp"],
   ["MS SQL Server Integration Services", "/mssql.svg"],
-  ["Docker", "/docker.png"],
+  ["Docker", "/docker.webp"],
 ];
 
 const SkillsSlider = () => {
@@ -41,7 +41,7 @@ const SkillsSlider = () => {
               .sort(() => Math.random() - 0.5)
               .map((skill, idx) => (
                 <div className="snake-skill" key={`${i}-${idx}`}>
-                  <img src={skill[1]} alt="skill logo" />
+                  <img src={skill[1]} alt="skill logo" loading="lazy" />
                   <div className="skillName">{skill[0]}</div>
                 </div>
               ))}

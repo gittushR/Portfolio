@@ -11,7 +11,7 @@ const RootLayout = () => {
     "/": ["white", "black"],
     "/projects": ["#0d1321", "#f1f1e6"],
     "/about": ["#0D0D0D", "#d3fbd8", "#CADCC8"],
-    "/work": ["#bffcfb", "#19647e"],
+    "/work": [ "#19647e","#bffcfb"],
   };
   const bgColor = backgroundMap[location.pathname][0] || "#000000";
   const fontColor = backgroundMap[location.pathname][1] || "black";

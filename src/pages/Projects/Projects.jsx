@@ -92,15 +92,20 @@ const Projects = () => {
           <div className="gridItem">
             <div className="projectVid">
               <img
-                src="/forkify.png"
+                src="/forkify.webp"
                 alt="forkify App Image"
                 className="projectVid"
+                loading="lazy"
               />
             </div>
             <div className="projectHeader">
               <h2>Forkify</h2>
               <div className="projectLinks">
-                <a href={"https://github.com/gittushR/forkifyApp"}>
+                <a
+                  href={"https://github.com/gittushR/forkifyApp"}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
                   <FaGithub></FaGithub>
                 </a>
               </div>
@@ -133,15 +138,20 @@ const Projects = () => {
           <div className="gridItem">
             <div className="projectVid">
               <img
-                src="/buyme.png"
+                src="/buyme.webp"
                 alt="forkify App Image"
                 className="projectVid"
+                loading="lazy"
               />
             </div>
             <div className="projectHeader">
               <h2>BuyMe</h2>
               <div className="projectLinks">
-                <a href={"https://github.com/gittushR/buyme"}>
+                <a
+                  href={"https://github.com/gittushR/buyme"}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
                   <FaGithub></FaGithub>
                 </a>
               </div>

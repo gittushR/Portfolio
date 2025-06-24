@@ -9,9 +9,10 @@ const ProjectShowcase = () => {
         <div className="project-container">
           <div className="project-image-wrapper">
             <img
-              src={"./rowdyChat.png"}
+              src={"./rowdyChat.webp"}
               alt="Project"
               className="project-image"
+              loading="lazy"
             />
           </div>
           <div className="project-details">
@@ -29,6 +30,8 @@ const ProjectShowcase = () => {
               <a
                 href="https://github.com/gittushR/RowdyAI"
                 className="homebutton projectbutton"
+                rel="noopener noreferrer"
+                target="_blank"
               >
                 GITHUB <FaGithub></FaGithub>
               </a>
@@ -40,9 +43,10 @@ const ProjectShowcase = () => {
         <div className="project-container-end">
           <div className="project-image-wrapper">
             <img
-              src={"./docthor.png"}
+              src={"./docthor.webp"}
               alt="Project"
               className="project-image-end"
+              loading="lazy"
             />
           </div>
           <div className="project-details-end">
@@ -61,6 +65,8 @@ const ProjectShowcase = () => {
               <a
                 href="https://github.com/gittushR/DocThor"
                 className="homebutton projectbutton"
+                rel="noopener noreferrer"
+                target="_blank"
               >
                 GITHUB <FaGithub></FaGithub>
               </a>
@@ -71,7 +77,12 @@ const ProjectShowcase = () => {
       <SlideInOnScroll fromLeft={true}>
         <div className="project-container">
           <div className="project-image-wrapper">
-            <img src={"./jobapp.png"} alt="Project" className="project-image" />
+            <img
+              src={"./jobapp.webp"}
+              alt="Project"
+              className="project-image"
+              loading="lazy"
+            />
           </div>
           <div className="project-details">
             <h2 className="project-title">
@@ -89,6 +100,8 @@ const ProjectShowcase = () => {
               <a
                 href="https://github.com/gittushR/Job_App_Backend"
                 className="homebutton projectbutton"
+                rel="noopener noreferrer"
+                target="_blank"
               >
                 GITHUB <FaGithub></FaGithub>
               </a>

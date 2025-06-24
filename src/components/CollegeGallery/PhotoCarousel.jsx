@@ -3,13 +3,13 @@ import "./PhotoCarousel.css";
 
 // Add your image paths here (local or URL-based)
 const photos = [
-  "/college1.jpg",
-  "/college2.jpg",
-  "/college3.jpg",
-  "/college4.jpg",
-  "/college5.jpg",
-  "/college6.png",
-  "/college7.jpg",
+  "/college1.webp",
+  "/college2.webp",
+  "/college3.webp",
+  "/college4.webp",
+  "/college5.webp",
+  "/college6.webp",
+  "/college7.webp",
 ];
 
 const PhotoCarousel = () => {
@@ -38,7 +38,7 @@ const PhotoCarousel = () => {
         >
           {photos.map((photo, index) => (
             <div className="carousel-slide" key={index}>
-              <img src={photo} alt={`Slide ${index}`} />
+              <img loading="lazy" src={photo} alt={`Slide ${index}`} />
             </div>
           ))}
         </div>

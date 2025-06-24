@@ -10,7 +10,7 @@ const CompanyWorks = ({ workTitle, listEle }) => {
           className="myworkheader"
           onClick={() => setIsOpen((prev) => (prev = !prev))}
         >
-          <FaDotCircle></FaDotCircle> {workTitle}{" "}
+          <FaDotCircle className="worklistdot"></FaDotCircle> {workTitle}{" "}
           <span className={`open-toggle ${!isOpen ? "pulse" : ""}`}>
             {isOpen ? "▲" : "▼"}
           </span>

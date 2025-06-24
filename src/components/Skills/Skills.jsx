@@ -6,49 +6,49 @@ const Skills = () => {
     <div className="skills">
       <div class="skills__row">
         <div class="skills__item">
-          <img src="/sql.png" alt="" />
+          <img loading="lazy" src="/sql.webp" alt="" />
           <div class="skills__item-name">SQL</div>
         </div>
         <div class="skills__item">
-          <img src="/react.png" alt="" />
+          <img loading="lazy" src="/react.webp" alt="" />
           <div class="skills__item-name">REACT</div>
         </div>
         <div class="skills__item ">
-          <img src="/express.png" alt="" />
+          <img loading="lazy" src="/express.webp" alt="" />
           <div class="skills__item-name">EXPRESS.JS</div>
         </div>
       </div>
       <div class="skills__row">
         <div class="skills__item">
-          <img src="/cpp.png" alt="" />
+          <img loading="lazy" src="/cpp.webp" alt="" />
           <div class="skills__item-name">C++</div>
         </div>
         <div class="skills__item">
-          <img src="/java.png" alt="" />
+          <img loading="lazy" src="/java.webp" alt="" />
           <div class="skills__item-name">JAVA</div>
         </div>
         <div class="skills__item">
-          <img src="/js.png" alt="" />
+          <img loading="lazy" src="/js.webp" alt="" />
           <div class="skills__item-name">JAVASCRIPT</div>
         </div>
 
         <div class="skills__item">
-          <img src="/python.png" alt="" />
+          <img loading="lazy" src="/python.webp" alt="" />
           <div class="skills__item-name">PYTHON</div>
         </div>
       </div>
       <div class="skills__row">
         <div class="skills__item">
-          <img src="/springBoot.png" alt="" />
+          <img loading="lazy" src="/springBoot.webp" alt="" />
           <div class="skills__item-name">SPRING BOOT</div>
         </div>
 
         <div class="skills__item">
-          <img src="/node.png" alt="" />
+          <img loading="lazy" src="/node.webp" alt="" />
           <div class="skills__item-name">NODE.JS</div>
         </div>
         <div class="skills__item ">
-          <img src="/mongo.png" alt="" />
+          <img loading="lazy" src="/mongo.webp" alt="" />
           <div class="skills__item-name">MONGODB</div>
         </div>
       </div>

@@ -2,7 +2,7 @@
   min-height: 100vh;
   padding: 1.6rem 6.4rem;
   font-family: "Poppins";
-  background-color: #bffcfb;
+  background-color: #19647e;
 
   .workexContainer {
     display: flex;
@@ -31,12 +31,13 @@
           transition: filter 0.3s ease-in-out;
           height: 18rem;
           object-fit: cover;
+          margin-left: 3rem;
         }
         .intelLogo {
           transition: filter 0.3s ease-in-out;
           height: 7.5rem;
           object-fit: cover;
-          margin-left: 3rem;
+          margin-left: 6rem;
           margin-top: 5.5rem;
           margin-bottom: 5.5rem;
         }
@@ -47,10 +48,10 @@
           filter: drop-shadow(0 0 1rem #00c8fd);
         }
         .timeLine {
-          color: #28afb0;
+          color: #19647e;
           font-size: 4rem;
           font-weight: 700;
-          opacity: 0.6;
+          opacity: 0.7;
           display: flex;
           flex-direction: column;
           text-align: end;
@@ -69,15 +70,15 @@
         .team {
           position: absolute;
           align-self: flex-end;
-          font-size: 2rem;
+          font-size: 1.4rem;
           text-align: right;
           width: 60%;
-          font-family: "Dancing Script";
-          font-weight: 900;
+          font-family: "Poppins";
+          font-weight: 600;
           top: -4rem;
           right: 0;
         }
-        
+
         .mywork {
           display: flex;
           flex-direction: column;
@@ -86,7 +87,7 @@
           .myWorkContainer {
             display: flex;
             flex-direction: column;
-            width: 80%;
+            width: 90%;
             padding-top: 2rem;
 
             .myworkheader {

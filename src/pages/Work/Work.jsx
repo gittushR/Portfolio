@@ -1,4 +1,3 @@
-import { FaDotCircle } from "react-icons/fa";
 import "./work.css";
 import CompanyWorks from "../../components/CompanyWorks/CompanyWorks";
 import { useEffect } from "react";
@@ -12,7 +11,12 @@ const Work = () => {
       <div className="workexContainer">
         <div className="company">
           <div className="compHeader">
-            <img src="/oracle.png" alt="oracle Logo" className="compLogo" />
+            <img
+              src="/oracle.webp"
+              alt="oracle Logo"
+              className="compLogo"
+              loading="lazy"
+            />
             <div className="timeLine">
               <span className="pos">Associate Software Engineer</span>
               <span className="dates">AUGUST 2024 ONWARDS</span>
@@ -113,9 +117,10 @@ const Work = () => {
         <div className="company">
           <div className="compHeader">
             <img
-              src="/intel.png"
-              alt="oracle Logo"
+              src="/intel.webp"
+              alt="Intel Logo"
               className="compLogo intelLogo"
+              loading="lazy"
             />
             <div className="timeLine">
               <span className="pos">Software Intern</span>

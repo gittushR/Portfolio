@@ -2,20 +2,31 @@ import { useEffect, useState } from "react";
 import "./codingProfile.css";
 import {
   getGFGDetails,
+  getGitRepos,
   getLeetcodeDetails,
+  getLeetcodeRating,
 } from "../../helpers/ApiCommunicator/ApiCommunicator";
 
 const CodingProfile = ({ image, handleName, link, det }) => {
   let [leetcodeProbs, setLeetcodeProbs] = useState(null);
   let [gfgprobs, setgfgProbs] = useState(null);
+  let [leetcodeRating, setLeetcodeRating] = useState(null);
+  let [gitRepos, setGitRepos] = useState(null);
 
   useEffect(() => {
     (async () => {
       try {
         let leetcodeStats = getLeetcodeDetails("tusharrathi");
         let gfgStats = getGFGDetails();
+        let lcrating = getLeetcodeRating().then((value) => {
+          const roundedValue = Math.round(value);
+          return roundedValue;
+        });
+        let gitRepoCount = getGitRepos();
         setLeetcodeProbs(leetcodeStats);
         setgfgProbs(gfgStats);
+        setLeetcodeRating(lcrating);
+        setGitRepos(gitRepoCount);
       } catch (error) {
         console.log("Failed to fetch coding problems: " + error);
       }
@@ -41,7 +52,7 @@ const CodingProfile = ({ image, handleName, link, det }) => {
   if (handleName === "gittushR") {
     listEle = (
       <ul>
-        <li>Public Repos: {det.repos}</li>
+        <li>Public Repos: {gitRepos ? gitRepos : "Loading..."}</li>
         <li>Active Since: {det.activeSince}</li>
       </ul>
     );
@@ -50,7 +61,9 @@ const CodingProfile = ({ image, handleName, link, det }) => {
     listEle = (
       <ul>
         <li>Problems Solved: {leetcodeProbs ? leetcodeProbs : "Loading..."}</li>
-        <li>Coding Score: {det.score}</li>
+        <li>
+          Contest Rating: {leetcodeRating ? leetcodeRating : "Loading..."}
+        </li>
         <li>Active Since: {det.activeSince}</li>
       </ul>
     );
@@ -60,7 +73,7 @@ const CodingProfile = ({ image, handleName, link, det }) => {
       <a href={link} rel="noopener noreferrer" target="_blank">
         <div className="iconHeader">
           <div className="logo">
-            <img src={image}></img>
+            <img src={image} loading="lazy"></img>
           </div>
           <div className="handle">{handleName}</div>
         </div>

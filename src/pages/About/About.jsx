@@ -10,28 +10,28 @@ import { useEffect } from "react";
 let myCertificates = [
   {
     name: "Oracle Cloud Infrastructure 2024 Certified Application Integration Professional",
-    logo: "/oic.png",
+    logo: "/oic.webp",
     desc: `Certified in designing and implementing integrations using Oracle Integration Cloud (OIC), with hands-on experience building middleware layers and translating end-to-end application requirements into scalable, workflow-based solutions.`,
     link: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=660DEA8D67B2E70E130427C9D5024CD88EE27AB3078DC82572063D713D3E7948",
     class: "Oracle-cert",
   },
   {
     name: "Oracle Redwood Application 2024 Certified Developer Associate",
-    logo: "/vbcs.png",
+    logo: "/vbcs.webp",
     desc: `Certified in designing and developing user experiences using the Redwood Design System (RDS) and Oracle Visual Builder Studio, with validated expertise in crafting modern applications on the Redwood platform.`,
     link: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=EBE1564ABAEA9A44E67D6FFD28FD89C27CF185D036F1DA68C639CFA26141CC83",
     class: "Oracle-cert",
   },
   {
     name: "Intel -  Recognized for Fearless Innovation (April 2024)",
-    logo: "/intel-96.png",
+    logo: "/intel-96.webp",
     desc: `Awarded by leadership for successfully delivering a key result in R1 by optimizing internal systems, enabling data integration layers, and driving end-to-end automation—significantly contributing to tech debt reduction.`,
     link: "https://drive.google.com/file/d/1iqs87LcvD9WgVbrptw81xgO7MNzRZ78B/view?usp=sharing",
     class: "intel-cert",
   },
   {
     name: "IIT Bombay -  Java Training Certificate",
-    logo: "/IITB.png",
+    logo: "/IITB.webp",
     desc: `Completed Java training and certification under the Spoken Tutorial Project by IIT Bombay, organized at NIT Silchar, with a proctored online exam validating core Java programming skills.`,
     link: "https://drive.google.com/file/d/1H30SL4wGFZXtQul-BrgPB1lzKmmB4wbe/view?usp=drive_link",
     class: "IITB",
@@ -92,7 +92,7 @@ const About = () => {
         <div className="aboutMeContainer">
           <div className="aboutMyselfBox">
             <div className="myImage">
-              <img src="/profile2.png" alt="my photo" />
+              <img src="/profile2.png" alt="my photo" loading="lazy" />
             </div>
             <div className="myselfbox1">
               <div className="div1">Hey there, I AM</div>
@@ -240,7 +240,7 @@ const About = () => {
           style={{
             zIndex: 2,
             backgroundImage:
-              "url(https://www.citypng.com/public/uploads/preview/white-double-arrow-to-down-icon-hd-png-7017516950328142dcfgauvah.png)",
+              "url(https://www.citypng.com/public/uploads/preview/white-double-arrow-to-down-icon-hd-png-7017516950328142dcfgauvah.webp)",
             height: "4rem",
             width: "4rem",
           }}
@@ -306,6 +306,7 @@ const About = () => {
                     src={certificate.logo}
                     alt="certificateLogo"
                     className={certificate.class}
+                    loading="lazy"
                   />
                 </div>
                 <div className="certificateDesc">
@@ -340,7 +341,7 @@ const About = () => {
           <h1>COLLEGE</h1>
           <div className="college">
             <div className="collegeLogo">
-              <img src="/nits.png" alt="College Logo" />
+              <img src="/nits.webp" alt="College Logo" loading="lazy" />
             </div>
             <div className="collegeDesc">
               <div className="collegeHeader">
@@ -406,7 +407,7 @@ const About = () => {
           <div className="css-society">
             <div className="cssHeader">
               <div className="cssLogo">
-                <img src="/css.png" alt="css Logo" />
+                <img src="/css.webp" alt="css Logo" loading="lazy" />
               </div>
               <h3>THE COMPUTER SCIENCE SOCIETY, NITS</h3>
             </div>
@@ -421,7 +422,8 @@ const About = () => {
             <div className="cssHeader">
               <div className="cssLogo">
                 <img
-                  src="/nits.png"
+                  loading="lazy"
+                  src="/nits.webp"
                   alt="NIT Logo"
                   style={{ height: "4rem", width: "4rem" }}
                 />

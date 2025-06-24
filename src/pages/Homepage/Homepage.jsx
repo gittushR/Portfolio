@@ -74,7 +74,12 @@ const Homepage = () => {
             </button>
           </div>
         </div>
-        <img src={"/image3.png"} alt="Tushar Rathi" className="profile-image" />
+        <img
+          loading="lazy"
+          src={"/image3.webp"}
+          alt="Tushar Rathi"
+          className="profile-image"
+        />
       </div>
       <div class={`arrow animated bounce ${isScrolled ? "fade" : ""}`}></div>
       <div className="exploreMore">Explore More</div>
