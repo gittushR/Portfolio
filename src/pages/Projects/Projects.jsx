@@ -15,7 +15,7 @@ const Projects = () => {
         <div className="projectsGrid">
           <ProjectGridItem
             projectName={"ROWDY AI"}
-            videoLink={"/Video/RowdyV2.mp4"}
+            videoLink={"/Video/Rowdyv2.mp4"}
             gitLink={"https://github.com/gittushR/RowdyAI"}
             aboutProj={`Built a bold, sarcastic AI platform that delivers dynamic text
                 and image interactions, enhancing user engagement and deepening
@@ -32,7 +32,7 @@ const Projects = () => {
           ></ProjectGridItem>
           <ProjectGridItem
             projectName={"DOCTHOR"}
-            videoLink={"/Video/docthor.mp4"}
+            videoLink={"/Video/Docthor.mp4"}
             gitLink={"https://github.com/gittushR/DocThor"}
             aboutProj={`An AI-driven virtual doctor that processes voice and image
                 inputs to provide health suggestions in a conversational,
@@ -50,7 +50,7 @@ const Projects = () => {
           ></ProjectGridItem>
           <ProjectGridItem
             projectName={"rollORhold"}
-            videoLink={"/Video/rollorhold.mp4"}
+            videoLink={"/Video/Rollorhold.mp4"}
             gitLink={"https://github.com/gittushR/RollORHold"}
             aboutProj={`An AI-driven virtual doctor that processes voice and image
                 inputs to provide health suggestions in a conversational,
@@ -66,7 +66,7 @@ const Projects = () => {
           ></ProjectGridItem>
           <ProjectGridItem
             projectName={"Smashbug"}
-            videoLink={"/Video/smashbug.mp4"}
+            videoLink={"/Video/Smashbug.mp4"}
             gitLink={"https://github.com/gittushR/RollORHold"}
             aboutProj={`An AI-driven virtual doctor that processes voice and image
                 inputs to provide health suggestions in a conversational,
@@ -77,7 +77,7 @@ const Projects = () => {
           ></ProjectGridItem>
           <ProjectGridItem
             projectName={"Job Listings"}
-            videoLink={"/Video/jobApp.mp4"}
+            videoLink={"/Video/Jobapp.mp4"}
             gitLink={"https://github.com/gittushR/Job_App_Backend"}
             aboutProj={`Built a job portal that enables efficient job posting management and discovery through a streamlined user experience. Focused mainly on building the seamless API-driven communication between systems. `}
             techUsed={[
@@ -129,7 +129,7 @@ const Projects = () => {
           </div>
           <ProjectGridItem
             projectName={"Foodcourt"}
-            videoLink={"/Video/footcourt.mp4"}
+            videoLink={"/Video/Footcourt.mp4"}
             gitLink={"https://github.com/gittushR/Footcourt"}
             aboutProj={`Designed and developed a fully responsive food delivery website with a strong focus on clean UI, intuitive navigation, and engaging user experience.  `}
             techUsed={["Vanilla JS", "HTML", "CSS", "Media Queries"]}
