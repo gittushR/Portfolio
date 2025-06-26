@@ -14,8 +14,6 @@ const ContactForm = () => {
     message: "",
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -32,10 +30,8 @@ const ContactForm = () => {
     })
       .then(() => {
         alert("Success!");
-        setIsSubmitting(true);
       })
       .catch((error) => alert(error));
-    setIsSubmitting(false);
     e.preventDefault();
   };
 
@@ -93,11 +89,10 @@ const ContactForm = () => {
           <div className="submit-container">
             <button
               type="submit"
-              disabled={isSubmitting}
               className="submitbutton"
               onClick={handleSubmit}
             >
-              {isSubmitting ? "SENDING..." : "SUBMIT"}
+              SUBMIT
               <div className="submit-underline"></div>
             </button>
           </div>
