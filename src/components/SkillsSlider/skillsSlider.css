@@ -1,5 +1,5 @@
 .snake-illusion-wrapper {
-  background: #111;
+  background: var(--background);
   padding: 4rem 0;
   display: flex;
   flex-direction: column;
@@ -42,7 +42,7 @@
     width: auto;
   }
   .skillName {
-    color: #c8fcea;
+    color: var(--thirdColor);
     font-size: 1.6rem;
   }
 }
@@ -67,11 +67,11 @@
 }
 
 .left .snake-track {
-  animation: scroll-left 100s linear infinite;
+  animation: scroll-left 45s linear infinite;
 }
 
 .right .snake-track {
-  animation: scroll-right 80s linear infinite;
+  animation: scroll-right 25s linear infinite;
 }
 
 /* Delays for illusion */

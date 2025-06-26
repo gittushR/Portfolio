@@ -2,7 +2,7 @@
   min-height: 100vh;
   padding: 1.6rem 6.4rem;
   font-family: "Poppins";
-  background-color: #19647e;
+  background-color: var(--background);
 
   .workexContainer {
     display: flex;
@@ -14,11 +14,11 @@
       display: flex;
       flex-direction: column;
       width: 90%;
-      border: solid 0.5rem #f4f3ee;
+      /* border: solid 0.5rem var(--divColor); */
       padding: 1.6rem;
       padding-right: 3rem;
       /* border-radius: 2rem; */
-      background-color: #f4f3ee;
+      background-color: var(--divColor);
       padding-bottom: 2.4rem;
 
       .compHeader {
@@ -48,10 +48,9 @@
           filter: drop-shadow(0 0 1rem #00c8fd);
         }
         .timeLine {
-          color: #19647e;
+          color: var(--standout);
           font-size: 4rem;
           font-weight: 700;
-          opacity: 0.7;
           display: flex;
           flex-direction: column;
           text-align: end;
@@ -64,7 +63,7 @@
       .aboutWork {
         display: flex;
         flex-direction: column;
-        color: #19647e;
+        color: var(--text);
         position: relative;
 
         .team {
@@ -77,6 +76,7 @@
           font-weight: 600;
           top: -4rem;
           right: 0;
+          color: var(--secondaryText);
         }
 
         .mywork {
@@ -97,6 +97,7 @@
               align-items: center;
               gap: 0.5rem;
               margin-bottom: 1rem;
+              color: var(--standout);
             }
             .workDone {
               margin-left: 4rem;

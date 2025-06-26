@@ -17,6 +17,7 @@
     gap: 5rem;
     padding: 2rem 2rem;
     position: relative;
+    color: var(--secondaryText);
 
     .clipped-bg {
       position: absolute;

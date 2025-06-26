@@ -13,8 +13,4 @@
     font-size: 2rem;
   }
 }
-.stroke-text {
-  color: transparent;
-  -webkit-text-stroke: 0.2rem black;
-  text-stroke: 0.2rem black;
-}
+

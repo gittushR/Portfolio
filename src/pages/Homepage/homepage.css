@@ -2,6 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
 :root {
   overflow-x: hidden;
+  background-color: var(--background);
+}
+.body {
+  background-color: var(--background);
 }
 .hero {
   position: relative;
@@ -11,15 +15,18 @@
   align-items: center;
   margin: 4rem 0;
   font-family: "Poppins", sans-serif;
+  background-color: var(--background);
 }
 .hero-bg {
   position: absolute;
   top: 0;
-  right: 0;
+  right: -10rem;
   width: 70%;
   height: 100%;
-  background: #fff9db;
+  background: #353b48;
   z-index: 0;
+  border-radius: 50%;
+  
 }
 
 .intro,
@@ -35,17 +42,20 @@
 .intro h1 {
   font-size: 4rem;
   font-weight: 900;
+  color: var(--text);
 }
 
 .intro h2 {
   font-size: 9rem;
   font-weight: 900;
   line-height: 1.1;
+  color: transparent;
 }
 
 .intro p {
-  font-size: 1.4rem;
-  color: #333;
+  margin-top: 2rem;
+  font-size: 1.6rem;
+  color: var(--secondaryText);
   line-height: 1.6;
   margin-bottom: 2rem;
 }
@@ -56,8 +66,8 @@
 }
 .homebutton {
   padding: 1rem 2.4rem;
-  border: 0.2rem solid black;
-  background-color: transparent;
+  border: 0.2rem none var(--standout);
+  background-color: var(--standout);
   font-weight: 600;
   cursor: pointer;
   text-align: center;
@@ -68,9 +78,15 @@
   position: relative;
   overflow: hidden;
   margin: 0 2rem;
+  color: var(--secondaryText);
+}
+.view-resume {
+  border: 0.2rem none var(--fourthColor);
+  background-color: var(--fourthColor);
 }
 
 .homebutton:hover {
+  border: 0.2rem none black;
   background-color: black;
   color: white;
 }
@@ -96,10 +112,10 @@
   width: 49rem;
   max-width: 100%;
 }
+
 .stroke-text {
   color: transparent;
-  -webkit-text-stroke: 0.2rem black;
-  text-stroke: 0.2rem black;
+  -webkit-text-stroke: 0.2rem var(--text);
 }
 .scroll-down {
   text-align: center;
@@ -170,13 +186,15 @@
 
 .arrow {
   position: fixed;
-  bottom: 5rem;
+  bottom: 2rem;
   left: 50%;
   margin-left: -2rem;
-  width: 2rem;
-  height: 2rem;
+  width: 4rem;
+  height: 4rem;
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAMAAADDpiTIAAAAMFBMVEX///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAv3aB7AAAAD3RSTlMAGNe9CgcGtbOytLe2f5VrjfCKAAADsElEQVR4AezBgQAAAACAoP2pF6kCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIDZpRvTiIEYiMLkzivb65/Xf7eBLSFkYAQzDUjwvS6rZ3N9LduekvuffFOAq/+Xs+T+pABffzhL7p8CfP3FBdQB3gXEH45S+psXEP9VgM7fvoD4rwJ0/v4FxF9TQE1IAT38YZbcPwV4+YsLGBNSQB9/mONf/XdIAZ38YR9y/xTg678KkPunAF//VYDcPwU4+IsLGDekgI7+cA+5fwow8hcUsPxTgLG/uIBxQQro6w/XEPinABd/bQHLPwUY+6sLeCEFdPeH989Hfj4poL//55ddOqgCAIQBKKT9S5vB294+GeAeA/gbwN8A/gbwN4C/AfwN4G8AfwP4G8DfAP4G8DeAvwH8DeBvAH8D+BvA3wD+BvA3gL8B/A3gbwB/A/gbwN8A/gbM9DeAvwH8DeBvAH8D+BvA3wD+BvA3gL8B/A3gbwB/A/gbwN8A/gbwN4C/AfwN4G8AfwP4G8DfAP4G8DeAvwH8DeBvAH8D+BvA3wD+BvA3gL8B/A3gbwB/A/gbwN8A/gbwN4C/AfwN4G8AfwP4G8DfAP4G8DeAvwH8DeBvAP//AfwN4G8AfwP4G8DfAP4G8DeAvwH8DeBvAH8D+BvA3wD+BvA3gL8B/A3gbwB/A/gbwN8A/gbwN4C/AfwN4G8AfwP4G8DfAP4G8DeAvwH8DeBvAH8D+BvA3wD+BvA3gL8B/A3gbwB/A/gbwN8A/gbwN4C/AfwN4G8AfwPm+hvA3wD+BvA3gL8B/A3gbwB/A/gbwN8A/gbwN4C/AfwN4G8AfwP4G8DfAP4G8DeAvwH8DeBvAH8D+BvA34Bd/gbwN4C/AfwN4G8AfwP4G8DfAP4G8DeAvwH8DeBvQMXfAP4G8DeAvwH8DeBvQNPfAP4G8Deg7G8AfwPa/gbE/Q2I+xvA3wD+BvA3gL8B/A3gbwB/A/gbwN8A/gYs8DeAvwH8DeBvAH8D+BvA3wD+BvA3gL8B/A3gbwB/A/gbwN8A/gbs9zeAvwH8DeBvAH8D+BvA3wD+BvT8DeBvAH8D+BvQ9TeAvwFtfwPi/gbwf+3BsQAAAADAIH/rYeypAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOAUHBYk13Z7LTsAAAAASUVORK5CYII=);
   background-size: contain;
+  filter: invert(1);
+  cursor: pointer;
 }
 
 .bounce {
@@ -193,20 +211,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 3rem;
+  margin-bottom: 6rem;
   font-size: 1.6rem;
   font-family: "Poppins";
   font-weight: 800;
   letter-spacing: 0.2rem;
+  color: var(--thirdColor);
+  cursor: pointer;
 }
-.stats {
+/* .stats {
   display: flex;
   justify-content: space-around;
   background: white;
   padding: 4rem 0;
   font-weight: 600;
   text-align: center;
-}
+} */
 
 .aboutMe {
   display: grid;
@@ -229,10 +249,10 @@
       position: absolute;
       margin: 1rem auto;
       border: 0;
-      width: 120%;
+      width: 115%;
       right: 0;
-      top: -2.5rem;
-      border-top: 0.2rem solid rgba(0, 0, 0, 0.5);
+      top: -1.5rem;
+      border-top: 0.2rem solid var(--fourthColor);
     }
   }
   .frame {
@@ -246,7 +266,7 @@
       line-height: 5rem;
       font-size: 2rem;
       width: 80%;
-      color: #202030;
+      color: var(--text);
 
       .fancy {
         font-family: "Dancing Script";
@@ -267,6 +287,7 @@
     gap: 5rem;
 
     .workEx {
+      color: var(--text);
       font-family: "Poppins";
       font-size: 5rem;
       font-weight: 900;
@@ -279,7 +300,7 @@
       margin: 1rem auto;
       border: 0;
       width: 100%;
-      border-top: 0.2rem solid rgba(0, 0, 0, 0.5);
+      border-top: 0.2rem solid var(--fourthColor);
     }
   }
 }
@@ -320,7 +341,7 @@
 
 .footerSection {
   padding: 1.6rem 6.4rem;
-  background-color: #fff9db;
+  background-color: var(--background);
   position: absolute;
   width: 100%;
   left: 0;
@@ -341,7 +362,7 @@
       line-height: 1;
       justify-self: center;
       align-self: center;
-      color: #fab005;
+      color: var(--text);
     }
 
     .links-accent {
@@ -354,12 +375,12 @@
       left: 0;
       width: 100%;
       height: 0.4rem;
-      background-color: #ff475683;
+      background-color: var(--fourthColor);
     }
   }
   .links {
     padding-top: 5rem;
-    border-left: #fab005 solid;
+    border-left: var(--fourthColor) solid;
   }
   .pageLinks-container {
     display: flex;
@@ -377,7 +398,7 @@
     row-gap: 1.5rem;
     column-gap: 4rem;
     font-size: 1.4rem;
-    color: #fab005;
+    color: var(--fourthColor);
     font-weight: 800;
   }
   .other {
@@ -391,30 +412,17 @@
 
     .submitbutton {
       margin-bottom: 3rem;
-      border: #fab005 solid;
-      color: #fab005;
+      background-color: var(--standout);
+      border: var(--standout) solid;
+      color: var(--secondaryText);
+    }
+    .submitbutton:hover {
+      border: 0.3rem solid black;
+      background-color: black;
+      color: white;
     }
     .footer {
       padding-left: 2rem;
     }
-  }
-}
-.neon-text {
-  font-size: 2rem;
-  color: black;
-  text-shadow: 0 0 0.5rem #ff005e, 0 0 1rem #ff005e, 0 0 2rem #ff005e,
-    0 0 4rem #ff005e, 0 0 8rem #ff005e;
-  animation: glow 1.5s infinite alternate;
-  font-family: "Poppins";
-}
-
-@keyframes glow {
-  0% {
-    text-shadow: 0 0 0.5rem #ff005e, 0 0 1rem #ff005e, 0 0 2rem #ff005e,
-      0 0 4rem #ff005e, 0 0 8rem #ff005e;
-  }
-  100% {
-    text-shadow: 0 0 1rem #00d4ff, 0 0 2rem #00d4ff, 0 0 4rem #00d4ff,
-      0 0 8rem #00d4ff, 0 0 16rem #00d4ff;
   }
 }

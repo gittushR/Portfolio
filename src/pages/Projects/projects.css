@@ -1,7 +1,7 @@
 :root {
   --background: #0d1321;
-  --textcolor: #f1f1e6;
-  --alternatecolor: #4191f9;
+  --textcolor: #f5f8fa;
+  --alternatecolor: #1da1f2;
 }
 .projectsPage {
   min-height: 100vh;
@@ -59,10 +59,9 @@
             font-size: 2rem;
             gap: 1.2rem;
 
-            .git-link{
+            .git-link {
               padding-top: 0.5rem;
             }
-
           }
         }
         .projectabout {
@@ -90,7 +89,7 @@
       }
       .gridItem:hover {
         transform: translateZ(-0.8rem) scale(1.02);
-        box-shadow: 0 1rem 2.5rem rgba(236, 236, 236, 0.2);
+        box-shadow: 0 1rem 2.5rem var(--standout);
       }
     }
   }

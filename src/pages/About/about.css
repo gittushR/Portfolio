@@ -3,7 +3,7 @@
 .aboutMePage {
   position: relative;
   font-family: "Poppins";
-  background-color: #0d0d0d;
+  background-color: var(--background);
   height: 90vh;
   margin-bottom: 0;
 
@@ -14,7 +14,7 @@
     justify-content: center;
     overflow: hidden;
     .aboutMyselfBox {
-      background-color: #383838;
+      background-color: var(--divColor);
       height: 80%;
       width: 80%;
       margin: 2rem;
@@ -37,7 +37,7 @@
         top: 10%;
         font-family: "Poppins";
         line-height: 8.5rem;
-        color: #f2ecff;
+        color: var(--text);
         .div1 {
           font-size: 4rem;
           font-weight: 700;
@@ -56,7 +56,7 @@
 
         .quote-card {
           position: relative;
-          color: #f2ecff;
+          color: var(--text);
           padding: 4rem 3rem 3rem 6rem;
           border-radius: 0.8rem;
           max-width: 85rem;
@@ -72,7 +72,7 @@
           top: 0.8rem;
           right: 2rem;
           font-size: 8rem;
-          color: #d3fbd8;
+          color: var(--text);
           line-height: 0.35;
           font-family: serif;
         }
@@ -94,7 +94,7 @@
             top: 10rem;
             left: 30%;
             width: 100%;
-            color: #f2ecff;
+            color: var(--fourthColor);
             .quickLinks {
               display: flex;
               flex-direction: column;
@@ -107,6 +107,7 @@
               margin-top: 1rem;
               a:hover {
                 text-decoration: underline;
+                color: var(--standout);
               }
 
               h2 {
@@ -334,10 +335,10 @@
 }
 .education {
   min-height: 100vh;
-  background-color: #9ab0a6;
+  background-color: var(--background);
   .educationContainer {
     padding: 2.8rem;
-    color: #212926;
+    color: var(--text);
     h1 {
       text-align: center;
       font-size: 4.8rem;
@@ -352,8 +353,9 @@
       margin-bottom: 1.6rem;
       gap: 2rem;
       padding-bottom: 0;
-      border: solid 0.5rem;
+      border: solid 0.5rem var(--divColor);
       border-radius: 2.4rem;
+      background-color: var(--divColor);
 
       h3 {
         font-size: 1.8rem;
@@ -380,6 +382,7 @@
         }
         .collegeHeader:hover {
           text-decoration: underline;
+          color: var(--standout);
         }
 
         ul {
@@ -390,6 +393,7 @@
 
           a:hover {
             text-decoration: underline;
+            color: var(--standout);
           }
           li:not(:last-child) {
             margin-bottom: 1rem;
@@ -430,12 +434,12 @@
   }
 }
 .codingProfiles {
-  background-color: #212926;
+  background-color: var(--background);
   height: fit-content;
   .codingContainer {
     padding: 3rem;
     h1 {
-      color: #d3fbd8;
+      color: var(--text);
       text-align: center;
       letter-spacing: 0.5rem;
       font-size: 4.8rem;
@@ -461,7 +465,7 @@
 .skillsSection {
   padding: 1.6rem 6.4rem;
   overflow: hidden;
-  background-color: #111;
+  background-color: var(--background);
   height: fit-content;
   .skillsContainer {
     padding: 2rem;
@@ -470,13 +474,13 @@
       letter-spacing: 0.5rem;
       font-size: 4.8rem;
       padding-bottom: 1rem;
-      color: #c8fcea;
+      color: var(--text);
     }
   }
 }
 .certificationsSection {
-  background-color: #2e3135;
-  color: #1f898c;
+  background-color: var(--background);
+  color: var(--text);
   min-height: fit-content;
   padding: 3rem 6.4rem;
   .certificationContainer {
@@ -525,12 +529,13 @@
 
           a:hover {
             text-decoration: underline;
+            color: var(--standout);
           }
 
           .certDesc {
             padding-top: 1rem;
             padding-bottom: 1rem;
-            color: #adc8c9;
+            color: var(--thirdColor);
             font-size: 1.7rem;
           }
           .certHeading {
@@ -543,7 +548,7 @@
             justify-content: center;
             gap: 1rem;
             font-size: 1.8rem;
-            color: #adc8c9;
+            color: var(--thirdColor);
           }
         }
       }

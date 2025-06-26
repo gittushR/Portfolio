@@ -26,7 +26,7 @@ const CurvedArrowCTA = () => {
             refY="5"
             orient="auto"
           >
-            <path d="M0,0 L10,5 L0,10 Z" fill="#f2ecff" />
+            <path d="M0,0 L10,5 L0,10 Z" fill="var(--thirdColor)" />
           </marker>
         </defs>
         <path

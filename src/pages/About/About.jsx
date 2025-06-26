@@ -391,8 +391,9 @@ const About = () => {
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    Degree Certificate <FaExternalLinkAlt></FaExternalLinkAlt>,
+                    Degree Certificate <FaExternalLinkAlt></FaExternalLinkAlt>
                   </a>
+                  ,{" "}
                   <a
                     href="https://drive.google.com/file/d/1mr8-z_Eo9_xXQluNo4FwUXqaQvpDVHbW/view?usp=sharing"
                     rel="noopener noreferrer"

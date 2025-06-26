@@ -9,7 +9,7 @@
 
 .cta-text {
   font-size: 1.5rem;
-  color: #f2ecff;
+  color:var(--thirdColor);
   text-align: left;
   width: 100%;
   font-family: "Poppins";
@@ -17,22 +17,12 @@
   padding-bottom: 3rem;
 }
 
-.cta-text a {
-  color: #f2ecff;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.cta-text a:hover {
-  text-decoration: underline;
-}
-
 .cta-arrow {
   transform: rotate(45deg);
   justify-self: baseline
 }
 .animated-arrow {
-  stroke: #f2ecff;
+  stroke: var(--thirdColor);
   stroke-width: 4;
   fill: none;
 

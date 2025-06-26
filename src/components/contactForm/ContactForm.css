@@ -43,7 +43,7 @@
 }
 
 .contact-subtitle {
-  color: #f08c00;
+  color: var(--fourthColor);
   font-size: 1.28rem;
   line-height: 1;
 }
@@ -57,13 +57,14 @@
 
 .input-group {
   width: 100%;
+  margin-bottom: 0.8rem;
 }
 
 .contact-input,
 .contact-textarea {
   width: 100%;
-  background-color: #ffd43b;
-  color: black;
+  background-color: var(--divColor);
+  color: var(--text);
   padding: 0.8rem 1.2rem;
   border: none;
   border-radius: 0;
@@ -75,13 +76,13 @@
 
 .contact-input::placeholder,
 .contact-textarea::placeholder {
-  color: #495057;
+  color: var(--thirdColor);
 }
 
 .contact-input:focus,
 .contact-textarea:focus {
-  border-color: #fab005;
-  box-shadow: 0 0 0 0.2rem #fab005;
+  border-color: var(--standout);
+  box-shadow: 0 0 0 0.2rem var(--standout);
 }
 
 .contact-textarea {
@@ -96,9 +97,9 @@
 }
 .submitbutton {
   font-size: 1rem;
-  color: #fab005;
-  border: 0.2rem solid #fab005;
-  background-color: transparent;
+  color: var(--text);
+  border: 0.2rem solid var(--standout);
+  background-color: var(--standout);
   font-weight: 700;
   cursor: pointer;
   text-align: center;
@@ -112,6 +113,7 @@
 
 .submitbutton:hover {
   background-color: black;
+  border: 0.2rem solid black;
   color: white;
 }
 

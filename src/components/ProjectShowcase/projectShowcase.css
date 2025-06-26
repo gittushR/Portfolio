@@ -24,7 +24,7 @@
 }
 
 .project-image-wrapper {
-  background-color: #fff9db;
+  background-color: var(--divColor);
   position: relative;
   height: 50vh;
   width: 50vw;
@@ -33,7 +33,7 @@
 }
 .project-image-wrapper:hover {
   transform: translateY(-0.8rem) scale(1.02);
-  box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 2.5rem var(--standout);
 }
 
 .project-image {
@@ -70,11 +70,11 @@
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 2rem;
-  color: #868e96;
+  color: var(--thirdColor);
 }
 
 .project-title .highlight {
-  color: #212529;
+  color: var(--secondaryText);
   font-size: 4rem;
   font-weight: 800;
 }
@@ -82,7 +82,7 @@
 .project-description {
   font-size: 1.6rem;
   margin-bottom: 3rem;
-  color: #495057;
+  color: var(--secondaryText);
 }
 
 .projectbutton {

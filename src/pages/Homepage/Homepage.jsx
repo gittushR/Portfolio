@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./homepage.css";
 import Footer from "../../components/Footer/Footer";
 import Stat from "../../components/homePageStat/Stat";
@@ -14,6 +14,11 @@ import ContactForm from "../../components/contactForm/ContactForm";
 import { Link, useNavigate } from "react-router";
 
 const Homepage = () => {
+  const aboutRef = useRef(null);
+
+  const scrollToAbout = () => {
+    aboutRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
   const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -31,15 +36,15 @@ const Homepage = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <>
+    <div className="body">
       <div className="hero" id="top">
         <div className="hero-bg"></div>
         <div className="intro">
           <h1>Hi! I’m</h1>
           <h2 className="stroke-text">Tushar Rathi.</h2>
           <p>
-            I code for fun, love problem solving, eating and playing. Currently
-            working at{" "}
+            I code for fun, love problem solving and playing video games.
+            Currently working at{" "}
             <b style={{ color: "red" }}>
               <a
                 href="https://www.oracle.com/in/"
@@ -81,16 +86,21 @@ const Homepage = () => {
           className="profile-image"
         />
       </div>
-      <div class={`arrow animated bounce ${isScrolled ? "fade" : ""}`}></div>
-      <div className="exploreMore">Explore More</div>
+      <div
+        onClick={scrollToAbout}
+        className={`arrow animated bounce ${isScrolled ? "fade" : ""}`}
+      ></div>
+      <div className="exploreMore" onClick={scrollToAbout}>
+        Explore More
+      </div>
 
-      <section className="stats">
+      {/* <section className="stats">
         <Stat num={"1"} data="Years of experience"></Stat>
         <Stat num={"10"} data="Successful projects"></Stat>
         <Stat num={"100"} data="Cups of tea"></Stat>
-      </section>
+      </section> */}
 
-      <section className="aboutMe">
+      <section className="aboutMe" ref={aboutRef}>
         <div className="aboutHeading stroke-text">About Me</div>
         <div className="line">
           <hr />
@@ -133,6 +143,7 @@ const Homepage = () => {
           </p>
         </div>
       </section>
+      
       <section className="work">
         <div className="workHeading">
           <hr className="line" />
@@ -188,7 +199,7 @@ const Homepage = () => {
             </span>
           </h2>
         </div>
-        <div className="linkssection" style={{ borderLeft: "#fab005 solid" }}>
+        <div className="linkssection" style={{ borderLeft: "var(--fourthColor) solid" }}>
           <h2 className="links-title">
             Li
             <span className="links-accent">
@@ -205,7 +216,7 @@ const Homepage = () => {
             <a href="#top" className="logo">
               <span
                 className="navbarLogo"
-                style={{ color: "black", lineHeight: "1", fontSize: "2rem" }}
+                style={{ color: 'var(--text)', lineHeight: "1", fontSize: "2rem" }}
               >
                 tushar.
                 <br />
@@ -242,7 +253,7 @@ const Homepage = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -1,3 +1,15 @@
+:root {
+  --background: #0d1321;
+  --hoverColorDiv: #818f9e;
+  --text: #f5f8fa;
+  --standout: #1da1f2;
+  --secondaryText: #e1e8ed;
+  --thirdColor: #aab8c2;
+  --fourthColor: #657786;
+  --divColor: #353b48;
+  --alternate: #212926;
+}
+
 html {
   scroll-behavior: smooth;
   font-size: 62.5%;

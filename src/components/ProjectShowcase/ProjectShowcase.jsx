@@ -7,14 +7,20 @@ const ProjectShowcase = () => {
     <section className="project-showcase">
       <SlideInOnScroll fromLeft={true}>
         <div className="project-container">
-          <div className="project-image-wrapper">
-            <img
-              src={"./rowdyChat.webp"}
-              alt="Project"
-              className="project-image"
-              loading="lazy"
-            />
-          </div>
+          <a
+            href="https://github.com/gittushR/RowdyAI"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <div className="project-image-wrapper">
+              <img
+                src={"./rowdyChat.webp"}
+                alt="Project"
+                className="project-image"
+                loading="lazy"
+              />
+            </div>
+          </a>
           <div className="project-details">
             <h2 className="project-title">
               <span className="highlight">Rowdy AI</span>
@@ -41,14 +47,20 @@ const ProjectShowcase = () => {
       </SlideInOnScroll>
       <SlideInOnScroll>
         <div className="project-container-end">
-          <div className="project-image-wrapper">
-            <img
-              src={"./docthor.webp"}
-              alt="Project"
-              className="project-image-end"
-              loading="lazy"
-            />
-          </div>
+          <a
+            href="https://github.com/gittushR/DocThor"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <div className="project-image-wrapper">
+              <img
+                src={"./docthor.webp"}
+                alt="Project"
+                className="project-image-end"
+                loading="lazy"
+              />
+            </div>
+          </a>
           <div className="project-details-end">
             <h2 className="project-title">
               <span className="highlight">DOCTHOR</span>
@@ -76,14 +88,20 @@ const ProjectShowcase = () => {
       </SlideInOnScroll>
       <SlideInOnScroll fromLeft={true}>
         <div className="project-container">
-          <div className="project-image-wrapper">
-            <img
-              src={"./jobapp.webp"}
-              alt="Project"
-              className="project-image"
-              loading="lazy"
-            />
-          </div>
+          <a
+            href="https://github.com/gittushR/Job_App_Backend"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <div className="project-image-wrapper">
+              <img
+                src={"./jobapp.webp"}
+                alt="Project"
+                className="project-image"
+                loading="lazy"
+              />
+            </div>
+          </a>
           <div className="project-details">
             <h2 className="project-title">
               <span className="highlight">Job Listings</span>

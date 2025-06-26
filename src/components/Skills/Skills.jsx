@@ -33,7 +33,7 @@ const Skills = () => {
         </div>
 
         <div class="skills__item">
-          <img loading="lazy" src="/python.webp" alt="" />
+          <img loading="lazy" src="/py.webp" alt="" />
           <div class="skills__item-name">PYTHON</div>
         </div>
       </div>

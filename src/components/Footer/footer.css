@@ -4,25 +4,25 @@
   text-align: center;
   line-height: 1.5;
   font-size: 1rem;
-  color: #fab005;
+  color: var(--fourthColor);
 }
 .footer__text a {
   text-align: center;
   line-height: 1.5;
   font-size: 1rem;
-  color: #fab005;
+  color: var(--fourthColor);
   transition: all 0.2s ease-in-out;
   display: inline-block;
 }
 .footer__text a:hover,
 .footer__text a:active {
-  color: #588157;
+  color: var(--standout);
 }
 .footer hr {
   margin: 1.6rem 0 0.3rem 4.8rem;
   border: 0;
   width: 50%;
-  border-top: 0.2rem solid #fab0058e;
+  border-top: 0.2rem solid var(--fourthColor);
 }
 .social-links {
   display: flex;
@@ -34,7 +34,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: #fab005;
+  color: var(--fourthColor);
   width: 4.8rem;
   height: 0.5rem;
   /* margin: 1rem 1rem; */

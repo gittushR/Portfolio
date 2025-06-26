@@ -8,10 +8,10 @@ import SocialLinks from "../components/SocialLinks/SocialLinks";
 const RootLayout = () => {
   const location = useLocation();
   const backgroundMap = {
-    "/": ["white", "black"],
-    "/projects": ["#0d1321", "#f1f1e6"],
-    "/about": ["#0D0D0D", "#d3fbd8", "#CADCC8"],
-    "/work": [ "#19647e","#bffcfb"],
+    "/": ["var(--background)", "var(--text)"],
+    "/projects": ["var(--background)", "var(--text)"],
+    "/about": ["var(--background)", "var(--text)"],
+    "/work": ["var(--background)", "var(--text)"],
   };
   const bgColor = backgroundMap[location.pathname][0] || "#000000";
   const fontColor = backgroundMap[location.pathname][1] || "black";

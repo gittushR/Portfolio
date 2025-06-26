@@ -35,7 +35,7 @@
       }
 
       .skills__item-name {
-        color: rgb(54, 52, 52);
+        color: var(--thirdColor);
         font-size: 1.3rem;
         font-weight: 600;
         line-height: 1;
