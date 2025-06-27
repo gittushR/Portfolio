@@ -5,7 +5,7 @@ import SkillsSlider from "../../components/SkillsSlider/SkillsSlider";
 import { FaExternalLinkAlt, FaLink } from "react-icons/fa";
 import PhotoCarousel from "../../components/CollegeGallery/PhotoCarousel";
 import CurvedArrowCTA from "../../components/CurvedArrow/CurvedArrowCTA";
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 
 let myCertificates = [
   {
@@ -86,6 +86,23 @@ const About = () => {
     ],
     dark: ["#d3f9d8", "#8ce99a", "#51cf66", "#37b24d", "#2b8a3e"],
   };
+  const codingRef = useRef(null);
+
+  const scrollToCodingPofiles = () => {
+    codingRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      setIsScrolled(scrollY >= 1);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <>
       <div className="aboutMePage">
@@ -152,7 +169,7 @@ const About = () => {
                       </div>
                       <div className="resume">
                         <a
-                          href="https://drive.google.com/file/d/1_V9mEL-UQ3KR8jd2exqDj8o55TpY2YUO/view?usp=drive_link"
+                          href="/resume.pdf"
                           style={{
                             display: "flex",
                             flexDirection: "row",
@@ -246,8 +263,12 @@ const About = () => {
           }}
         ></div> */}
       </div>
+      <div
+        onClick={scrollToCodingPofiles}
+        className={`arrow animated bounce ${isScrolled ? "fade" : ""}`}
+      ></div>
 
-      <div className="codingProfiles" id="codingProfiles">
+      <div className="codingProfiles" id="codingProfiles" ref={codingRef}>
         <div className="codingContainer">
           <h1>CODING PROFILES</h1>
           <div className="leetcodeCalendar">

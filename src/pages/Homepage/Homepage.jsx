@@ -59,13 +59,9 @@ const Homepage = () => {
           <div className="buttons">
             <button
               className="homebutton view-resume"
-              onClick={() =>
-                window.open(
-                  "https://drive.google.com/file/d/1_V9mEL-UQ3KR8jd2exqDj8o55TpY2YUO/view?usp=drive_link",
-                  "_blank",
-                  "noopener noreferrer"
-                )
-              }
+              onClick={() => {
+                window.open("/resume.pdf", "_blank");
+              }}
             >
               View Resume
             </button>
@@ -143,7 +139,7 @@ const Homepage = () => {
           </p>
         </div>
       </section>
-      
+
       <section className="work">
         <div className="workHeading">
           <hr className="line" />
@@ -199,7 +195,10 @@ const Homepage = () => {
             </span>
           </h2>
         </div>
-        <div className="linkssection" style={{ borderLeft: "var(--fourthColor) solid" }}>
+        <div
+          className="linkssection"
+          style={{ borderLeft: "var(--fourthColor) solid" }}
+        >
           <h2 className="links-title">
             Li
             <span className="links-accent">
@@ -216,7 +215,11 @@ const Homepage = () => {
             <a href="#top" className="logo">
               <span
                 className="navbarLogo"
-                style={{ color: 'var(--text)', lineHeight: "1", fontSize: "2rem" }}
+                style={{
+                  color: "var(--text)",
+                  lineHeight: "1",
+                  fontSize: "2rem",
+                }}
               >
                 tushar.
                 <br />

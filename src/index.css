@@ -28,3 +28,7 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
