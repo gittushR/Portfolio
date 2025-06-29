@@ -1,6 +1,6 @@
 import "./projectShowcase.css";
 import { FaGithub } from "react-icons/fa";
-import SlideInOnScroll from "../../helpers/slideIn/SlideInOnScroll";
+import SlideInOnScroll from "../../helpers/slideIn/SlideInOnScroll.jsx";
 
 const ProjectShowcase = () => {
   return (

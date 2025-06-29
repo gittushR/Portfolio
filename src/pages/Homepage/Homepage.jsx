@@ -1,19 +1,19 @@
 import { useEffect, useRef, useState } from "react";
 import "./homepage.css";
-import Footer from "../../components/Footer/Footer";
-import Experience from "../../components/Experience/Experience";
-import ProjectShowcase from "../../components/ProjectShowcase/ProjectShowcase";
+import Footer from "../../components/Footer/Footer.jsx";
+import Experience from "../../components/Experience/Experience.jsx";
+import ProjectShowcase from "../../components/ProjectShowcase/ProjectShowcase.jsx";
 import {
   FaExternalLinkAlt,
   FaExternalLinkSquareAlt,
   FaLink,
 } from "react-icons/fa";
-import ContactForm from "../../components/contactForm/ContactForm";
+import ContactForm from "../../components/contactForm/ContactForm.jsx";
 import { Link, useNavigate } from "react-router";
-import DrawingBoard from "../../components/DrawingBoard/Drawingboard";
-import SocialLinks from "../../components/SocialLinks/SocialLinks";
-import SpotifyCard from "../../components/SpotifyCard/SpotifyCard";
-import GladtoHave from "../../components/GladtoHaveCard/GladtoHave";
+import DrawingBoard from "../../components/DrawingBoard/DrawingBoard.jsx";
+import SocialLinks from "../../components/SocialLinks/SocialLinks.jsx";
+import SpotifyCard from "../../components/SpotifyCard/SpotifyCard.jsx";
+import GladtoHave from "../../components/GladtoHaveCard/GladtoHave.jsx";
 
 const Homepage = () => {
   const aboutRef = useRef(null);

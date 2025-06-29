@@ -1,6 +1,6 @@
 import React from "react";
 import "./experience.css";
-import SlideInOnScroll from "../../helpers/slideIn/SlideInOnScroll";
+import SlideInOnScroll from "../../helpers/slideIn/SlideInOnScroll.jsx";
 
 let jobs = [
   {

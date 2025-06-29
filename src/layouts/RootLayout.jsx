@@ -2,7 +2,6 @@ import "./rootLayout.css";
 import { Link, Outlet, useLocation } from "react-router";
 import { FaBriefcase, FaHome, FaProjectDiagram, FaUser } from "react-icons/fa";
 import { NavLink } from "react-router";
-import SocialLinks from "../components/SocialLinks/SocialLinks";
 
 const RootLayout = () => {
   const location = useLocation();

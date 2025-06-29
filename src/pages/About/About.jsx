@@ -1,11 +1,11 @@
 import "./about.css";
 import LeetCodeCalendar from "leetcode-calendar";
-import CodingProfile from "../../components/CodingProfile/CodingProfile";
-import SkillsSlider from "../../components/SkillsSlider/SkillsSlider";
+import CodingProfile from "../../components/CodingProfile/CodingProfile.jsx";
+import SkillsSlider from "../../components/SkillsSlider/SkillsSlider.jsx";
 import { FaLink } from "react-icons/fa";
 import { useEffect, useRef, useState } from "react";
-import SpotifyCard from "../../components/SpotifyCard/SpotifyCard";
-import GladtoHave from "../../components/GladtoHaveCard/GladtoHave";
+import SpotifyCard from "../../components/SpotifyCard/SpotifyCard.jsx";
+import GladtoHave from "../../components/GladtoHaveCard/GladtoHave.jsx";
 
 let myCertificates = [
   {

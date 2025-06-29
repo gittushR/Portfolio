@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./projects.css";
 import { FaGithub } from "react-icons/fa";
-import ProjectGridItem from "../../components/ProjectPageGridComp/ProjectGridItem";
+import ProjectGridItem from "../../components/ProjectPageGridComp/ProjectGridItem.jsx";
 
 const Projects = () => {
   useEffect(() => {
