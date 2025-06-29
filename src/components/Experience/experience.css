@@ -1,6 +1,4 @@
 .experienceTimeline {
-  /* height: 100vh; */
-  /* padding: 1.6rem 6.4rem; */
   padding-left: 12.8rem;
   padding-right: 12.8rem;
   display: flex;
@@ -36,12 +34,17 @@
       width: 12.5rem;
       z-index: 1;
     }
+    p {
+      font-size: 1.4rem;
+      font-family: "Poppins";
+      font-weight: 500;
+      text-align: end;
+    }
   }
   .intel {
     margin-left: 10%;
   }
   .oracle {
-
     img {
       height: 6rem;
     }
@@ -51,6 +54,45 @@
     img {
       height: 6rem;
       width: auto;
+    }
+  }
+}
+
+@media (max-width: 451px) {
+  .experienceTimeline {
+    padding: 0;
+    gap: 2rem;
+
+    .company {
+      flex-direction: column;
+      gap: 2rem;
+      background-color: var(--background2);
+      width: 100%;
+      border-radius: 1rem;
+
+      .clipped-bg {
+        display: none;
+      }
+    }
+    .intel {
+      margin-left: 0;
+      p {
+        text-align: center;
+      }
+    }
+    .nits {
+      margin-left: 0;
+      p {
+        text-align: center;
+      }
+    }
+    .oracle {
+      img {
+        height: 6.5rem;
+      }
+      p {
+        text-align: center;
+      }
     }
   }
 }

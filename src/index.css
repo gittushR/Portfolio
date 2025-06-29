@@ -1,5 +1,5 @@
 :root {
-  --background: #0f172a;
+  /* --background: #0f172a; */
   --text: #f5f8fa;
   --standout: #1da1f2;
   --secondaryText: #e1e8ed;
@@ -9,6 +9,8 @@
   --alternate: #212926;
   --background2: #141d30;
   --background3: #1e293b;
+  --background: #0d1321;
+ 
 }
 
 html {

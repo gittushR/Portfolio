@@ -30,7 +30,7 @@ const RootLayout = () => {
             rathi
           </span>
         </Link>
-        <nav className="navbar">
+        <nav className="navbar desktop-nav">
           <NavLink to="/" className="nav-item">
             <span className="nav-text">HOME</span>
             <FaHome className="nav-icon" />
@@ -53,6 +53,21 @@ const RootLayout = () => {
       <main>
         <Outlet />
       </main>
+      <nav className="navbar mobile-nav">
+        <NavLink to="/" className="nav-item">
+          <FaHome className="nav-icon" />
+        </NavLink>
+        <NavLink to="/projects" className="nav-item">
+          <FaProjectDiagram className="nav-icon" />
+        </NavLink>
+        <NavLink to="/work" className="nav-item">
+          <FaBriefcase className="nav-icon" />
+        </NavLink>
+
+        <NavLink to="/about" className="nav-item">
+          <FaUser className="nav-icon" />
+        </NavLink>
+      </nav>
     </div>
   );
 };

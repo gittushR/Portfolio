@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
 :root {
-  overflow-x: hidden;
   background-color: var(--background);
 }
 .body {
   background-color: var(--background);
 }
 .hero {
+  max-width: 100%;
   padding: 1.6rem 12.8rem;
   display: flex;
   align-items: start;
@@ -38,6 +38,7 @@
   font-family: "Poppins";
   font-weight: 700;
   color: var(--text);
+  max-width: 100%;
 }
 
 .intro h1 {
@@ -123,11 +124,6 @@
 
 .homebutton:hover:before {
   left: 95%;
-}
-
-.profile-image {
-  width: 49rem;
-  max-width: 100%;
 }
 
 .stroke-text {
@@ -331,6 +327,11 @@
       border-top: 0.2rem solid var(--fourthColor);
     }
   }
+  button {
+    width: 50%;
+    align-self: center;
+    margin-top: 4rem;
+  }
 }
 .projects {
   display: flex;
@@ -358,6 +359,11 @@
       border-top: 0.2rem solid rgba(0, 0, 0, 0.5);
     }
   }
+  button {
+    width: 50%;
+    align-self: center;
+    margin-top: 4rem;
+  }
 }
 .morebutton {
   font-size: 1.2rem;
@@ -371,7 +377,6 @@
 .footerSection {
   padding: 1.6rem 12.8rem;
   background-color: var(--background);
-  /* position: absolute; */
   width: 100%;
   left: 0;
   margin-top: 2rem;
@@ -457,5 +462,117 @@
       padding-left: 2rem;
       padding-bottom: 0.6rem;
     }
+  }
+}
+
+@media (max-width: 451px) {
+  .body{
+    padding-bottom: 6.5rem;
+  }
+  .hero {
+    padding: 0.8rem 3.6rem;
+    flex-direction: column;
+    margin-top: 0;
+    .intro {
+      width: 100%;
+      .hi {
+        gap: 0.5rem;
+        h1 {
+          font-size: 1.4rem;
+        }
+        h2 {
+          font-size: 1.8rem;
+          font-weight: 700;
+        }
+        .stroke-text {
+          -webkit-text-stroke: 0.1rem var(--standout);
+        }
+      }
+      .headline {
+        font-size: 2.39rem;
+      }
+      p {
+        font-size: 1.6rem;
+      }
+      .aboutComment {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+      }
+      .aboutComment2 {
+        font-size: 1.6rem;
+        margin-bottom: 3rem;
+      }
+    }
+    .cards {
+      align-items: center;
+    }
+  }
+  .arrow {
+    display: none;
+  }
+  .work {
+    padding: 1rem 3.2rem;
+    margin-bottom: 1rem;
+    .workHeading {
+      padding: 0.8rem 3.2rem;
+
+      .workEx {
+        align-self: center;
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        font-weight: 700;
+        padding-left: 2.5rem;
+      }
+      .line {
+        display: none;
+      }
+    }
+    button {
+      width: 90%;
+      margin-top: 2rem;
+    }
+  }
+  .projects {
+    padding: 0.8rem 3.2rem;
+
+    .projectHeader {
+      padding: 0.8rem 3.2rem;
+      gap: 0;
+
+      .proj {
+        font-size: 2rem;
+        width: 100%;
+        font-weight: 700;
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+      }
+      .line {
+        display: none;
+      }
+    }
+    button {
+      width: 90%;
+      margin-top: 2rem;
+    }
+  }
+  .footerSection {
+    padding: 0.8rem 3.2rem;
+    display: flex;
+    flex-direction: column;
+
+    .onlydesktop {
+      display: none;
+    }
+    .links {
+      padding-top: 3rem;
+      border-left: none;
+      border-top: var(--fourthColor) solid;
+    }
+    .other{
+      padding-top: 2rem;
+    }
+  }
+  .morebutton {
+    width: 100%;
   }
 }

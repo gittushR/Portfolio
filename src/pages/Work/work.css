@@ -8,7 +8,7 @@
 
   .workExperience {
     width: 75%;
-    color: #fff;
+    color: var(--text);
     font-family: "Poppins";
     padding-top: 1.6rem;
 
@@ -169,6 +169,97 @@
             font-weight: 500;
           }
         }
+      }
+    }
+  }
+}
+@media (max-width: 451px) {
+  .experiencePage {
+    padding: 0.8rem 3.2rem;
+    padding-bottom: 8rem;
+    flex-direction: column;
+    gap: 2rem;
+
+    .workExperience {
+      width: 100%;
+      padding-top: 1.6rem;
+      display: flex;
+      flex-direction: column;
+
+      h2 {
+        font-size: 3.2rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        align-self: center;
+      }
+      .timeline {
+        .timeline-item {
+          display: flex;
+          position: relative;
+          margin-bottom: 4rem;
+
+          .timeline-content {
+            margin-left: 2.4rem;
+
+            .timeline-date {
+              font-size: 1.2rem;
+              color: var(--thirdColor);
+              text-transform: uppercase;
+              letter-spacing: 0.1rem;
+            }
+
+            .timeline-title {
+              font-size: 1.8rem;
+              font-weight: bold;
+              margin: 0.4rem 0;
+              color: var(--text);
+            }
+
+            .timeline-team {
+              font-size: 1.6rem;
+              color: var(--text);
+              margin-bottom: 0.8rem;
+            }
+
+            .timeline-description {
+              ul {
+                margin-left: 1rem;
+              }
+            }
+
+            .sub-item {
+              padding-left: 0rem;
+
+              .sub-icon {
+                display: none;
+              }
+
+              .sub-content {
+                flex: 1;
+
+                .sub-title {
+                  color: var(--thirdColor);
+                }
+
+                .sub-description {
+                  color: var(--fourthColor);
+                }
+              }
+            }
+          }
+        }
+        .timeline-item:last-child{
+          margin-bottom: 2rem;
+        }
+      }
+    }
+    .workSidebar{
+      width: 100%;
+      align-items: center;
+      gap: 2rem;
+      .floating-card{
+        max-width: 100%;
+        width: 90%;
       }
     }
   }

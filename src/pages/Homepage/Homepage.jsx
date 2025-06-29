@@ -165,11 +165,7 @@ const Homepage = () => {
         <Experience></Experience>
         <button
           className="homebutton morebutton"
-          style={{
-            width: "50%",
-            alignSelf: "center",
-            marginTop: "4rem",
-          }}
+          
           onClick={() => {
             navigate("/work");
           }}
@@ -188,11 +184,7 @@ const Homepage = () => {
         <ProjectShowcase></ProjectShowcase>
         <button
           className="homebutton morebutton"
-          style={{
-            width: "50%",
-            alignSelf: "center",
-            margin: "2rem 2rem",
-          }}
+      
           onClick={() => {
             navigate("/projects");
           }}
@@ -201,7 +193,7 @@ const Homepage = () => {
         </button>
       </section>
       <div className="footerSection">
-        <div className="linkssection">
+        <div className="linkssection ">
           <h2 className="links-title">
             Cont
             <span className="links-accent">
@@ -211,7 +203,7 @@ const Homepage = () => {
           </h2>
         </div>
         <div
-          className="linkssection"
+          className="linkssection onlydesktop"
           style={{ borderLeft: "var(--fourthColor) solid" }}
         >
           <h2 className="links-title">

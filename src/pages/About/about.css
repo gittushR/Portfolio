@@ -43,7 +43,7 @@
     align-items: end;
     gap: 2.4rem;
   }
- 
+
   .floating-card {
     background: linear-gradient(135deg, var(--fourthColor), var(--thirdColor));
     backdrop-filter: blur(1rem);
@@ -308,4 +308,90 @@
 }
 .keyword {
   color: var(--standout);
+}
+
+@media (max-width: 451px) {
+  .aboutPage {
+    padding: 0.8rem 3.2rem;
+    padding-bottom: 6rem;
+  }
+  .aboutMePage {
+    flex-direction: column;
+    gap: 2rem;
+
+    .aboutMeContainer {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+    .cardsContainer {
+      width: 100%;
+      align-items: center;
+    }
+  }
+  .codingProfiles {
+    margin-top: 3rem;
+    .codingContainer {
+      h1 {
+        font-size: 3.2rem;
+      }
+      .leetcodeCalendar {
+        overflow-x: scroll;
+        white-space: nowrap;
+        max-width: 100%;
+      }
+      .codingHandles {
+        flex-direction: column;
+      }
+    }
+  }
+  .certificationsSection {
+    padding-top: 3rem;
+    .certificationContainer {
+      h1 {
+        font-size: 3.2rem;
+      }
+      .certificates {
+        .certificate {
+          flex-direction: column;
+          gap: 0rem;
+          .certificatePic {
+            .IITB {
+              height: 12rem;
+              padding-bottom: 0;
+            }
+          }
+          .certificateDesc {
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 1.6rem;
+            padding-bottom: 2rem;
+            .certHeading {
+              text-align: center;
+            }
+            .certDesc {
+              text-align: center;
+            }
+            .viewCert {
+              font-weight: 800;
+              margin-top: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  .skillsSection{
+    .skillsContainer{
+      h1{
+        font-size: 3.2rem;
+        padding-bottom: 0;
+      }
+      .skillslide{
+        max-width: 100%;
+        padding: 0.8rem 3.2rem;
+      }
+    }
+  }
 }

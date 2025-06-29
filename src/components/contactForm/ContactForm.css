@@ -163,3 +163,21 @@
     transform: scale(1);
   }
 }
+
+@media (max-width:451px) {
+  .contact-section{
+    padding: 2rem 0;
+
+    .contact-container{
+      max-width: 100%;
+    }
+  }
+  .thank-you-container{
+    .thank-you-img{
+      height: 15rem;
+    }
+    h2{
+      font-size: 1.6rem;
+    }
+  }
+}

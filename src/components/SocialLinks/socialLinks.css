@@ -60,3 +60,17 @@
 .sociallinks span:hover .fa-discord {
   color: #2957e0;
 }
+@media (max-width: 451px) {
+  .sociallinks {
+    margin-top: 1rem;
+    align-items: center;
+    justify-content: center;
+
+    .sociallinks a{
+      font-size: 2rem;
+    }
+    .sociallinks span{
+      font-size: 2rem;
+    }
+  }
+}

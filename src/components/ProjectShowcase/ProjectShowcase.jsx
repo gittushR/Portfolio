@@ -8,11 +8,11 @@ const ProjectShowcase = () => {
       <SlideInOnScroll fromLeft={true}>
         <div className="project-container">
           <a
-            href="https://github.com/gittushR/RowdyAI"
+            href="https://github.com/gittushR/RowdyAI "
             rel="noopener noreferrer"
             target="_blank"
           >
-            <div className="project-image-wrapper">
+            <div className="project-image-wrapper wrapper-rowdychat">
               <img
                 src={"./rowdyChat.webp"}
                 alt="Project"
@@ -52,7 +52,7 @@ const ProjectShowcase = () => {
             rel="noopener noreferrer"
             target="_blank"
           >
-            <div className="project-image-wrapper">
+            <div className="project-image-wrapper wrapper-docthor">
               <img
                 src={"./docthor.webp"}
                 alt="Project"
@@ -93,7 +93,7 @@ const ProjectShowcase = () => {
             rel="noopener noreferrer"
             target="_blank"
           >
-            <div className="project-image-wrapper">
+            <div className="project-image-wrapper wrapper-jobapp">
               <img
                 src={"./jobapp.webp"}
                 alt="Project"

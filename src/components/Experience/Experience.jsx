@@ -35,16 +35,7 @@ const Experience = () => {
                 style={{ background: `${job.background}` }}
               ></div>
               <img src={job.logo} alt={job.company} loading="lazy" />
-              <p
-                style={{
-                  fontSize: "1.4rem",
-                  fontFamily: "Poppins",
-                  fontWeight: "500",
-                  textAlign: "end",
-                }}
-              >
-                {job.content}
-              </p>
+              <p>{job.content}</p>
             </div>
           </SlideInOnScroll>
         );

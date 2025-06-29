@@ -1,5 +1,5 @@
 .skills {
-  display: flex;
+  display: none;
   justify-content: center;
 
   .skills__row {
@@ -55,4 +55,26 @@
 
 .skills__item--webpack img {
   border-radius: 50%;
+}
+
+@media (max-width: 451px) {
+  .skills {
+    display: flex;
+    max-width: 100%;
+
+    .skills__row {
+      .skills__item {
+        height: 12rem;
+        width: 12.5rem;
+
+        img {
+          height: 4.5rem;
+        }
+        .skills__item-name {
+          font-size: 1.2rem;
+          line-height: 0;
+        }
+      }
+    }
+  }
 }

@@ -1,5 +1,4 @@
 :root {
-  --background: #0d1321;
   --textcolor: #f5f8fa;
   --alternatecolor: #1da1f2;
 }
@@ -8,8 +7,8 @@
   background-color: var(--background);
   padding: 6.4rem 12.8rem;
   display: flex;
-
   font-family: "Poppins";
+
   .projectsContainer {
     h1 {
       font-size: 3.2rem;
@@ -34,7 +33,7 @@
         padding: 1rem;
         gap: 1.2rem;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        img{
+        img {
           width: 100%;
           object-fit: cover;
         }
@@ -96,6 +95,39 @@
       .gridItem:hover {
         transform: translateZ(-0.8rem) scale(1.02);
         box-shadow: 0 1rem 2.5rem var(--standout);
+      }
+    }
+  }
+}
+@media (max-width: 451px) {
+  .projectsPage {
+    padding: 0.6rem 3.2rem;
+    padding-bottom: 8rem;
+    .projectsContainer {
+      .projectsGrid {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding-top: 2rem;
+        width: 37rem;
+
+        .gridItem {
+          .projectabout {
+            max-width: 100%;
+          }
+          .projectTech {
+            max-width: 100%;
+            .techUsed {
+              flex-wrap: wrap;
+              .tech {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex: 1 1 0.8rem;
+              }
+            }
+          }
+        }
       }
     }
   }

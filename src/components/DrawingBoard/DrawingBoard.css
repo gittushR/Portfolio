@@ -60,3 +60,9 @@
 .canvas-controls button:hover {
   background-color: var(--divColor);
 }
+
+@media (max-width:451px){
+  .drawing-container{
+    padding: 1.6rem 3.2rem;
+  }
+}

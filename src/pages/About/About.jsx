@@ -6,6 +6,7 @@ import { FaLink } from "react-icons/fa";
 import { useEffect, useRef, useState } from "react";
 import SpotifyCard from "../../components/SpotifyCard/SpotifyCard.jsx";
 import GladtoHave from "../../components/GladtoHaveCard/GladtoHave.jsx";
+import Skills from "../../components/Skills/Skills.jsx";
 
 let myCertificates = [
   {
@@ -38,6 +39,14 @@ let myCertificates = [
   },
 ];
 const About = () => {
+  const scrollRef = useRef(null);
+
+  useEffect(() => {
+    const container = scrollRef.current;
+    if (container) {
+      container.scrollLeft = container.scrollWidth * 0.45; // scroll to right edge
+    }
+  }, []);
   let codingStats = {
     leetcode: {
       problemSolved: 0,
@@ -103,6 +112,7 @@ const About = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
     <div className="aboutPage">
       <div className="aboutMePage">
@@ -183,7 +193,7 @@ const About = () => {
       <div className="codingProfiles" id="codingProfiles" ref={codingRef}>
         <div className="codingContainer">
           <h1>CODING PROFILES</h1>
-          <div className="leetcodeCalendar">
+          <div className="leetcodeCalendar" ref={scrollRef}>
             <a
               href="https://leetcode.com/u/tusharrathi/"
               rel="noopener noreferrer"
@@ -275,6 +285,7 @@ const About = () => {
           <h1>TECH I WORK WITH</h1>
           <div className="skillslide">
             <SkillsSlider></SkillsSlider>
+            <Skills></Skills>
           </div>
         </div>
       </div>

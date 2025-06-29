@@ -1,6 +1,6 @@
 .project-showcase {
   padding: 1.6rem 12.8rem;
-  font-family: "Poppins", "sans-seriff";
+  font-family: "Poppins";
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
@@ -24,7 +24,7 @@
 .project-image-wrapper {
   background-color: var(--background2);
   position: relative;
-  height:50vh;
+  height: 50vh;
   width: 50vw;
   align-items: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -90,4 +90,66 @@
   gap: 1rem;
   align-items: center;
   justify-content: center;
+}
+
+@media (max-width: 451px) {
+  .project-showcase {
+    padding: 0;
+    gap: 2rem;
+  }
+  .project-image-wrapper {
+    width: 100vh;
+    height: 40vh;
+  }
+  .wrapper-jobapp {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.863);
+    background-image: url("/jobapp.webp");
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  }
+  .wrapper-docthor {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.521);
+    background-image: url("/docthor.webp");
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  }
+  .wrapper-rowdychat {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.719);
+    background-image: url("/rowdyChat.webp");
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  }
+  .project-image {
+    display: none;
+  }
+  .project-image-end {
+    display: none;
+  }
+  .project-details {
+    position: absolute;
+    left: 25%;
+  }
+  .project-details-end {
+    position: absolute;
+    right: 25%;
+  }
+  .project-title {
+    font-size: 1.4rem;
+
+    .highlight {
+      font-size: 2rem;
+    }
+  }
+  .project-description {
+    font-size: 1.4rem;
+  }
 }
