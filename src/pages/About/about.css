@@ -43,130 +43,7 @@
     align-items: end;
     gap: 2.4rem;
   }
-  /* .aboutMeContainer {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-    .aboutMyselfBox {
-      background-color: var(--divColor);
-      height: 80%;
-      width: 80%;
-      margin: 2rem;
-      position: relative;
-      border-radius: 10rem;
-
-      .myImage {
-        position: absolute;
-        left: -12rem;
-        top: 1rem;
-        img {
-          height: 65rem;
-        }
-      }
-      .myselfbox1 {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        left: 15%;
-        top: 10%;
-        font-family: "Poppins";
-        line-height: 8.5rem;
-        color: var(--text);
-        .div1 {
-          font-size: 4rem;
-          font-weight: 700;
-        }
-        .div2 {
-          font-size: 10rem;
-          font-weight: 800;
-          letter-spacing: 0.8rem;
-        }
-      }
-      .myselfbox2 {
-        position: absolute;
-        margin-top: 5rem;
-        top: 40%;
-        right: 15%;
-
-        .quote-card {
-          position: relative;
-          color: var(--text);
-          padding: 4rem 3rem 3rem 6rem;
-          border-radius: 0.8rem;
-          max-width: 85rem;
-          font-size: 1.6rem;
-          font-weight: 600;
-          line-height: 1.8;
-          font-family: "Poppins", "Inter", sans-serif;
-          text-align: right;
-        }
-
-        .quote-mark {
-          position: absolute;
-          top: 0.8rem;
-          right: 2rem;
-          font-size: 8rem;
-          color: var(--text);
-          line-height: 0.35;
-          font-family: serif;
-        }
-      }
-      .gotoLinks {
-        width: 140rem;
-        position: absolute;
-        bottom: 18%;
-        left: 25%;
-        .boxContainer {
-          position: relative;
-          .div0 {
-            position: absolute;
-            left: 5%;
-            width: 40%;
-          }
-          .div1 {
-            position: absolute;
-            top: 10rem;
-            left: 30%;
-            width: 100%;
-            color: var(--fourthColor);
-            .quickLinks {
-              display: flex;
-              flex-direction: column;
-              align-items: start;
-              justify-content: start;
-              padding: 1.6rem;
-              font-weight: 700;
-              font-size: 1rem;
-              gap: 1rem;
-              margin-top: 1rem;
-              a:hover {
-                text-decoration: underline;
-                color: var(--standout);
-              }
-
-              h2 {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: start;
-                gap: 1.2rem;
-                font-size: 2rem;
-              }
-              .pageSections {
-                font-size: 1.3rem;
-                display: flex;
-                flex-direction: row;
-                gap: 2rem;
-              }
-            }
-          }
-        }
-      }
-    }
-  } */
-
+ 
   .floating-card {
     background: linear-gradient(135deg, var(--fourthColor), var(--thirdColor));
     backdrop-filter: blur(1rem);
@@ -176,7 +53,8 @@
     /* border: 0.1rem solid rgba(255, 255, 255, 0.2); */
     /* animation: cardFloat 6s ease-in-out infinite; */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 32rem;
+    max-width: 32rem;
+    width: 100%;
   }
 
   /* .floating-card:hover {

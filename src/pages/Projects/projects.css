@@ -11,23 +11,22 @@
 
   font-family: "Poppins";
   .projectsContainer {
-
     h1 {
       font-size: 3.2rem;
       color: var(--textcolor);
     }
     .projectsGrid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 40rem), 1fr));
       gap: 4rem;
       padding-top: 2rem;
 
       .gridItem {
         background: linear-gradient(
-        135deg,
-        var(--background2),
-        var(--background3)
-      );
+          135deg,
+          var(--background2),
+          var(--background3)
+        );
         border: 0.05rem var(--alternatecolor) none;
         border-radius: 1rem;
         display: flex;
@@ -35,7 +34,10 @@
         padding: 1rem;
         gap: 1.2rem;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-
+        img{
+          width: 100%;
+          object-fit: cover;
+        }
         .projectVid {
           height: 32rem;
           .project-video {
