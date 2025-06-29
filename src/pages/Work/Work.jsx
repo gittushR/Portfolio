@@ -1,5 +1,4 @@
 import "./work.css";
-import CompanyWorks from "../../components/CompanyWorks/CompanyWorks";
 import { useEffect } from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
 

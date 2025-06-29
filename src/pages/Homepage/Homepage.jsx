@@ -1,12 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import "./homepage.css";
 import Footer from "../../components/Footer/Footer";
-import Stat from "../../components/homePageStat/Stat";
-import Skills from "../../components/Skills/Skills";
 import Experience from "../../components/Experience/Experience";
 import ProjectShowcase from "../../components/ProjectShowcase/ProjectShowcase";
 import {
-  FaArrowRight,
   FaExternalLinkAlt,
   FaExternalLinkSquareAlt,
   FaLink,
@@ -15,7 +12,6 @@ import ContactForm from "../../components/contactForm/ContactForm";
 import { Link, useNavigate } from "react-router";
 import DrawingBoard from "../../components/DrawingBoard/Drawingboard";
 import SocialLinks from "../../components/SocialLinks/SocialLinks";
-import { FaArrowRightArrowLeft } from "react-icons/fa6";
 import SpotifyCard from "../../components/SpotifyCard/SpotifyCard";
 import GladtoHave from "../../components/GladtoHaveCard/GladtoHave";
 
@@ -160,59 +156,6 @@ const Homepage = () => {
         onClick={scrollToAbout}
         className={`arrow animated bounce ${isScrolled ? "fade" : ""}`}
       ></div>
-      {/* <div className="exploreMore" onClick={scrollToAbout}>
-        Explore More
-      </div> */}
-
-      {/* <section className="stats">
-        <Stat num={"1"} data="Years of experience"></Stat>
-        <Stat num={"10"} data="Successful projects"></Stat>
-        <Stat num={"100"} data="Cups of tea"></Stat>
-      </section> */}
-
-      {/* <section className="aboutMe" ref={aboutRef}>
-        <div className="aboutHeading stroke-text">About Me</div>
-        <div className="line">
-          <hr />
-        </div>
-        <Skills></Skills>
-        <div className="frame">
-          <p className="myPara">
-            Hey there! I’m a Software Engineer from{" "}
-            <b className="fancy">Kathmandu, Nepal</b> , and a Computer Science
-            grad from{" "}
-            <b className="fancy" style={{ color: "#f76707" }}>
-              {" "}
-              NIT Silchar
-            </b>
-            . I’ve wrangled with APIs at
-            <b className="fancy" style={{ color: "red" }}>
-              {" "}
-              Oracle
-            </b>
-            , debugged legacy chaos at{" "}
-            <a
-              href="https://www.intel.in/content/www/in/en/homepage.html"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <b className="fancy" style={{ color: "#0068b6" }}>
-                Intel
-              </b>
-            </a>
-            , and built everything from sarcastic chatbots to job portals that
-            actually work. I speak fluent{"  "}
-            Java, Python, C++, sarcasm — and I believe good code is like good
-            tea: strong, clean, and slightly addictive.
-            <br />
-            <b>
-              {" "}
-              Wanna know more? Keep scrolling — I promise it's not all
-              semicolons.
-            </b>
-          </p>
-        </div>
-      </section> */}
 
       <section className="work" ref={aboutRef}>
         <div className="workHeading">
