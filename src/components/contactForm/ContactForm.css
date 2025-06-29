@@ -138,11 +138,11 @@
 }
 
 .thank-you-img {
-  width: 45rem;
+  height: 18rem;
 }
 
 .thank-you-container h2 {
-  font-size: 1.6rem;
+  font-size: 2rem;
   color: var(--thirdColor);
 }
 

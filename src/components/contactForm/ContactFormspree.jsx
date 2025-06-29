@@ -21,7 +21,7 @@ export default function ExampleForm() {
     return (
       <div className="thank-you-container">
         <img
-          src="/getBackLater.png" // or use an emoji/URL
+          src="/getBack.png" // or use an emoji/URL
           alt="Thanks"
           className="thank-you-img"
         />
