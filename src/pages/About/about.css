@@ -1,13 +1,49 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap");
-.aboutMePage {
-  position: relative;
+.aboutPage {
+  min-height: fit-content;
+  padding: 1.6rem 12.8rem;
   font-family: "Poppins";
+}
+.aboutMePage {
   background-color: var(--background);
-  height: 90vh;
-  margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  margin-top: 4.8rem;
 
   .aboutMeContainer {
+    width: 70%;
+
+    h1 {
+      font-size: 4.8rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 1rem;
+    }
+    img {
+      width: 90%;
+      object-fit: cover;
+    }
+    h2 {
+      color: var(--secondaryText);
+      font-size: 2rem;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      color: var(--thirdColor);
+      font-size: 1.5rem;
+      max-width: 90%;
+    }
+  }
+  .cardsContainer {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 2.4rem;
+  }
+  /* .aboutMeContainer {
     height: 100%;
     width: 100%;
     display: flex;
@@ -129,101 +165,39 @@
         }
       }
     }
-  }
-
-  /* .aboutMeBox {
-    position: absolute;
-    background-color: #689461;
-    border-radius: 2rem;
-    height: 30.5rem;
-    width: 110rem;
-    top: 5%;
-    left: 20%;
-    z-index: 1;
-    .boxContainer {
-      position: relative;
-      padding: 1.2rem;
-      .div1 {
-        padding: 2rem;
-        font-family: "Poppins";
-        font-weight: 800;
-        font-size: 3rem;
-        color: white;
-      }
-      .div2 {
-        color: white;
-        position: relative;
-        bottom: 3rem;
-        padding: 2rem;
-        font-family: "Poppins";
-        font-weight: 800;
-      }
-      .div3 {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 45%;
-        padding: 2rem;
-        font-family: "Poppins";
-        color: white;
-        font-size: 2rem;
-        font-weight: 800;
-      }
-      .div4 {
-        position: absolute;
-        bottom: 2.5rem;
-        right: 3.5rem;
-        width: 35%;
-        padding: 2rem;
-        font-family: "Poppins";
-        color: white;
-        font-size: 2rem;
-        font-weight: 800;
-      }
-    }
-  }
-  .aboutMeBox2 {
-    position: absolute;
-    color: #b0c7ac;
-    background-color: #689461;
-    border-radius: 2rem;
-    height: 31rem;
-    width: 110rem;
-    top: 48%;
-    left: 10%;
-    z-index: 1;
   } */
-  /* Floating Cards */
+
   .floating-card {
-    position: absolute;
-    background: #fefefe;
+    background: linear-gradient(135deg, var(--fourthColor), var(--thirdColor));
     backdrop-filter: blur(1rem);
     border-radius: 1.6rem;
     padding: 1.8rem;
     box-shadow: 0 0.8rem 3.2rem rgba(0, 0, 0, 0.1);
-    border: 0.1rem solid rgba(255, 255, 255, 0.2);
-    animation: cardFloat 6s ease-in-out infinite;
+    /* border: 0.1rem solid rgba(255, 255, 255, 0.2); */
+    /* animation: cardFloat 6s ease-in-out infinite; */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    max-width: 28rem;
+    width: 32rem;
   }
 
-  .floating-card:hover {
+  /* .floating-card:hover {
     transform: translateY(-0.5rem) scale(1.02);
     box-shadow: 0 1.2rem 4rem rgba(0, 0, 0, 0.15);
-  }
+  } */
 
   .floating-card h3 {
     margin: 0 0 1rem 0;
-    color: #333;
+    color: var(--alternate);
     font-size: 1.4rem;
     font-weight: bold;
   }
   .timeline-card {
     z-index: 1;
-    top: 55%;
-    right: 2%;
     animation-delay: 4s;
+    background: linear-gradient(135deg, var(--background2), var(--background3));
 
+    h3 {
+      color: var(--secondaryText);
+    }
     .timeline {
       display: flex;
       flex-direction: column;
@@ -240,7 +214,7 @@
     .timeline-dot {
       width: 1rem;
       height: 1rem;
-      background: linear-gradient(135deg, #667eea, #764ba2);
+      background: linear-gradient(135deg, var(--standout), #764ba2);
       border-radius: 50%;
       flex-shrink: 0;
     }
@@ -252,12 +226,12 @@
 
     .timeline-date {
       font-weight: bold;
-      color: #667eea;
+      color: var(--standout);
       font-size: 1.2rem;
     }
 
     .timeline-event {
-      color: #555;
+      color: var(--thirdColor);
       font-size: 1.2rem;
     }
 
@@ -271,13 +245,12 @@
     }
   }
   .hobbies-card {
-    top: 7%;
-    right: 1.7%;
     animation-delay: 2s;
     z-index: 1;
 
     h3 {
       font-size: 1.5rem;
+      color: var(--background3);
     }
 
     .hobbies-grid {
@@ -297,10 +270,6 @@
       animation: zoomIn 0.6s ease-out both;
     }
 
-    .hobby-item:hover {
-      background-color: rgba(102, 126, 234, 0.1);
-    }
-
     .hobby-icon {
       font-size: 2rem;
       margin-bottom: 0.8rem;
@@ -308,7 +277,7 @@
 
     .hobby-name {
       font-size: 1.2rem;
-      color: #666;
+      color: var(--alternate);
       font-weight: 500;
     }
 
@@ -333,137 +302,36 @@
     transform: translateY(-1rem);
   }
 }
-.education {
-  min-height: 100vh;
-  background-color: var(--background);
-  .educationContainer {
-    padding: 2.8rem;
-    color: var(--text);
-    h1 {
-      text-align: center;
-      font-size: 4.8rem;
-    }
-    .college {
-      display: flex;
-      flex-direction: row;
-      padding: 1.6rem 6.4rem;
-      margin-left: 6.4rem;
-      margin-right: 6.4rem;
-      margin-top: 2.4rem;
-      margin-bottom: 1.6rem;
-      gap: 2rem;
-      padding-bottom: 0;
-      border: solid 0.5rem var(--divColor);
-      border-radius: 2.4rem;
-      background-color: var(--divColor);
 
-      h3 {
-        font-size: 1.8rem;
-      }
-      .collegeLogo {
-        display: flex;
-        align-items: center;
-        img {
-          height: 25rem;
-          width: 25rem;
-          padding: 1.6rem;
-        }
-      }
-      .collegeDesc {
-        display: flex;
-        flex-direction: column;
-        padding: 2.4rem;
-        h2 {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          font-size: 2.2rem;
-          gap: 0.5rem;
-        }
-        .collegeHeader:hover {
-          text-decoration: underline;
-          color: var(--standout);
-        }
-
-        ul {
-          padding: 1.5rem;
-          /* font-style: italic; */
-          font-size: 1.6rem;
-          font-family: "Poppins";
-
-          a:hover {
-            text-decoration: underline;
-            color: var(--standout);
-          }
-          li:not(:last-child) {
-            margin-bottom: 1rem;
-          }
-        }
-      }
-    }
-    .css-society {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 0rem 16rem;
-      padding-bottom: 2rem;
-      text-align: center;
-
-      .cssHeader {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        .cssLogo {
-          img {
-            width: 6rem;
-            height: 6rem;
-          }
-        }
-        h3 {
-          text-decoration: underline;
-          font-size: 1.8rem;
-        }
-      }
-      p {
-        font-family: "Poppins";
-        font-size: 1.6rem;
-      }
-    }
-  }
-}
 .codingProfiles {
   background-color: var(--background);
   height: fit-content;
+  margin-top: 5.2rem;
   .codingContainer {
-    padding: 3rem;
     h1 {
       color: var(--text);
       text-align: center;
       letter-spacing: 0.5rem;
-      font-size: 4.8rem;
-      padding-bottom: 1rem;
+      font-size: 4rem;
     }
     .leetcodeCalendar {
       display: flex;
       align-items: center;
       justify-content: center;
       color: white;
-      padding-top: 3rem;
-      padding-bottom: 3rem;
+      padding: 1.6rem 12.8rem;
     }
     .codingHandles {
+      margin-top: 2.4rem;
       display: flex;
       flex-direction: row;
-      padding: 2rem 6.4rem;
       align-items: center;
-      justify-content: space-between;
+      justify-content: space-evenly;
+      gap: 3.2rem;
     }
   }
 }
 .skillsSection {
-  padding: 1.6rem 6.4rem;
   overflow: hidden;
   background-color: var(--background);
   height: fit-content;
@@ -472,7 +340,7 @@
     h1 {
       text-align: center;
       letter-spacing: 0.5rem;
-      font-size: 4.8rem;
+      font-size: 4rem;
       padding-bottom: 1rem;
       color: var(--text);
     }
@@ -482,18 +350,17 @@
   background-color: var(--background);
   color: var(--text);
   min-height: fit-content;
-  padding: 3rem 6.4rem;
+  padding-top: 5.5rem;
   .certificationContainer {
     h1 {
       text-align: center;
-      font-size: 4.8rem;
+      font-size: 4rem;
     }
     .certificates {
       display: flex;
       flex-direction: column;
       align-items: start;
       justify-content: center;
-      padding-top: 1rem;
 
       .certificate {
         display: flex;
@@ -501,23 +368,29 @@
         align-items: center;
         justify-content: center;
         gap: 2rem;
-        width: 90%;
+        width: 100%;
         margin: 1rem;
+        background: linear-gradient(
+          135deg,
+          var(--background),
+          var(--background3)
+        );
 
         .certificatePic {
           .intel-cert {
-            height: 15rem;
-            width: 30rem;
+            height: 12rem;
+            width: 22.5rem;
             padding: 2rem;
           }
           .IITB {
-            height: 20rem;
-            width: 30rem;
+            height: 15rem;
+            width: 22.5rem;
             padding: 2.5rem;
+            object-fit: contain;
           }
           img {
-            height: 20rem;
-            width: 30rem;
+            height: 15rem;
+            width: 22.5rem;
             object-fit: contain;
           }
         }
@@ -536,10 +409,10 @@
             padding-top: 1rem;
             padding-bottom: 1rem;
             color: var(--thirdColor);
-            font-size: 1.7rem;
+            font-size: 1.4rem;
           }
           .certHeading {
-            font-size: 2rem;
+            font-size: 1.6rem;
           }
           .viewCert {
             display: flex;
@@ -547,11 +420,14 @@
             align-items: center;
             justify-content: center;
             gap: 1rem;
-            font-size: 1.8rem;
+            font-size: 1.4rem;
             color: var(--thirdColor);
           }
         }
       }
     }
   }
+}
+.keyword {
+  color: var(--standout);
 }

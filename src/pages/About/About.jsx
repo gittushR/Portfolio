@@ -6,6 +6,8 @@ import { FaExternalLinkAlt, FaLink } from "react-icons/fa";
 import PhotoCarousel from "../../components/CollegeGallery/PhotoCarousel";
 import CurvedArrowCTA from "../../components/CurvedArrow/CurvedArrowCTA";
 import { useEffect, useRef, useState } from "react";
+import SpotifyCard from "../../components/SpotifyCard/SpotifyCard";
+import GladtoHave from "../../components/GladtoHaveCard/GladtoHave";
 
 let myCertificates = [
   {
@@ -104,164 +106,76 @@ const About = () => {
     };
   }, []);
   return (
-    <>
+    <div className="aboutPage">
       <div className="aboutMePage">
         <div className="aboutMeContainer">
-          <div className="aboutMyselfBox">
-            <div className="myImage">
-              <img src="/profile2.png" alt="my photo" loading="lazy" />
-            </div>
-            <div className="myselfbox1">
-              <div className="div1">Hey there, I AM</div>
-              <div className="div2">TUSHAR RATHI</div>
-            </div>
-            <div className="myselfbox2">
-              <div className="quote-card">
-                <span className="quote-mark">”</span>
-                <p className="quote-text">
-                  A 2024 CS grad with a thing for tech, clean code, and solving
-                  real problems with creativity. Dual-certified in Oracle Cloud,
-                  ex-Intel intern, and a Codeforces Expert with 800+ LeetCode
-                  problems under the belt with development skills across the
-                  board.
-                </p>
-              </div>
-            </div>
-            <div className="gotoLinks">
-              <div className="boxContainer">
-                <div className="div0">
-                  <CurvedArrowCTA></CurvedArrowCTA>
+          <h1>Hi. I'm Tushar Rathi 👋</h1>
+          <img src="/IMG1.jpg" alt="my photo" />
+          <h2>Short Bio</h2>
+          <p>
+            I'm a full stack software developer currently based in Bengaluru,
+            India, working full time at <span className="keyword">Oracle</span>.
+            A 2024 CS grad with a thing for tech, clean code, and solving real
+            problems with creativity. I am also a big DSA fan with and a
+            <span className="keyword">
+              expert rating on Codeforces and solved 800+ LeetCode problems.
+            </span>
+            <br></br>I mainly code in the{" "}
+            <span className="keyword">
+              MERN stack along with C++ and python.
+            </span>
+          </p>
+          <h2>Career</h2>
+          <p>
+            I started my professional career while at college, when I joined
+            <span className="keyword"> Intel</span> as an intern during the
+            final semester of Bachelor's degree. After my internship at Intel, I
+            grabbed an offer from Oracle for an Associate Software Engineer. I
+            also worked as a freelancer between the internship and the full time
+            job, working mainly on{" "}
+            <span className="keyword">
+              building full stack websites, landing pages and backend Rest
+              API's.
+            </span>{" "}
+          </p>
+        </div>
+        <div className="cardsContainer">
+          <SpotifyCard></SpotifyCard>
+          <GladtoHave></GladtoHave>
+          <div className="floating-card hobbies-card">
+            <h3>🎯 Hobbies</h3>
+            <div className="hobbies-grid">
+              {hobbies.map((hobby, index) => (
+                <div
+                  key={hobby.name}
+                  className="hobby-item"
+                  style={{ animationDelay: `${index * 0.15}s` }}
+                >
+                  <span className="hobby-icon">{hobby.icon}</span>
+                  <span className="hobby-name">{hobby.name}</span>
                 </div>
-                <div className="div1">
-                  <div className="quickLinks">
-                    <h2>
-                      Find My<FaExternalLinkAlt></FaExternalLinkAlt>
-                    </h2>
-                    <div className="pageSections">
-                      <div className="codingSection">
-                        <a
-                          href="#codingProfiles"
-                          style={{
-                            display: "flex",
-                            flexDirection: "row",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            gap: "0.5rem",
-                          }}
-                        >
-                          <FaLink></FaLink>Coding Profiles
-                        </a>
-                      </div>
-
-                      <div className="certificatesSection">
-                        <a
-                          href="#certificationsSection"
-                          style={{
-                            display: "flex",
-                            flexDirection: "row",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            gap: "0.5rem",
-                          }}
-                        >
-                          <FaLink></FaLink>Certificates
-                        </a>
-                      </div>
-                      <div className="resume">
-                        <a
-                          href="/resume.pdf"
-                          style={{
-                            display: "flex",
-                            flexDirection: "row",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            gap: "0.5rem",
-                          }}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <FaLink></FaLink>Resume
-                        </a>
-                      </div>
-                      <div className="educationSection">
-                        <a
-                          href="#education"
-                          style={{
-                            display: "flex",
-                            flexDirection: "row",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            gap: "0.5rem",
-                          }}
-                        >
-                          <FaLink></FaLink>
-                          College
-                        </a>
-                      </div>
-                      <div className="techskillSection">
-                        <a
-                          href="#skills"
-                          style={{
-                            display: "flex",
-                            flexDirection: "row",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            gap: "0.5rem",
-                          }}
-                        >
-                          <FaLink></FaLink>Technical Skills
-                        </a>
-                      </div>
-                    </div>
+              ))}
+            </div>
+          </div>
+          <div className="floating-card timeline-card">
+            <h3>📅 Important Dates</h3>
+            <div className="timeline">
+              {importantDates.map((item, index) => (
+                <div
+                  key={index}
+                  className="timeline-item"
+                  style={{ animationDelay: `${index * 0.3}s` }}
+                >
+                  <div className="timeline-dot"></div>
+                  <div className="timeline-content">
+                    <span className="timeline-date">{item.date}</span>
+                    <span className="timeline-event">{item.event}</span>
                   </div>
                 </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
-        <div className="floating-card hobbies-card">
-          <h3>🎯 Hobbies & Interests</h3>
-          <div className="hobbies-grid">
-            {hobbies.map((hobby, index) => (
-              <div
-                key={hobby.name}
-                className="hobby-item"
-                style={{ animationDelay: `${index * 0.15}s` }}
-              >
-                <span className="hobby-icon">{hobby.icon}</span>
-                <span className="hobby-name">{hobby.name}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="floating-card timeline-card">
-          <h3>📅 Important Dates</h3>
-          <div className="timeline">
-            {importantDates.map((item, index) => (
-              <div
-                key={index}
-                className="timeline-item"
-                style={{ animationDelay: `${index * 0.3}s` }}
-              >
-                <div className="timeline-dot"></div>
-                <div className="timeline-content">
-                  <span className="timeline-date">{item.date}</span>
-                  <span className="timeline-event">{item.event}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-        {/* <div
-          className={`arrow animated bounce ${isScrolled ? "fade" : ""}`}
-          style={{
-            zIndex: 2,
-            backgroundImage:
-              "url(https://www.citypng.com/public/uploads/preview/white-double-arrow-to-down-icon-hd-png-7017516950328142dcfgauvah.webp)",
-            height: "4rem",
-            width: "4rem",
-          }}
-        ></div> */}
       </div>
       <div
         onClick={scrollToCodingPofiles}
@@ -279,9 +193,9 @@ const About = () => {
             >
               <LeetCodeCalendar
                 username="tusharrathi"
-                blockSize={12}
-                blockMargin={14}
-                fontSize={16}
+                blockSize={10}
+                blockMargin={10}
+                fontSize={12}
                 theme={exampleTheme}
                 style={{ maxWidth: "160rem" }}
               />
@@ -357,7 +271,22 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="education" id="education">
+
+      <div className="skillsSection" id="skills">
+        <div className="skillsContainer">
+          <h1>TECH I WORK WITH</h1>
+          <div className="skillslide">
+            <SkillsSlider></SkillsSlider>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default About;
+/*
+<div className="education" id="education">
         <div className="educationContainer">
           <h1>COLLEGE</h1>
           <div className="college">
@@ -462,16 +391,157 @@ const About = () => {
           <PhotoCarousel></PhotoCarousel>
         </div>
       </div>
-      <div className="skillsSection" id="skills">
-        <div className="skillsContainer">
-          <h1>TECHNICAL SKILLS</h1>
-          <div className="skillslide">
-            <SkillsSlider></SkillsSlider>
+*/
+
+/*
+<div className="floating-card hobbies-card">
+          <h3>🎯 Hobbies & Interests</h3>
+          <div className="hobbies-grid">
+            {hobbies.map((hobby, index) => (
+              <div
+                key={hobby.name}
+                className="hobby-item"
+                style={{ animationDelay: `${index * 0.15}s` }}
+              >
+                <span className="hobby-icon">{hobby.icon}</span>
+                <span className="hobby-name">{hobby.name}</span>
+              </div>
+            ))}
           </div>
         </div>
-      </div>
-    </>
-  );
-};
+        <div className="floating-card timeline-card">
+          <h3>📅 Important Dates</h3>
+          <div className="timeline">
+            {importantDates.map((item, index) => (
+              <div
+                key={index}
+                className="timeline-item"
+                style={{ animationDelay: `${index * 0.3}s` }}
+              >
+                <div className="timeline-dot"></div>
+                <div className="timeline-content">
+                  <span className="timeline-date">{item.date}</span>
+                  <span className="timeline-event">{item.event}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+*/
 
-export default About;
+/* A 2024 CS grad with a thing for tech, clean code, and solving
+                  real problems with creativity. Dual-certified in Oracle Cloud,
+                  ex-Intel intern, and a Codeforces Expert with 800+ LeetCode
+                  problems under the belt with development skills across the
+                  board.
+                  */
+
+/*
+                   <div className="gotoLinks">
+              <div className="boxContainer">
+                <div className="div0">
+                  <CurvedArrowCTA></CurvedArrowCTA>
+                </div>
+                <div className="div1">
+                  <div className="quickLinks">
+                    <h2>
+                      Find My<FaExternalLinkAlt></FaExternalLinkAlt>
+                    </h2>
+                    <div className="pageSections">
+                      <div className="codingSection">
+                        <a
+                          href="#codingProfiles"
+                          style={{
+                            display: "flex",
+                            flexDirection: "row",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            gap: "0.5rem",
+                          }}
+                        >
+                          <FaLink></FaLink>Coding Profiles
+                        </a>
+                      </div>
+
+                      <div className="certificatesSection">
+                        <a
+                          href="#certificationsSection"
+                          style={{
+                            display: "flex",
+                            flexDirection: "row",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            gap: "0.5rem",
+                          }}
+                        >
+                          <FaLink></FaLink>Certificates
+                        </a>
+                      </div>
+                      <div className="resume">
+                        <a
+                          href="/resume.pdf"
+                          style={{
+                            display: "flex",
+                            flexDirection: "row",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            gap: "0.5rem",
+                          }}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <FaLink></FaLink>Resume
+                        </a>
+                      </div>
+                      <div className="educationSection">
+                        <a
+                          href="#education"
+                          style={{
+                            display: "flex",
+                            flexDirection: "row",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            gap: "0.5rem",
+                          }}
+                        >
+                          <FaLink></FaLink>
+                          College
+                        </a>
+                      </div>
+                      <div className="techskillSection">
+                        <a
+                          href="#skills"
+                          style={{
+                            display: "flex",
+                            flexDirection: "row",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            gap: "0.5rem",
+                          }}
+                        >
+                          <FaLink></FaLink>Technical Skills
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+                  */
+/*
+<div className="aboutMyselfBox">
+            <div className="myImage">
+              <img src="/profile2.png" alt="my photo" loading="lazy" />
+            </div>
+            <div className="myselfbox1">
+              <div className="div1">Hey there, I AM</div>
+              <div className="div2">TUSHAR RATHI</div>
+            </div>
+            <div className="myselfbox2">
+              <div className="quote-card">
+                <span className="quote-mark">”</span>
+                <p className="quote-text"></p>
+              </div>
+            </div>
+          </div>
+*/

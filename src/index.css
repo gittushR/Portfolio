@@ -1,6 +1,5 @@
 :root {
-  --background: #0d1321;
-  --hoverColorDiv: #818f9e;
+  --background: #0f172a;
   --text: #f5f8fa;
   --standout: #1da1f2;
   --secondaryText: #e1e8ed;
@@ -8,6 +7,8 @@
   --fourthColor: #657786;
   --divColor: #353b48;
   --alternate: #212926;
+  --background2: #141d30;
+  --background3: #1e293b;
 }
 
 html {
@@ -31,4 +32,11 @@ a {
 
 body::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Edge */
+}
+
+.centeredLine {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
 }

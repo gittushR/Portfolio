@@ -1,4 +1,3 @@
-import React from "react";
 import "./rootLayout.css";
 import { Link, Outlet, useLocation } from "react-router";
 import { FaBriefcase, FaHome, FaProjectDiagram, FaUser } from "react-icons/fa";
@@ -51,7 +50,6 @@ const RootLayout = () => {
             <FaUser className="nav-icon" />
           </NavLink>
         </nav>
-        <SocialLinks></SocialLinks>
       </header>
       <main>
         <Outlet />

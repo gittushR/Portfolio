@@ -1,6 +1,6 @@
 .snake-illusion-wrapper {
   background: var(--background);
-  padding: 4rem 0;
+  padding-top: 3.2rem;
   display: flex;
   flex-direction: column;
   gap: 10rem;
@@ -38,12 +38,12 @@
   justify-content: center;
 
   img {
-    height: 10rem;
+    height: 7.2rem;
     width: auto;
   }
   .skillName {
     color: var(--thirdColor);
-    font-size: 1.6rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -67,7 +67,7 @@
 }
 
 .left .snake-track {
-  animation: scroll-left 45s linear infinite;
+  animation: scroll-left 48s linear infinite;
 }
 
 .right .snake-track {

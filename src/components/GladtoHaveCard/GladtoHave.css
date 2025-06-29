@@ -1,0 +1,19 @@
+.nonfloatingcard {
+  background: linear-gradient(135deg, var(--background), var(--background3));
+  backdrop-filter: blur(1rem);
+  border-radius: 1rem;
+  padding: 3.2rem;
+  box-shadow: 0 0.8rem 3.2rem rgba(0, 0, 0, 0.1);
+  border: 0.1rem solid var(--background2);
+  /* animation: cardFloat 6s ease-in-out infinite; */
+  width: 32rem;
+}
+.cardActions {
+  color: var(--standout);
+  margin-top: 1.4rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  li:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}

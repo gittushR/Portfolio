@@ -6,12 +6,18 @@ import Skills from "../../components/Skills/Skills";
 import Experience from "../../components/Experience/Experience";
 import ProjectShowcase from "../../components/ProjectShowcase/ProjectShowcase";
 import {
+  FaArrowRight,
   FaExternalLinkAlt,
   FaExternalLinkSquareAlt,
   FaLink,
 } from "react-icons/fa";
 import ContactForm from "../../components/contactForm/ContactForm";
 import { Link, useNavigate } from "react-router";
+import DrawingBoard from "../../components/DrawingBoard/Drawingboard";
+import SocialLinks from "../../components/SocialLinks/SocialLinks";
+import { FaArrowRightArrowLeft } from "react-icons/fa6";
+import SpotifyCard from "../../components/SpotifyCard/SpotifyCard";
+import GladtoHave from "../../components/GladtoHaveCard/GladtoHave";
 
 const Homepage = () => {
   const aboutRef = useRef(null);
@@ -37,25 +43,95 @@ const Homepage = () => {
   }, []);
   return (
     <div className="body">
+      <div>
+        <DrawingBoard />
+      </div>
       <div className="hero" id="top">
-        <div className="hero-bg"></div>
         <div className="intro">
-          <h1>Hi! I’m</h1>
-          <h2 className="stroke-text">Tushar Rathi.</h2>
+          <div className="hi">
+            <h1>Hi! I’m</h1>
+            <h2 className="stroke-text">Tushar Rathi.</h2>
+          </div>
+          <div className="headline">
+            I love <span style={{ color: "var(--standout)" }}>Algorithms</span>{" "}
+            and <span style={{ color: "var(--thirdColor)" }}>Coding</span>
+          </div>
           <p>
-            I code for fun, love problem solving and playing video games.
-            Currently working at{" "}
-            <b style={{ color: "red" }}>
+            Associate Sofware Engineer @Oracle
+            {/* <b style={{ color: "red" }}>
               <a
                 href="https://www.oracle.com/in/"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                Oracle
+                @Oracle
               </a>
-            </b>{" "}
-            as an Associate Software Engineer.
+            </b> */}
+            , CS grad'24 @NIT Silchar
+            {/* <b style={{ color: "orangered" }}>
+              <a
+                href="https://www.nits.ac.in/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                @NIT Silchar
+              </a>
+            </b> */}
           </p>
+
+          <div className="aboutComment">
+            Full Stack Software Developer, Currently working full time{" "}
+            <span style={{ color: "var(--standout)" }}>
+              <a
+                href="https://www.oracle.com/in/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                @Oracle
+              </a>
+            </span>{" "}
+            and previously completed an internship{" "}
+            <span style={{ color: "var(--standout)" }}>
+              <a
+                href="https://www.intel.in/content/www/in/en/homepage.html"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                @Intel
+              </a>
+            </span>
+            . I play video games, houseparties and travel for fun.
+          </div>
+          <div className="aboutComment2">
+            I’ve wrangled with APIs at
+            <b className="fancy" style={{ color: "red" }}>
+              {" "}
+              Oracle
+            </b>
+            , debugged legacy chaos at{" "}
+            <a
+              href="https://www.intel.in/content/www/in/en/homepage.html"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <b className="fancy" style={{ color: "#0068b6" }}>
+                Intel
+              </b>
+            </a>
+            , and built everything from sarcastic chatbots to job portals that
+            actually work. I speak fluent{"  "}
+            C++, Java, Python, sarcasm — and build stuff using MERN stack,
+            Spring Boot, ChatGPT (lol). I believe good code is like good tea:
+            strong, clean, and slightly addictive.
+            <br />
+            <br></br>
+            <b>
+              {" "}
+              Wanna know more? Keep scrolling — I promise it's not all
+              semicolons.
+            </b>
+          </div>
+          <SocialLinks></SocialLinks>
           <div className="buttons">
             <button
               className="homebutton view-resume"
@@ -75,20 +151,18 @@ const Homepage = () => {
             </button>
           </div>
         </div>
-        <img
-          loading="lazy"
-          src={"/image3.webp"}
-          alt="Tushar Rathi"
-          className="profile-image"
-        />
+        <div className="cards">
+          <GladtoHave></GladtoHave>
+          <SpotifyCard></SpotifyCard>
+        </div>
       </div>
       <div
         onClick={scrollToAbout}
         className={`arrow animated bounce ${isScrolled ? "fade" : ""}`}
       ></div>
-      <div className="exploreMore" onClick={scrollToAbout}>
+      {/* <div className="exploreMore" onClick={scrollToAbout}>
         Explore More
-      </div>
+      </div> */}
 
       {/* <section className="stats">
         <Stat num={"1"} data="Years of experience"></Stat>
@@ -96,7 +170,7 @@ const Homepage = () => {
         <Stat num={"100"} data="Cups of tea"></Stat>
       </section> */}
 
-      <section className="aboutMe" ref={aboutRef}>
+      {/* <section className="aboutMe" ref={aboutRef}>
         <div className="aboutHeading stroke-text">About Me</div>
         <div className="line">
           <hr />
@@ -138,18 +212,17 @@ const Homepage = () => {
             </b>
           </p>
         </div>
-      </section>
+      </section> */}
 
-      <section className="work">
+      <section className="work" ref={aboutRef}>
         <div className="workHeading">
           <hr className="line" />
-          <div className="workEx">Experience</div>
+          <div className="workEx">Work Experience</div>
         </div>
         <Experience></Experience>
         <button
           className="homebutton morebutton"
           style={{
-            letterSpacing: "0.8rem",
             width: "50%",
             alignSelf: "center",
             marginTop: "4rem",
@@ -158,13 +231,13 @@ const Homepage = () => {
             navigate("/work");
           }}
         >
-          Know More <FaExternalLinkAlt></FaExternalLinkAlt>
+          See my detailed journey here <FaExternalLinkAlt></FaExternalLinkAlt>
         </button>
       </section>
 
       <section className="projects">
         <div className="projectHeader">
-          <div className="proj stroke-text">Projects</div>
+          <div className="proj">Personal Projects</div>
           <div className="line">
             <hr />
           </div>
@@ -173,7 +246,6 @@ const Homepage = () => {
         <button
           className="homebutton morebutton"
           style={{
-            letterSpacing: "0.8rem",
             width: "50%",
             alignSelf: "center",
             margin: "2rem 2rem",
@@ -182,7 +254,7 @@ const Homepage = () => {
             navigate("/projects");
           }}
         >
-          See More <FaExternalLinkAlt></FaExternalLinkAlt>
+          See more completed projects <FaExternalLinkAlt></FaExternalLinkAlt>
         </button>
       </section>
       <div className="footerSection">
@@ -227,16 +299,16 @@ const Homepage = () => {
               </span>
             </a>
             <div className="pageLinks">
-              <Link to={"/about"}>
+              <Link to={"/about"} className="footerLink">
                 About <FaExternalLinkSquareAlt></FaExternalLinkSquareAlt>{" "}
               </Link>
-              <Link to={"/work"}>
+              <Link to={"/work"} className="footerLink">
                 Work <FaExternalLinkSquareAlt></FaExternalLinkSquareAlt>
               </Link>
-              <Link to={"/projects"}>
+              <Link to={"/projects"} className="footerLink">
                 Projects <FaExternalLinkSquareAlt></FaExternalLinkSquareAlt>
               </Link>
-              <Link>
+              <Link className="footerLink">
                 Blogs <FaExternalLinkSquareAlt></FaExternalLinkSquareAlt>
               </Link>
             </div>

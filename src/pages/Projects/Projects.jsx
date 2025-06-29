@@ -11,7 +11,7 @@ const Projects = () => {
   return (
     <div className="projectsPage">
       <div className="projectsContainer">
-        <h1>PERSONAL PROJECTS</h1>
+        <h1>Some stuff that I've built</h1>
         <div className="projectsGrid">
           <ProjectGridItem
             projectName={"ROWDY AI"}
@@ -131,7 +131,8 @@ const Projects = () => {
             projectName={"Foodcourt"}
             videoLink={"/Video/Footcourt.mp4"}
             gitLink={"https://github.com/gittushR/Footcourt"}
-            aboutProj={`Designed and developed a fully responsive food delivery website with a strong focus on clean UI, intuitive navigation, and engaging user experience.  `}
+            aboutProj={`Designed and developed a fully responsive food delivery website with a strong focus on clean UI, intuitive navigation, and engaging user experience. This is just a frontend
+                website I built learning Javascript.`}
             techUsed={["Vanilla JS", "HTML", "CSS", "Media Queries"]}
             playlink={"https://foodcourtproject.netlify.app/"}
           ></ProjectGridItem>

@@ -1,5 +1,5 @@
 .rootLayout {
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   max-width: 144rem;
@@ -8,12 +8,12 @@
   box-sizing: border-box;
 
   header {
-    padding: 1.6rem 6.4rem;
+    padding: 1.6rem 12.8em;
+    padding-bottom: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    font-size: larger;
 
     .logo {
       display: flex;
@@ -26,8 +26,9 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 14rem;
-      width: 30rem;
+      gap: 1.6rem;
+      width: 32rem;
+      margin-right: 1rem;
 
       .nav-item {
         font-family: "Poppins";
@@ -46,22 +47,22 @@
         transition: opacity 0.8s ease, transform 0.5s ease;
       }
       .nav-text {
-        opacity: 1;
-        transform: scale(1);
+        opacity: 0;
+        transform: scale(0.5);
       }
 
       .nav-icon {
-        opacity: 0;
-        transform: scale(0.5);
-        font-size: 2.4rem;
-      }
-
-      .nav-item:hover .nav-text {
-        opacity: 0;
-        transform: scale(0.5);
+        opacity: 1;
+        transform: scale(1);
+        font-size: 2rem;
       }
 
       .nav-item:hover .nav-icon {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+
+      .nav-item:hover .nav-text {
         opacity: 1;
         transform: scale(1);
         color: var(--standout);

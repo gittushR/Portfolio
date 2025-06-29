@@ -1,0 +1,41 @@
+.spotify-card {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.65);
+  color: var(--text);
+  border-radius: 1rem;
+  padding: 3.2rem;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  max-width: 32rem;
+  background-image: url("https://i.scdn.co/image/ab67706c0000da84b80903ef954198f942abfe6d");
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  /* animation: cardFloat 6s ease-in-out infinite; */
+}
+
+.spotify-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+}
+
+.spotify-card-inner h4 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: var(--secondaryText);
+}
+
+.spotify-card-inner span {
+  font-weight: 800;
+  color: var(--text);
+}
+
+.spotify-card-inner p {
+  margin-top: 10px;
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: var(--secondaryText);
+  font-weight: 600;
+}

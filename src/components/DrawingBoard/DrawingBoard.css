@@ -1,0 +1,62 @@
+.drawing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+  padding: 1.6rem 12.8rem;
+  font-family: sans-serif;
+}
+
+.drawing-wrapper {
+  position: relative;
+  width: 100%;
+  height: 25rem;
+}
+
+.drawing-canvas {
+  width: 100%;
+  height: 100%;
+  border: 0.1rem solid var(--divColor);
+  border-radius: 0.8rem;
+  cursor: crosshair;
+  background-color: var(--divColor);
+}
+
+/* Controls over canvas */
+.canvas-controls {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 1rem;
+  background-color: var(--fourthColor);
+  padding: 0.8rem;
+  border-radius: 0.6rem;
+  box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.1);
+}
+
+.canvas-controls input[type="color"] {
+  width: 3.2rem;
+  height: 3.2rem;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background-color: var(--fourthColor);
+}
+
+.canvas-controls button {
+  font-family: "Poppins";
+  font-weight: 600;
+  padding: 0.6rem 1.2rem;
+  font-size: 1.2rem;
+  background-color: var(--standout);
+  color: var(--text);
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.canvas-controls button:hover {
+  background-color: var(--divColor);
+}

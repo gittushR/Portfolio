@@ -1,15 +1,299 @@
 import "./work.css";
 import CompanyWorks from "../../components/CompanyWorks/CompanyWorks";
 import { useEffect } from "react";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
+const educationData = [
+  {
+    date: "NOVEMBER 2020 - MAY 2024",
+    title: "NATIONAL INSTITUTE OF TECHNOLOGY SILCHAR",
+    team: "B.Tech in Computer Science & Engineering",
+    description: (
+      <ul>
+        <li>
+          Graduated with Computer Science degree and a Cummulative grade point
+          average of <b>8.78</b>
+        </li>
+        <li>
+          Attained <b>100% SCHOLARSHIP from Government of India</b> for the
+          Bachelor's degree at NITS. Yeah, that was pretty cool !!
+        </li>
+        <li>
+          Did a couple of research internships, research projects, was a member
+          of the Placement Cell, Led the Computer Science Society as the
+          Executive Head, enjoyed fests every 2 months, made friends across
+          departments and had a<b> lot, lot, lot of fun</b>
+        </li>
+        <li>
+          <a
+            href="https://drive.google.com/file/d/1m5ZwWIMmlfJuGPLaLqXw5n23YxviyfYJ/view?usp=sharing"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            See Offer letter <FaExternalLinkAlt></FaExternalLinkAlt>
+          </a>
+          ,{" "}
+          <a
+            href="https://drive.google.com/file/d/1nQ_KMLlvJv8IH0hBXUf-BZESqgliC-j-/view?usp=sharing"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Degree Certificate <FaExternalLinkAlt></FaExternalLinkAlt>
+          </a>
+          ,{" "}
+          <a
+            href="https://drive.google.com/file/d/1mr8-z_Eo9_xXQluNo4FwUXqaQvpDVHbW/view?usp=sharing"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Grade-sheets <FaExternalLinkAlt></FaExternalLinkAlt>
+          </a>
+        </li>
+      </ul>
+    ),
+    logo: "https://www.nits.ac.in/images/logo-small.png",
+    sub: [
+      {
+        title: "Executive Head @Computer Science Society, NITS",
+        description: ` The most active departmental club at my time, organized seminars,
+              fun events, hackathons and technical competiotions. Ran the club
+              with all my heart. Striver's event being the highlight of the
+              time.`,
+        icon: "/css.webp",
+      },
+      {
+        title: "Internship Coordinator @Placement Cell, NITS",
+        description: ` Dedicated a lot of time to this. Learnt some things that are
+              really handy now. Saw pretty early how companies hire, conducted
+              interviews, contacted HRs, but later did end up hurting myself
+              though.`,
+        icon: "https://www.nits.ac.in/images/logo-small.png",
+      },
+    ],
+  },
+];
+const experienceData = [
+  {
+    date: "AUGUST 2025 - PRESENT",
+    title: "Associate Software Engineer, Managed Cloud Services team",
+    team: "Oracle",
+    description: (
+      <ul>
+        <li>
+          Built an automated reconciliation workflow using Oracle Integration
+          Cloud (OIC) and SQL to fetch and validate file counts from remote SFTP
+          folders — eliminated manual Excel-based tasks and increased efficiency
+          by over 50%. Enhanced maintainability of OIC integrations by
+          parameterizing hard-coded values, designing lookups — improved
+          scalability and reduced long-term tech debt.
+        </li>
+        <li>
+          Designed and developed FastAPI services in Python to process and
+          extract structured data (text & speech) from formats like PDFs and
+          audio, and generate tokenized outputs in JSON for downstream business
+          processes.
+        </li>
+        <li>
+          Technologies used: Oracle Integration Cloud, PL/SQL, Oracle Cloud
+          Infrastructure, Javascript, Oracle Visual Builder. Completed Oracle
+          Certifications - Oracle Integrations Cloud Professional & Oracle
+          Redwood Application Developer.
+        </li>
+      </ul>
+    ),
+    logo: "/oracle-64.png",
+  },
+  {
+    date: "JANUARY 2024 - JUNE 2024",
+    title: "Software Intern, GRC Platforms team",
+    team: "Intel",
+    description: (
+      <ul>
+        <li>
+          Optimized legacy SSIS automation workflows by analyzing existing data
+          pipelines and identifying inefficiencies in SQL-based logic.
+          Refactored complex transformation logic and migrated it into modular,
+          reusable C# scripts using SSIS Script Tasks, resulting in the
+          elimination of over 45 redundant stored procedures. This effort
+          significantly reduced database storage usage by 20% and improved
+          maintainability. Despite the architecture shift, performance was
+          either preserved or enhanced through careful testing, memory
+          management, streamlined data flows and optimized database assets .
+        </li>
+        <li>
+          Worked on RSA Archer GRC platform, implementing features like SOX
+          compliance, Controls & Assessments, and automated datafeeds — resolved
+          50+ monthly incidents with 100% SLA adherence, ensuring seamless
+          governance and compliance operations.
+        </li>
+        <li>
+          Technologies used: C#, PL/SQL, MS SQL Server Integration, ReactJS, RSA
+          Archer.
+        </li>
+      </ul>
+    ),
+    logo: "/intel-64.png",
+  },
+];
+const skills = [
+  "C++",
+  "Java",
+  "Spring Boot",
+  "Typescript",
+  "Javascript",
+  "ReactJS",
+  "Express",
+  "Python",
+  "MaterialUI",
+  "TailwindCSS",
+  "SQL",
+  "MongoDB",
+  "Firebase",
+  "FlutterSDK",
+  "UI/UX",
+];
+const tools = [
+  "Git",
+  "Github",
+  "Docker",
+  "PostgreSQL",
+  "Oracle Cloud",
+  "Postman",
+  "Swagger",
+];
+const coreSubjects = [
+  "Data Structures",
+  "Algorithms",
+  "Operating Systems",
+  "Computer Networks",
+  "DBMS",
+];
+const spokenLang = ["English", "Hindi", "Nepali", "Marwadi"];
 const Work = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className="workExperience">
-      <div className="workexContainer">
-        <div className="company">
+    <div className="experiencePage">
+      <div className="workExperience">
+        <h2>Work Experience</h2>
+        <div className="timeline">
+          {experienceData.map((exp, index) => (
+            <div className="timeline-item" key={index}>
+              <div className="timeline-icon">
+                <img src={exp.logo} alt="logo" />
+              </div>
+              <div className="timeline-content">
+                <span className="timeline-date">{exp.date}</span>
+                <h3 className="timeline-title">{exp.title}</h3>
+                <h4 className="timeline-team">{exp.team}</h4>
+                <p className="timeline-description">{exp.description}</p>
+
+                {/* Render sub-experiences */}
+                {exp.sub &&
+                  exp.sub.map((sub, i) => (
+                    <div className="sub-item" key={i}>
+                      <div className="sub-icon">
+                        <img src={sub.icon} alt="sub" />
+                      </div>
+                      <div className="sub-content">
+                        <h5 className="sub-title">{sub.title}</h5>
+                        <p className="sub-description">{sub.description}</p>
+                      </div>
+                    </div>
+                  ))}
+              </div>
+            </div>
+          ))}
+        </div>
+        <h2>Education</h2>
+        <div className="timeline education">
+          {educationData.map((exp, index) => (
+            <div className="timeline-item" key={index}>
+              <div
+                className="timeline-icon"
+                style={{ backgroundColor: "#eee" }}
+              >
+                <img src={exp.logo} alt="logo" />
+              </div>
+              <div className="timeline-content">
+                <span className="timeline-date">{exp.date}</span>
+                <h3 className="timeline-title">{exp.title}</h3>
+                <h4 className="timeline-team">{exp.team}</h4>
+                <p className="timeline-description">{exp.description}</p>
+
+                {/* Render sub-experiences */}
+                {exp.sub &&
+                  exp.sub.map((sub, i) => (
+                    <div className="sub-item" key={i}>
+                      <div className="sub-icon">
+                        <img src={sub.icon} alt="sub" />
+                      </div>
+                      <div className="sub-content">
+                        <h5 className="sub-title">{sub.title}</h5>
+                        <p className="sub-description">{sub.description}</p>
+                      </div>
+                    </div>
+                  ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="workSidebar">
+        <div className="floating-card">
+          <h2>Technical Skills</h2>
+          <ul className="skill-list">
+            {skills.map((skill, index) => (
+              <li key={index} className="skill-item">
+                <span className="skill-bullet" />
+                <span className="skill-text">{skill}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="floating-card">
+          <h2>Tools I Know</h2>
+          <ul className="skill-list">
+            {tools.map((skill, index) => (
+              <li key={index} className="skill-item">
+                <span className="skill-bullet" />
+                <span className="skill-text">{skill}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="floating-card">
+          <h2>Core Subjects</h2>
+          <ul className="skill-list">
+            {coreSubjects.map((skill, index) => (
+              <li key={index} className="skill-item">
+                <span className="skill-bullet" />
+                <span className="skill-text">{skill}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="floating-card">
+          <h2>Soken Languages</h2>
+          <ul className="skill-list">
+            {spokenLang.map((skill, index) => (
+              <li key={index} className="skill-item">
+                <span className="skill-bullet" />
+                <span className="skill-text">{skill}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Work;
+/*
+<div className="company">
           <div className="compHeader">
             <img
               src="/oracle.webp"
@@ -209,9 +493,4 @@ const Work = () => {
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  );
-};
-
-export default Work;
+*/

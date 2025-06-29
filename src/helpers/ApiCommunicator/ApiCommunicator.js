@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios, { AxiosHeaders } from "axios";
 
 export const getLeetcodeDetails = async (username) => {
   let res;
@@ -67,3 +67,4 @@ export const getGitRepos = async () => {
     return null;
   }
 };
+

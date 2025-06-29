@@ -70,8 +70,6 @@ const Footer = () => {
             Tushar Rathi
           </a>
           <br />
-          {/* Made with{" "}
-          <span style={{ color: "red", marginLeft: "0.2rem" }}>&hearts;</span> */}
         </p>
       </div>
     </footer>
