@@ -39,7 +39,7 @@ const Homepage = () => {
   }, []);
   return (
     <div className="body">
-      <div>
+      <div className="drawingCanvas">
         <DrawingBoard />
       </div>
       <div className="hero" id="top">

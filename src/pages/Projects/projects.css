@@ -99,7 +99,7 @@
     }
   }
 }
-@media (max-width: 451px) {
+@media (max-width: 500px) {
   .projectsPage {
     padding: 0.6rem 3.2rem;
     padding-bottom: 8rem;
@@ -110,6 +110,105 @@
         gap: 2rem;
         padding-top: 2rem;
         width: 37rem;
+
+        .gridItem {
+          .projectabout {
+            max-width: 100%;
+          }
+          .projectTech {
+            max-width: 100%;
+            .techUsed {
+              flex-wrap: wrap;
+              .tech {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex: 1 1 0.8rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 410px) {
+  .projectsPage {
+    padding: 0.6rem 3.2rem;
+    padding-bottom: 8rem;
+    .projectsContainer {
+      .projectsGrid {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding-top: 2rem;
+        width: 35rem;
+
+        .gridItem {
+          .projectabout {
+            max-width: 100%;
+          }
+          .projectTech {
+            max-width: 100%;
+            .techUsed {
+              flex-wrap: wrap;
+              .tech {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex: 1 1 0.8rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 380px) {
+  .projectsPage {
+    padding: 0.6rem 3.2rem;
+    padding-bottom: 8rem;
+    .projectsContainer {
+      .projectsGrid {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding-top: 2rem;
+        width: 30rem;
+
+        .gridItem {
+          .projectabout {
+            max-width: 100%;
+          }
+          .projectTech {
+            max-width: 100%;
+            .techUsed {
+              flex-wrap: wrap;
+              .tech {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex: 1 1 0.8rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 340px) {
+  .projectsPage {
+    padding: 0.6rem 3.2rem;
+    padding-bottom: 8rem;
+    .projectsContainer {
+      .projectsGrid {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding-top: 2rem;
+        width: 28rem;
 
         .gridItem {
           .projectabout {

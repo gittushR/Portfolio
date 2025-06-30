@@ -466,8 +466,11 @@
 }
 
 @media (max-width: 451px) {
-  .body{
+  .body {
     padding-bottom: 6.5rem;
+  }
+  .drawingCanvas {
+    display: none;
   }
   .hero {
     padding: 0.8rem 3.6rem;
@@ -568,7 +571,7 @@
       border-left: none;
       border-top: var(--fourthColor) solid;
     }
-    .other{
+    .other {
       padding-top: 2rem;
     }
   }
