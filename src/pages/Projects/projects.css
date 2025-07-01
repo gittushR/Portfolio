@@ -132,7 +132,7 @@
     }
   }
 }
-@media (max-width: 410px) {
+@media (max-width: 420px) {
   .projectsPage {
     padding: 0.6rem 3.2rem;
     padding-bottom: 8rem;
@@ -165,7 +165,7 @@
     }
   }
 }
-@media (max-width: 380px) {
+@media (max-width: 391px) {
   .projectsPage {
     padding: 0.6rem 3.2rem;
     padding-bottom: 8rem;
@@ -175,7 +175,7 @@
         flex-direction: column;
         gap: 2rem;
         padding-top: 2rem;
-        width: 30rem;
+        width: 32rem;
 
         .gridItem {
           .projectabout {

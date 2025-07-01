@@ -5,14 +5,10 @@ import { NavLink } from "react-router";
 
 const RootLayout = () => {
   const location = useLocation();
-  const backgroundMap = {
-    "/": ["var(--background)", "var(--text)"],
-    "/projects": ["var(--background)", "var(--text)"],
-    "/about": ["var(--background)", "var(--text)"],
-    "/work": ["var(--background)", "var(--text)"],
-  };
-  const bgColor = backgroundMap[location.pathname][0] || "#000000";
-  const fontColor = backgroundMap[location.pathname][1] || "black";
+  const currentPath = location.pathname;
+
+  const bgColor = "var(--background)";
+  const fontColor = "var(--text)";
   return (
     <div
       className="rootLayout"
@@ -31,20 +27,36 @@ const RootLayout = () => {
           </span>
         </Link>
         <nav className="navbar desktop-nav">
-          <NavLink to="/" className="nav-item">
+          <NavLink
+            to="/"
+            className={currentPath === "/" ? "active nav-item" : "nav-item"}
+          >
             <span className="nav-text">HOME</span>
             <FaHome className="nav-icon" />
           </NavLink>
-          <NavLink to="/projects" className="nav-item">
+          <NavLink
+            to="/projects"
+            className={
+              currentPath === "/projects" ? "active nav-item" : "nav-item"
+            }
+          >
             <span className="nav-text">PROJECTS</span>
             <FaProjectDiagram className="nav-icon" />
           </NavLink>
-          <NavLink to="/work" className="nav-item">
+          <NavLink
+            to="/work"
+            className={currentPath === "/work" ? "active nav-item" : "nav-item"}
+          >
             <span className="nav-text">WORK</span>
             <FaBriefcase className="nav-icon" />
           </NavLink>
 
-          <NavLink to="/about" className="nav-item">
+          <NavLink
+            to="/about"
+            className={
+              currentPath === "/about" ? "active nav-item" : "nav-item"
+            }
+          >
             <span className="nav-text">ABOUT</span>
             <FaUser className="nav-icon" />
           </NavLink>

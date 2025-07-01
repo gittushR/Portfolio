@@ -1,12 +1,50 @@
 import "./about.css";
-import LeetCodeCalendar from "leetcode-calendar";
 import CodingProfile from "../../components/CodingProfile/CodingProfile.jsx";
 import SkillsSlider from "../../components/SkillsSlider/SkillsSlider.jsx";
 import { FaLink } from "react-icons/fa";
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import SpotifyCard from "../../components/SpotifyCard/SpotifyCard.jsx";
 import GladtoHave from "../../components/GladtoHaveCard/GladtoHave.jsx";
 import Skills from "../../components/Skills/Skills.jsx";
+import { getLeetcodeDetails } from "../../helpers/ApiCommunicator/ApiCommunicator.js";
+import ActivityCalendar from "react-activity-calendar";
+import { Tooltip as ReactTooltip } from "react-tooltip";
+import "react-tooltip/dist/react-tooltip.css";
+
+import { Props as CalendarProps } from "react-activity-calendar";
+
+// Shape of `labels` property (default values).
+// All properties are optional.
+const labels = {
+  months: [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ],
+  weekdays: [
+    "Sun", // Sunday first!
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+  ],
+  totalCount: "{{count}} submissions in {{year}}",
+  legend: {
+    less: "Less",
+    more: "More",
+  },
+};
 
 let myCertificates = [
   {
@@ -40,6 +78,7 @@ let myCertificates = [
 ];
 const About = () => {
   const scrollRef = useRef(null);
+  const [LC, setLC] = useState(null);
 
   useEffect(() => {
     const container = scrollRef.current;
@@ -47,9 +86,15 @@ const About = () => {
       container.scrollLeft = container.scrollWidth * 0.45; // scroll to right edge
     }
   }, []);
+  useEffect(() => {
+    (async () => {
+      let lcdata = await getLeetcodeDetails();
+      let jsonData = JSON.parse(lcdata);
+      setLC(jsonData);
+    })();
+  }, []);
   let codingStats = {
     leetcode: {
-      problemSolved: 0,
       contestRating: 1567,
       activeSince: "June 2022",
     },
@@ -59,7 +104,7 @@ const About = () => {
       activeSince: "May 2021",
     },
     GFG: {
-      problemSolved: 0,
+      problemSolved: 631,
       score: 2100,
       activeSince: "August 2022",
     },
@@ -174,27 +219,61 @@ const About = () => {
           <h1>CODING PROFILES</h1>
           <div className="leetcodeCalendar" ref={scrollRef}>
             <a
-              href="https://leetcode.com/u/tusharrathi/"
+              href="https://leetcode.com/u/iamtusharrathi/"
               rel="noopener noreferrer"
               target="_blank"
             >
-              <LeetCodeCalendar
-                username="tusharrathi"
-                blockSize={10}
-                blockMargin={10}
-                fontSize={12}
-                theme={exampleTheme}
-                style={{ maxWidth: "160rem" }}
-              />
+              {LC ? (
+                <>
+                  <ActivityCalendar
+                    data={LC?.calendar}
+                    blockMargin={9}
+                    blockRadius={3}
+                    blockSize={10}
+                    theme={exampleTheme}
+                    labels={labels}
+                    renderBlock={(block, activity) =>
+                      React.cloneElement(block, {
+                        "data-tooltip-id": "react-tooltip",
+                        "data-tooltip-html": `${activity.count} submissions on ${activity.date}`,
+                      })
+                    }
+                  />
+                  <ReactTooltip id="react-tooltip" />
+                </>
+              ) : (
+                <>
+                  <ActivityCalendar
+                    data={LC?.calendar}
+                    loading
+                    blockMargin={9}
+                    blockRadius={3}
+                    blockSize={10}
+                  ></ActivityCalendar>
+                  <ReactTooltip id="react-tooltip" />
+                </>
+              )}
             </a>
           </div>
           <div className="codingHandles">
-            <CodingProfile
-              image="/leetcode-48.png"
-              handleName="tusharrathi"
-              link="https://leetcode.com/u/tusharrathi/"
-              det={codingStats.leetcode}
-            ></CodingProfile>
+            {LC ? (
+              <CodingProfile
+                image="/leetcode-48.png"
+                handleName="tusharrathi"
+                link="https://leetcode.com/u/iamtusharrathi/"
+                det={codingStats.leetcode}
+                leetcodeProblems={LC.totalSolved}
+              ></CodingProfile>
+            ) : (
+              <CodingProfile
+                image="/leetcode-48.png"
+                handleName="tusharrathi"
+                link="https://leetcode.com/u/iamtusharrathi/"
+                det={codingStats.leetcode}
+                leetcodeProblems="Loading"
+              ></CodingProfile>
+            )}
+
             <CodingProfile
               image="/codeforces-48.png"
               handleName="Whizz_Kid"

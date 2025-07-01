@@ -44,7 +44,9 @@
         align-items: center;
         justify-content: center;
       }
-
+      .active.nav-item {
+        color: var(--standout);
+      }
       .nav-text,
       .nav-icon {
         position: absolute;

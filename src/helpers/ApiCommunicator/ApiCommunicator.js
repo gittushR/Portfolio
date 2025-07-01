@@ -1,19 +1,24 @@
 import axios, { AxiosHeaders } from "axios";
+import { parseData } from "./GetLeetcodeStats";
 
-export const getLeetcodeDetails = async (username) => {
+export const getLeetcodeDetails = async () => {
   let res;
   try {
     res = await axios.get(
-      `https://leetcode-stats-api.herokuapp.com/${username}`
+      `https://leetcode-stats-api.herokuapp.com/iamtusharrathi`
     );
     if (res.status !== 200) {
       console.error("Unable to fetch leetcode profile");
       throw new Error("Unable to fetch leetcode profile");
     }
     const data = await res.data;
-    return data.totalSolved;
+    const submissionCalendar = parseData(res.data.submissionCalendar);
+    return JSON.stringify({
+      totalSolved: data.totalSolved,
+      calendar: submissionCalendar,
+    });
   } catch (error) {
-    console.error(error);
+    console(error);
     return null;
   }
 };
@@ -30,7 +35,6 @@ export const getGFGDetails = async () => {
     return data.totalProblemsSolved;
   } catch (error) {
     console.error(error);
-    return null;
   }
 };
 
@@ -48,7 +52,7 @@ export const getLeetcodeRating = async () => {
     return data.contestRating;
   } catch (error) {
     console.error(error);
-    return null;
+    return 1591;
   }
 };
 
@@ -67,4 +71,3 @@ export const getGitRepos = async () => {
     return null;
   }
 };
-

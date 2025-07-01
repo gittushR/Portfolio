@@ -3,12 +3,15 @@ import "./codingProfile.css";
 import {
   getGFGDetails,
   getGitRepos,
-  getLeetcodeDetails,
   getLeetcodeRating,
 } from "../../helpers/ApiCommunicator/ApiCommunicator";
-
-const CodingProfile = ({ image, handleName, link, det }) => {
-  let [leetcodeProbs, setLeetcodeProbs] = useState(null);
+const CodingProfile = ({
+  image,
+  handleName,
+  link,
+  det,
+  leetcodeProblems = null,
+}) => {
   let [gfgprobs, setgfgProbs] = useState(null);
   let [leetcodeRating, setLeetcodeRating] = useState(null);
   let [gitRepos, setGitRepos] = useState(null);
@@ -16,19 +19,38 @@ const CodingProfile = ({ image, handleName, link, det }) => {
   useEffect(() => {
     (async () => {
       try {
-        let leetcodeStats = getLeetcodeDetails("tusharrathi");
-        let gfgStats = getGFGDetails();
+        let gfgStats = getGFGDetails().then((value) => {
+          if (value == null) {
+            return 29;
+          }
+          return value;
+        });
+        setgfgProbs(gfgStats);
+      } catch (error) {
+        console.log("Failed to fetch gfg coding problems: " + error);
+      }
+    })();
+    (async () => {
+      try {
         let lcrating = getLeetcodeRating().then((value) => {
+          if (value == null) {
+            return 1591;
+          }
           const roundedValue = Math.round(value);
           return roundedValue;
         });
-        let gitRepoCount = getGitRepos();
-        setLeetcodeProbs(leetcodeStats);
-        setgfgProbs(gfgStats);
         setLeetcodeRating(lcrating);
+      } catch (error) {
+        setLeetcodeRating(det.contestRating);
+        console.log("Failed to fetch lc rating: " + error);
+      }
+    })();
+    (async () => {
+      try {
+        let gitRepoCount = getGitRepos();
         setGitRepos(gitRepoCount);
       } catch (error) {
-        console.log("Failed to fetch coding problems: " + error);
+        console.log("Failed to fetch git profile: " + error);
       }
     })();
   }, []);
@@ -60,7 +82,7 @@ const CodingProfile = ({ image, handleName, link, det }) => {
   if (handleName === "tusharrathi") {
     listEle = (
       <ul>
-        <li>Problems Solved: {leetcodeProbs ? leetcodeProbs : "Loading..."}</li>
+        <li>Problems Solved: {leetcodeProblems}</li>
         <li>
           Contest Rating: {leetcodeRating ? leetcodeRating : "Loading..."}
         </li>
