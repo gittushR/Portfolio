@@ -3,7 +3,7 @@ import LeetCodeCalendar from "leetcode-calendar";
 import CodingProfile from "../../components/CodingProfile/CodingProfile.jsx";
 import SkillsSlider from "../../components/SkillsSlider/SkillsSlider.jsx";
 import { FaLink } from "react-icons/fa";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import SpotifyCard from "../../components/SpotifyCard/SpotifyCard.jsx";
 import GladtoHave from "../../components/GladtoHaveCard/GladtoHave.jsx";
 import Skills from "../../components/Skills/Skills.jsx";
@@ -96,22 +96,6 @@ const About = () => {
     dark: ["#d3f9d8", "#8ce99a", "#51cf66", "#37b24d", "#2b8a3e"],
   };
   const codingRef = useRef(null);
-
-  const scrollToCodingPofiles = () => {
-    codingRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      setIsScrolled(scrollY >= 1);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
     <div className="aboutPage">
