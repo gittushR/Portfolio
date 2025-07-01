@@ -185,11 +185,6 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div
-        onClick={scrollToCodingPofiles}
-        className={`arrow animated bounce ${isScrolled ? "fade" : ""}`}
-      ></div>
-
       <div className="codingProfiles" id="codingProfiles" ref={codingRef}>
         <div className="codingContainer">
           <h1>CODING PROFILES</h1>
