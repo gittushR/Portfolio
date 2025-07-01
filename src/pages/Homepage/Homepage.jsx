@@ -50,7 +50,7 @@ const Homepage = () => {
           </div>
           <div className="headline">
             I love <span style={{ color: "var(--standout)" }}>Algorithms</span>{" "}
-            and <span style={{ color: "var(--thirdColor)" }}>Coding</span>
+            and <span style={{ color: "var(--thirdColor)" }}>Software Design</span>
           </div>
           <p>
             Associate Sofware Engineer @Oracle
