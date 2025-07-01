@@ -108,7 +108,7 @@ const About = () => {
             I'm a full stack software developer currently based in Bengaluru,
             India, working full time at <span className="keyword">Oracle</span>.
             A 2024 CS grad with a thing for tech, clean code, and solving real
-            problems with creativity. I am also a big DSA fan with and a
+            problems with creativity. I am also a big DSA fan with and an{" "}
             <span className="keyword">
               expert rating on Codeforces and solved 800+ LeetCode problems.
             </span>
