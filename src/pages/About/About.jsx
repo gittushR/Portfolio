@@ -39,7 +39,7 @@ const labels = {
     "Fri",
     "Sat",
   ],
-  totalCount: "{{count}} submissions in {{year}}",
+  totalCount: "{{count}} submissions in last 12 months",
   legend: {
     less: "Less",
     more: "More",
@@ -132,14 +132,30 @@ const About = () => {
   ];
   const exampleTheme = {
     light: [
-      "rgb(29, 10, 10)",
+      "rgb(235, 235, 235)",
       "rgba(192, 132, 245, 0.44)",
       "rgba(192, 132, 245, 0.6)",
       "rgba(192, 132, 245, 0.76)",
       "rgba(192, 132, 245, 0.92)",
     ],
-    dark: ["#d3f9d8", "#8ce99a", "#51cf66", "#37b24d", "#2b8a3e"],
+    dark: [
+      "rgb(235, 235, 235)",
+      "rgba(192, 132, 245, 0.44)",
+      "rgba(192, 132, 245, 0.6)",
+      "rgba(192, 132, 245, 0.76)",
+      "rgba(192, 132, 245, 0.92)",
+    ],
   };
+  // const exampleTheme = {
+  //   light: [
+  //     "#111",
+  //     "rgba(192, 132, 245, 0.44)",
+  //     "rgba(192, 132, 245, 0.6)",
+  //     "rgba(192, 132, 245, 0.76)",
+  //     "rgba(192, 132, 245, 0.92)",
+  //   ],
+  //   dark: ["#ebfbee", "#b2f2bb", "#51cf66", "#37b24d", "#2b8a3e"],
+  // };
   const codingRef = useRef(null);
 
   return (
