@@ -16,7 +16,7 @@ const Projects = () => {
           <ProjectGridItem
             projectName={"ROWDY AI"}
             videoLink={"/Video/RowdyV2.mp4"}
-            gitLink={"https://github.com/gittushR/RowdyAI"}
+            gitLink={"https://github.com/gittushR/RowdyV2"}
             aboutProj={`Built a bold, sarcastic AI platform that delivers dynamic text
                 and image interactions, enhancing user engagement and deepening
                 my understanding of secure, persistent conversational systems.`}
