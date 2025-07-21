@@ -8,7 +8,7 @@ const ProjectShowcase = () => {
       <SlideInOnScroll fromLeft={true}>
         <div className="project-container">
           <a
-            href="https://github.com/gittushR/RowdyAI"
+            href="https://github.com/gittushR/RowdyV2"
             rel="noopener noreferrer"
             target="_blank"
           >
