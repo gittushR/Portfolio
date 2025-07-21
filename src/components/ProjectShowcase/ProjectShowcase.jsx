@@ -34,7 +34,7 @@ const ProjectShowcase = () => {
             </p>
             <div className="buttons">
               <a
-                href="https://github.com/gittushR/RowdyAI"
+                href="https://github.com/gittushR/RowdyV2"
                 className="homebutton projectbutton"
                 rel="noopener noreferrer"
                 target="_blank"
