@@ -12,7 +12,10 @@ const SpotifyCard = () => {
         <h4>
           playlist: <span>songs I am hooked to...</span>
         </h4>
-        <p> A pure audiophile, hi quality music is top-notch priority. These are the songs I am listening to nowadays (repeat-mode level obsession)</p>
+        <p>
+          {" "}
+          Lately I’ve been hooked on these songs — can’t stop playing them (repeat-mode level obsession)
+        </p>
       </div>
     </a>
   );
