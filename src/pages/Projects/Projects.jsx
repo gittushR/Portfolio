@@ -28,6 +28,7 @@ const Projects = () => {
               "Gemini",
               "ImageKit",
             ]}
+            playlink={"https://rowdyv2.onrender.com/"}
           ></ProjectGridItem>
           <ProjectGridItem
             projectName={"DOCTHOR"}

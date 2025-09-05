@@ -24,7 +24,7 @@ const ProjectGridItem = ({
         }}
       >
         <a href={playlink} rel="noopener noreferrer" target="_blank">
-          {projectName === "Foodcourt" ? (
+          {projectName === "Foodcourt" || projectName === "ROWDY AI" ? (
             <FaExternalLinkAlt></FaExternalLinkAlt>
           ) : (
             "PLAY"
@@ -34,7 +34,11 @@ const ProjectGridItem = ({
     );
   }
   return (
-    <a href={gitLink} rel="noopener noreferrer" target="_blank">
+    <a
+      href={playlink ? playlink : gitLink}
+      rel="noopener noreferrer"
+      target="_blank"
+    >
       <div className="gridItem">
         <div className="projectVid">
           <video
