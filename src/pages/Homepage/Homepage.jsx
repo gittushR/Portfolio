@@ -37,12 +37,32 @@ const Homepage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  useEffect(() => {
+    const sections = document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            observer.unobserve(entry.target); 
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="body">
       <div className="drawingCanvas">
         <DrawingBoard />
       </div>
-      <div className="hero" id="top">
+      <div className="hero reveal" id="top">
         <div className="intro">
           <div className="hi">
             <h1>Hi! I’m</h1>
@@ -50,7 +70,8 @@ const Homepage = () => {
           </div>
           <div className="headline">
             I love <span style={{ color: "var(--standout)" }}>Algorithms</span>{" "}
-            and <span style={{ color: "var(--thirdColor)" }}>Software Design</span>
+            and{" "}
+            <span style={{ color: "var(--thirdColor)" }}>Software Design</span>
           </div>
           <p>
             Associate Sofware Engineer @Oracle
@@ -157,7 +178,7 @@ const Homepage = () => {
         className={`arrow animated bounce ${isScrolled ? "fade" : ""}`}
       ></div>
 
-      <section className="work" ref={aboutRef}>
+      <section className="work reveal" ref={aboutRef}>
         <div className="workHeading">
           <hr className="line" />
           <div className="workEx">Work Experience</div>
@@ -165,7 +186,6 @@ const Homepage = () => {
         <Experience></Experience>
         <button
           className="homebutton morebutton"
-          
           onClick={() => {
             navigate("/work");
           }}
@@ -174,7 +194,7 @@ const Homepage = () => {
         </button>
       </section>
 
-      <section className="projects">
+      <section className="projects reveal">
         <div className="projectHeader">
           <div className="proj">Personal Projects</div>
           <div className="line">
@@ -184,7 +204,6 @@ const Homepage = () => {
         <ProjectShowcase></ProjectShowcase>
         <button
           className="homebutton morebutton"
-      
           onClick={() => {
             navigate("/projects");
           }}
@@ -192,7 +211,7 @@ const Homepage = () => {
           See more completed projects <FaExternalLinkAlt></FaExternalLinkAlt>
         </button>
       </section>
-      <div className="footerSection">
+      <div className="footerSection reveal">
         <div className="linkssection ">
           <h2 className="links-title">
             Cont

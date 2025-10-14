@@ -172,8 +172,28 @@ const Work = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  useEffect(() => {
+    const sections = document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="experiencePage">
+    <div className="experiencePage reveal">
       <div className="workExperience">
         <h2>Work Experience</h2>
         <div className="timeline">

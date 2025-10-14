@@ -157,11 +157,29 @@ const About = () => {
   //   dark: ["#ebfbee", "#b2f2bb", "#51cf66", "#37b24d", "#2b8a3e"],
   // };
   const codingRef = useRef(null);
+  useEffect(() => {
+    const sections = document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div className="aboutPage">
       <div className="aboutMePage">
-        <div className="aboutMeContainer">
+        <div className="aboutMeContainer reveal">
           <h1>Hi. I'm Tushar Rathi 👋</h1>
           <img src="/IMG1.jpg" alt="my photo" />
           <h2>Short Bio</h2>
@@ -192,7 +210,7 @@ const About = () => {
             </span>{" "}
           </p>
         </div>
-        <div className="cardsContainer">
+        <div className="cardsContainer reveal">
           <SpotifyCard></SpotifyCard>
           <GladtoHave></GladtoHave>
           <div className="floating-card hobbies-card">
@@ -230,7 +248,11 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="codingProfiles" id="codingProfiles" ref={codingRef}>
+      <div
+        className="codingProfiles reveal"
+        id="codingProfiles"
+        ref={codingRef}
+      >
         <div className="codingContainer">
           <h1>CODING PROFILES</h1>
           <div className="leetcodeCalendar" ref={scrollRef}>
@@ -316,7 +338,7 @@ const About = () => {
           <h1>CERTIFICATIONS & AWARDS</h1>
           <div className="certificates">
             {myCertificates.map((certificate, ind) => (
-              <div className="certificate" key={ind}>
+              <div className="certificate reveal" key={ind}>
                 <div className="certificatePic">
                   {" "}
                   <img
@@ -354,7 +376,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="skillsSection" id="skills">
+      <div className="skillsSection reveal" id="skills">
         <div className="skillsContainer">
           <h1>TECH I WORK WITH</h1>
           <div className="skillslide">

@@ -5,6 +5,7 @@
   gap: 1.6rem;
   padding: 1.6rem 12.8rem;
   font-family: sans-serif;
+  animation: dropDown 0.8s ease-out forwards;
 }
 
 .drawing-wrapper {
@@ -61,8 +62,8 @@
   background-color: var(--divColor);
 }
 
-@media (max-width:451px){
-  .drawing-container{
+@media (max-width: 451px) {
+  .drawing-container {
     padding: 1.6rem 3.2rem;
   }
 }

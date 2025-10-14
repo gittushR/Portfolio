@@ -7,9 +7,27 @@ const Projects = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  useEffect(() => {
+    const sections = document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
   return (
     <div className="projectsPage">
-      <div className="projectsContainer">
+      <div className="projectsContainer reveal">
         <h1>Some stuff that I've built</h1>
         <div className="projectsGrid">
           <ProjectGridItem
