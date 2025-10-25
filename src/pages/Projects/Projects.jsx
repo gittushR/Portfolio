@@ -27,7 +27,7 @@ const Projects = () => {
   }, []);
   return (
     <div className="projectsPage">
-      <div className="projectsContainer reveal">
+      <div className="projectsContainer">
         <h1>Some stuff that I've built</h1>
         <div className="projectsGrid">
           <ProjectGridItem

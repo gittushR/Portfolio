@@ -73,7 +73,7 @@ const educationData = [
 ];
 const experienceData = [
   {
-    date: "AUGUST 2025 - PRESENT",
+    date: "AUGUST 2024 - PRESENT",
     title: "Associate Software Engineer, Managed Cloud Services team",
     team: "Oracle",
     description: (
@@ -193,10 +193,10 @@ const Work = () => {
   }, []);
 
   return (
-    <div className="experiencePage reveal">
+    <div className="experiencePage">
       <div className="workExperience">
         <h2>Work Experience</h2>
-        <div className="timeline">
+        <div className="timeline reveal">
           {experienceData.map((exp, index) => (
             <div className="timeline-item" key={index}>
               <div className="timeline-icon">
@@ -226,7 +226,7 @@ const Work = () => {
           ))}
         </div>
         <h2>Education</h2>
-        <div className="timeline education">
+        <div className="timeline education reveal">
           {educationData.map((exp, index) => (
             <div className="timeline-item" key={index}>
               <div
@@ -261,7 +261,7 @@ const Work = () => {
       </div>
 
       <div className="workSidebar">
-        <div className="floating-card">
+        <div className="floating-card reveal">
           <h2>Technical Skills</h2>
           <ul className="skill-list">
             {skills.map((skill, index) => (
@@ -272,7 +272,7 @@ const Work = () => {
             ))}
           </ul>
         </div>
-        <div className="floating-card">
+        <div className="floating-card reveal">
           <h2>Tools I Know</h2>
           <ul className="skill-list">
             {tools.map((skill, index) => (
@@ -283,7 +283,7 @@ const Work = () => {
             ))}
           </ul>
         </div>
-        <div className="floating-card">
+        <div className="floating-card reveal">
           <h2>Core Subjects</h2>
           <ul className="skill-list">
             {coreSubjects.map((skill, index) => (
@@ -294,7 +294,7 @@ const Work = () => {
             ))}
           </ul>
         </div>
-        <div className="floating-card">
+        <div className="floating-card reveal">
           <h2>Soken Languages</h2>
           <ul className="skill-list">
             {spokenLang.map((skill, index) => (
